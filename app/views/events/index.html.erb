@@ -1,0 +1,11 @@
+<h3><%= Event.count %> Events</h3>
+
+<table>
+<% @events.each do |event| %> 
+  <tr>
+     <td colspan='2'><%= link_to event.title, event_path( event ) %>
+     </td>
+  </tr>
+<% end %><!-- events.each -->
+</table>
+

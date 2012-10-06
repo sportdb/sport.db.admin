@@ -16,5 +16,8 @@ rerun.txt
 pickle-email-*.html
 
 
+db/*.db
+db/sport.db
+
 # Ignore komodo project files
 *.kpf

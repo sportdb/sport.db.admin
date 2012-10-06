@@ -1,0 +1,15 @@
+<!-- paras: game
+  NB: v2 uses two tds (table cells)
+  -->
+
+<!-- todo/fix:
+  check for :link options (:db|:live)
+  -->
+
+
+<td class='game-team1' style='text-align: right;'>
+  <span class=''>
+    <%= link_to game.team1.title, team_path( game.team1 ) %>
+  </span>
+  <%= "(#{game.team1.title2})" if game.team1.title2.present? %>
+</td>

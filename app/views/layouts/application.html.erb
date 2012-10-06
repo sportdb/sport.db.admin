@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sportdb</title>
+  <title>sport.db Web Admin</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+ <p>
+  <%= link_to 'Events', events_path() %>  &bull;
+  <%= link_to 'Teams', teams_path() %>  &bull;
+  <%= link_to 'Past Games', past_games_path() %> &bull;
+  <%= link_to 'Upcoming Games', games_path() %>
+  <!-- todo: add some more links -->
+ </p>
 
 <%= yield %>
 

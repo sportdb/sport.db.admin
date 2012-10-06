@@ -1,9 +1,16 @@
 Sportdb::Application.routes.draw do
 
   get "pages/index"
-
   get "pages/about"
 
-  root :to => 'pages#index'
+  
+  resources :events
+  resources :teams
+  resources :games do
+    get 'past',   :on => :collection
+  end
+
+
+  root :to => 'games#index'
 
 end
