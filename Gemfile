@@ -5,6 +5,13 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
+############
+## lets use open sport.db schema & fixtures
+
+gem 'sportdb', '0.2.0'
+
+
 group :production do
   gem 'pg'
 end
