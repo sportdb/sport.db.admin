@@ -1,5 +1,5 @@
 
-<table>
+<table class='play'>
 <% last_play_at = Time.local( 1999, 1, 1 )
    games.each do |game| %>
  
@@ -7,15 +7,15 @@
             last_play_at.month  == game.play_at.month &&
             last_play_at.day    == game.play_at.day %>
         
-    <tr style='background-color: silver;'>
+    <tr class='game-day'>
       <td colspan='9'><%= game.play_at.strftime('%A, %d. %B %Y') %></td>
     </tr> 
         
   <% end %>
  
  
- <tr style='vertical-align: middle;'>
-  <td>
+ <tr>
+  <td class='game-hour'>
     <%= game.play_at.strftime('%H:%M') %>
   </td>
  
@@ -23,7 +23,7 @@
   <%= render_game_score( game ) %>
   <%= render_game_team2( game ) %>
 
-  <td>
+  <td class='game-round'>
     (<%= link_to game.round.event.title, event_path( game.round.event ) %> / <%= game.round.title %>)
   </td>
     

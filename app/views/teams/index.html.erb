@@ -3,6 +3,7 @@
 <table>
  <% @teams.each do |team| %>
    <tr>
+     <td class='team-key'><%= team.key %></td>
      <td>
        <%= link_to team.title, team_path( team ) %>
      </td>

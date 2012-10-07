@@ -3,8 +3,8 @@
 <table>
 <% @events.each do |event| %> 
   <tr>
-     <td colspan='2'><%= link_to event.title, event_path( event ) %>
-     </td>
+     <td class='event-key'><%= event.key %></td> 
+     <td><%= link_to event.title, event_path( event ) %></td>
   </tr>
 <% end %><!-- events.each -->
 </table>

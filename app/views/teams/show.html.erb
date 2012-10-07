@@ -12,32 +12,17 @@
 <table class='play'>
 <% @team.games.each do |game| %>
 <tr>
-     
-<td class='game-date'>
-  <%= game.play_at %>
-</td>
+   
+<%= render_game_date( game ) %>
 
-<td>
-  <%= game.round.title %> - <%= link_to game.round.event.title, event_path(game.round.event) %>
-<td>
-        
-<td class='game-team1'>
-  <span class=''>
-    <%= link_to game.team1.title, team_path(game.team1) %>
-  </span>
-  <%= "(#{game.team1.title2})" if game.team1.title2.present? %>
-</td>
-        
-<td class='game-score'>
-  ( xxxx <%#= game.score_str %> )
-</td>
+<%= render_game_team1( game ) %>
+<%= render_game_score( game ) %>
+<%= render_game_team2( game ) %>
 
-<td class='game-team2'>
-  <span class=''>
-    <%= link_to game.team2.title, team_path(game.team2) %>
-  </span>
-  <%= "(#{game.team2.title2})" if game.team2.title2.present? %>
-</td>
+<!-- fix/todo: use part helper -->
+<td class='game-round'>
+  (<%= link_to game.round.event.title, event_path(game.round.event) %> - <%= game.round.title %>)
+<td>
 
 </tr>
 <% end %> <!-- games -->
