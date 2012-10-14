@@ -1,5 +1,3 @@
 
-class Prop < ActiveRecord::Base
-    
-end  # class Prop
+Prop = SportDB::Models::Prop
 

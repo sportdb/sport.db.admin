@@ -1,0 +1,2 @@
+
+Country = SportDB::Models::Country

@@ -4,6 +4,7 @@ Sportdb::Application.routes.draw do
   get "pages/about"
 
   
+  resources :rounds
   resources :events
   resources :teams
   resources :games do

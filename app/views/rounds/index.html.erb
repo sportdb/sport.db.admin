@@ -1,0 +1,20 @@
+<h3><%= Round.count %> Rounds</h3>
+
+<table>
+ <% @rounds.each do |round| %>
+   <tr>
+     <!-- fix: use round-key not team-key css class etc. -->
+     <td class='team-key'><%= round.event.key %> - <%= round.pos %></td>
+     <td>
+       <%= round.start_at %>
+     </td>
+     <td>
+       <%= link_to round.event.title, event_path( round.event ) %>
+     </td>
+     <td>
+        <%= round.title %>
+        <%= "(#{round.title2})"  if round.title2.present? %>
+     </td>
+   </tr>
+ <% end %><!-- teams.each -->
+</table>
