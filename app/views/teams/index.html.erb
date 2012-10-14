@@ -1,15 +1,56 @@
 <h3><%= Team.count %> Teams</h3>
 
+
+<h4><%= @national_teams.size %> National Teams</h4>
+
 <table>
- <% @teams.each do |team| %>
+ <% @national_teams.each do |team| %>
    <tr>
-     <td class='team-key'><%= team.country.key %> / <%= team.key %></td>
+     <td class='team-key'><%= team.key %></td>
      <td>
        <%= link_to team.title, team_path( team ) %>
      </td>
      <td>
-       <%= "(#{team.title2})" if team.title2.present? %>
+       <%= "(#{team.tag})" if team.tag.present? %>
      </td>
+     <td>
+       <%= team.title2 if team.title2.present? %>
+     </td>
+     
+     <td class='team-key'><%= team.country.key %>
+     </td>
+     <td>
+       <%= team.country.title %>
+       (<%= team.country.tag %>)
+     <td>
+     
+   </tr>
+ <% end %><!-- teams.each -->
+</table>
+
+
+<h4><%= @club_teams.size %> Clubs</h4>
+
+<table>
+ <% @club_teams.each do |team| %>
+   <tr>
+     <td class='team-key'><%= team.key %></td>
+     <td>
+       <%= link_to team.title, team_path( team ) %>
+     </td>
+     <td>
+       <%= "(#{team.tag})" if team.tag.present? %>
+     </td>
+     <td>
+       <%= team.title2  if team.title2.present? %>
+     </td>
+     
+     <td class='team-key'><%= team.country.key %>
+     </td>
+     <td>
+       <%= team.country.title %>
+       (<%= team.country.tag %>)
+     <td>
    </tr>
  <% end %><!-- teams.each -->
 </table>

@@ -6,9 +6,25 @@
   <% unless last_play_at.year   == game.play_at.year  &&
             last_play_at.month  == game.play_at.month &&
             last_play_at.day    == game.play_at.day %>
+    
+    <% unless last_play_at.year == game.play_at.year %>
+     <tr class='game-year'>
+       <td colspan='2'></td>
+       <td colspan='7'> <%= game.play_at.strftime('%Y') %></td>
+     </tr>
+    <% end %>
+
+    <!-- todo: find a method for week number; do NOT use strftime; there must be something easier -->
+    <% unless last_play_at.strftime('%V') == game.play_at.strftime('%V') %>
+     <tr class='game-week'>
+       <td colspan='2'></td>
+       <td colspan='7'>Week <%= game.play_at.strftime('%V') %></td>
+     </tr>
+    <% end %>
         
     <tr class='game-day'>
-      <td colspan='9'><%= game.play_at.strftime('%A, %d. %B %Y') %></td>
+      <td></td>
+      <td colspan='8'><%= game.play_at.strftime('%A, %d. %B') %></td>
     </tr> 
         
   <% end %>
@@ -25,6 +41,11 @@
 
   <td class='game-round'>
     (<%= link_to game.round.event.title, event_path( game.round.event ) %> / <%= game.round.title %>)
+  </td>
+  
+   
+  <td class='game-debug'><!-- for debugging dates/time zones; show in UTC raw from db -->
+    <%= game.play_at %>
   </td>
     
  </tr> 

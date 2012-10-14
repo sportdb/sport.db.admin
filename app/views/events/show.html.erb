@@ -33,6 +33,12 @@
 <%= render_game_team1( game ) %>
 <%= render_game_score( game ) %>
 <%= render_game_team2( game ) %>
+      
+        
+    <td>
+      <!-- todo: move to partial -->
+      <%= "(#{game.group.title})" if game.group.present? %>
+    </td>
         
      </tr>
   <% end %> <!-- games -->

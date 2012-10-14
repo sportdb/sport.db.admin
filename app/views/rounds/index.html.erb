@@ -1,12 +1,38 @@
 <h3><%= Round.count %> Rounds</h3>
 
-<table>
- <% @rounds.each do |round| %>
+<table class='play'>
+ <% last_start_at = Time.local( 1999, 1, 1 )
+    @rounds.each do |round| %>
+    
+    
+  <% unless last_start_at.year   == round.start_at.year  &&
+            last_start_at.month  == round.start_at.month &&
+            last_start_at.day    == round.start_at.day %>
+    
+    <% unless last_start_at.year == round.start_at.year %>
+     <tr class='round-year'>
+       <td colspan='2'></td>
+       <td colspan='9'><%= round.start_at.strftime('%Y') %></td>
+     </tr>
+    <% end %>
+
+    <!-- todo: find a method for week number; do NOT use strftime; there must be something easier -->
+    <% unless last_start_at.strftime('%V') == round.start_at.strftime('%V') %>
+     <tr class='round-week'>
+       <td colspan='2'></td>
+       <td colspan='9'>Week <%= round.start_at.strftime('%V') %></td>
+     </tr>
+    <% end %>
+        
+  <% end %>
+
+
+    
+    
    <tr>
-     <!-- fix: use round-key not team-key css class etc. -->
-     <td class='team-key'><%= round.event.key %> - <%= round.pos %></td>
+     <td class='round-key'><%= round.event.key %> - <%= round.pos %></td>
      <td>
-       <%= round.start_at %>
+       <%= round.start_at.strftime( '%b/%d %a') %>
      </td>
      <td>
        <%= link_to round.event.title, event_path( round.event ) %>
@@ -15,6 +41,10 @@
         <%= round.title %>
         <%= "(#{round.title2})"  if round.title2.present? %>
      </td>
+     <td class='round-debug'>
+       <%= round.start_at %>
+     </td>
    </tr>
- <% end %><!-- teams.each -->
+ <% last_start_at = round.start_at
+    end %><!-- rounds.each -->
 </table>

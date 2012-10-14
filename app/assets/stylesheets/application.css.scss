@@ -29,7 +29,8 @@ a {
 
 table {
   td.event-key,
-  td.team-key {
+  td.team-key,
+  td.round-key {
     color: $dark-gray;
     font-size: 12px;   // ~80%
     * {
@@ -42,7 +43,7 @@ table {
 
 table.play {
   tr.game-round,
-  tr.game-day {
+  tr.round-week {
      background-color:  $azure; 
      
      td {
@@ -50,7 +51,25 @@ table.play {
      border-bottom: 1px solid black;
      }
   }
+  
+ tr.game-day {
+     td {
+     border-top: 1px solid black;
+     border-bottom: 1px solid black;
+     }
+  }
 
+ tr.game-year,
+ tr.game-week,
+ tr.round-year {
+     background-color:  $azure;  // todo: make it darker 20%?
+     font-size: 22px;   // ~10%
+     
+     td {
+     border-top: 1px solid black;
+     border-bottom: 1px solid black;
+     }
+  }
   
   td.game-score {
      text-align: center;
@@ -58,7 +77,9 @@ table.play {
   
   td.game-date,
   td.game-hour,
-  td.game-round {
+  td.game-round,
+  td.game-debug,
+  td.round-debug {
     color: $dark-gray;
     font-size: 12px;   // ~80%
     * {
