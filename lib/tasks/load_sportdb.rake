@@ -11,10 +11,10 @@ task :sportdb_load => [:environment] do |t|
    'at/2011_12/cup',
    'at/2012_13/bl',
    'at/2012_13/cup',
-   'cl/teams',
-   'cl/2011_12/cl',
-   'cl/2011_12/el',
-   'cl/2012_13/cl',
+#   'cl/teams',
+#   'cl/2011_12/cl',
+#   'cl/2011_12/el',
+#   'cl/2012_13/cl',
    'de/teams',
    'de/2012_13/bl',
    'en/teams',
@@ -27,6 +27,11 @@ task :sportdb_load => [:environment] do |t|
    'world/quali_2012_13_c',
    'world/quali_2012_13_i'
    ])
+  
+  SportDB.read([
+    ['at.2011/12','at/2011_12/bl'],
+    ['at_bl_2012_13','at/2012_13/bl']
+  ])
   
 end
 

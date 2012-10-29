@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
     t.integer  "pos",                           :null => false
     t.boolean  "playoff",    :default => false, :null => false
     t.datetime "start_at",                      :null => false
+    t.datetime "end_at"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
@@ -115,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
     t.string   "title2"
     t.string   "key",                           :null => false
     t.string   "tag"
+    t.string   "synonyms"
     t.integer  "country_id",                    :null => false
     t.boolean  "club",       :default => false, :null => false
     t.boolean  "national",   :default => false, :null => false

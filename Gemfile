@@ -9,11 +9,12 @@ gem 'rails', '3.2.1'
 ############
 ## lets use open sport.db schema & fixtures
 
-gem 'sportdb', '0.3.3'
+gem 'sportdb', '0.4.4'
 
 
 group :production do
   gem 'pg'
+  gem 'thin'    # use faster multiplexed (w/ eventmachine) web server
 end
 
 group :development do
