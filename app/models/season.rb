@@ -1,0 +1,3 @@
+
+Season = SportDB::Models::Season
+

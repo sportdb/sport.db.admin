@@ -1,0 +1,3 @@
+
+League = SportDB::Models::League
+

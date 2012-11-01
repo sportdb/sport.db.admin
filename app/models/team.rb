@@ -1,6 +1,5 @@
 
-module SportDB
-  module Models
+module SportDB::Models
 
 class Team
 
@@ -11,8 +10,7 @@ class Team
 
 end # class Team
 
- end # module Models
-end # module SportDB
+end # module SportDB::Models
 
 
 

@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(:version => 20121006123833) do
 
+  create_table "badges", :force => true do |t|
+    t.integer  "team_id",    :null => false
+    t.integer  "league_id",  :null => false
+    t.integer  "season_id",  :null => false
+    t.string   "title",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "countries", :force => true do |t|
     t.string   "title",      :null => false
     t.string   "tag",        :null => false
@@ -24,7 +33,10 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
   create_table "events", :force => true do |t|
     t.string   "title",      :null => false
     t.string   "key",        :null => false
+    t.integer  "league_id",  :null => false
+    t.integer  "season_id",  :null => false
     t.datetime "start_at",   :null => false
+    t.datetime "end_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -90,6 +102,14 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
   add_index "groups_teams", ["group_id", "team_id"], :name => "index_groups_teams_on_group_id_and_team_id", :unique => true
   add_index "groups_teams", ["group_id"], :name => "index_groups_teams_on_group_id"
 
+  create_table "leagues", :force => true do |t|
+    t.string   "key",                           :null => false
+    t.string   "title",                         :null => false
+    t.boolean  "club",       :default => false, :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
   create_table "props", :force => true do |t|
     t.string   "key",        :null => false
     t.string   "value",      :null => false
@@ -110,6 +130,13 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
   end
 
   add_index "rounds", ["event_id"], :name => "index_rounds_on_event_id"
+
+  create_table "seasons", :force => true do |t|
+    t.string   "key",        :null => false
+    t.string   "title",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "teams", :force => true do |t|
     t.string   "title",                         :null => false

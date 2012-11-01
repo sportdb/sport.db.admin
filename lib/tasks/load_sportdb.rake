@@ -6,7 +6,10 @@ task :sportdb_load => [:environment] do |t|
   
   SportDB.load([
    'countries',
+   'leagues',
+   'seasons',
    'at/teams',
+   'at/badges',
    'at/2011_12/bl',
    'at/2011_12/cup',
    'at/2012_13/bl',
@@ -14,15 +17,19 @@ task :sportdb_load => [:environment] do |t|
    'de/teams',
    'en/teams',
    'cl/teams',
+   'cl/badges',
    'cl/2011_12/cl',
    'cl/2011_12/el',
    'cl/2012_13/cl',
    'de/2012_13/bl',
    'en/2012_13/pl',
    'euro/teams',
+   'euro/2008',
    'euro/2012',
    'mx/teams',
    'mx/apertura_2012',
+   'world/teams',
+   'world/2010',
    'world/quali_2012_13',
    'world/quali_2012_13_c',
    'world/quali_2012_13_i',
@@ -36,6 +43,8 @@ task :sportdb_load => [:environment] do |t|
     ['de.2012/13',       'de/2012_13/bl' ],
     ['en.2012/13',       'en/2012_13/pl' ],
     ['mx.apertura.2012', 'mx/apertura_2012' ],
+    ['euro.2008',        'euro/2008' ],
+    ['wm.2010',          'world/2010' ],
     ['wmq',              'world/quali_2012_13_c' ]
   ])
   
