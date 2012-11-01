@@ -38,6 +38,7 @@
     <td>
       <!-- todo: move to partial -->
       <%= "(#{game.group.title})" if game.group.present? %>
+      <%= "[k.o.]" if game.knockout? %>
     </td>
         
      </tr>

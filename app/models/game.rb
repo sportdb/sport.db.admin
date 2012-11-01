@@ -4,6 +4,8 @@ module SportDB::Models
 class Game
   
   def score_str
+    return " - " if score1.blank? && score2.blank?
+    
     if score5.present? && score6.present?    # im Elfmeterschiessen i.E.?
       "#{score5} : #{score6} i.E. / #{score3} : #{score4} n.V. / #{score1_str} : #{score2_str}"
     elsif score3.present? && score4.present?  # nach Verlaengerung n.V.?

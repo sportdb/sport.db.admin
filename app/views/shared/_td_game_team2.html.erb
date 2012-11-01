@@ -7,6 +7,11 @@
   -->
 
 <td class='game-team2'>
+  <!-- todo: move code to model ?? -->
+  <% if game.team2.national? %>
+    <%= image_tag "flags/32x32/#{game.team2.country.key}.png" %>
+  <% end %>
+  
   <span class=''>
     <%= link_to game.team2.title, team_path( game.team2 ) %>
   </span>

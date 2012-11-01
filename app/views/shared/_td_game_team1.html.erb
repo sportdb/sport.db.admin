@@ -12,4 +12,10 @@
     <%= link_to game.team1.title, team_path( game.team1 ) %>
   </span>
   <%= "(#{game.team1.title2})" if game.team1.title2.present? %>
+  
+  <!-- todo: move code to model ?? -->
+  <% if game.team1.national? %>
+    <%= image_tag "flags/32x32/#{game.team1.country.key}.png" %>
+  <% end %>
+  
 </td>

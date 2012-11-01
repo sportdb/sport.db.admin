@@ -4,7 +4,24 @@
 </h3>
 
 <p>
-  <%= "#{@team.title2}" if @team.title2.present? %>
+ 
+  <% if @team.national? %>
+  <% else %>
+       <%= image_tag "flags/24x24/#{@team.country.key}.png" %>
+       <%= @team.country.title %>
+       (<%= @team.country.tag %>)
+  <% end %>
+  
+   <%= " | #{@team.title2}" if @team.title2.present? %>
+
+</p>
+
+<!-- check for badges -->
+
+<p>
+<% @team.badges.each do |badge| %>
+  <%= badge.title %> <%= badge.league.title %> <%= badge.season.title %><br>
+<% end %>
 </p>
 
 
