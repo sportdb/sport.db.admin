@@ -2,6 +2,75 @@
 <h3><%= @event.title %></h3>
 
 
+<h4><%= @event.teams.count %> Teams</h4>
+
+<table>
+ <% @event.teams.each do |team| %>
+   <tr>
+     <td>
+        <% if team.national? %>
+          <%= image_tag "flags/32x32/#{team.country.key}.png" %>
+        <% end %>
+        <%= link_to team.title, team_path( team ) %>
+     </td>
+     <td>
+       <%= "(#{team.tag})" if team.tag.present? %>
+     </td>
+     <td>
+       <%= team.title2  if team.title2.present? %>
+     </td>
+
+<% if team.national? %>
+<% else %>
+     <td>
+       |
+     </td>
+     <td>
+       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
+       <%= team.country.title %>
+       (<%= team.country.tag %>)
+     <td>
+<% end %>
+   </tr>
+ <% end %><!-- teams.each -->
+</table>
+
+<% if @event.groups.count > 0 %>
+<h4><%= @event.groups.count %> Groups</h4>
+
+<p>
+<% @event.groups.each_with_index do |group,i| %>
+  <% if i > 0 %>
+    &bull;
+  <% end %>
+  <%= group.title %>
+<% end %>
+</p>
+
+<table>
+<% @event.groups.each do |group| %>
+<tr>
+ <td>
+  <%= group.title %> | 
+ </td>
+  <% group.teams.each do |team| %>
+
+   <td>
+    <% if team.national? %>
+      <%= image_tag "flags/32x32/#{team.country.key}.png" %>
+    <% end %>
+    <%= link_to team.title, team_path( team ) %>
+   </td>
+  <% end %>
+</tr>
+<% end %>
+</table>
+
+<% end %> <!-- if event.groups.count > 0 -->
+
+<!-- add games count -- how? --> 
+<h4><!-- x  --> Games</h4>
+
 <p>
 <!-- todo: add anchors for intra page links -->
 <% @event.rounds.each_with_index do |round,i| %>
