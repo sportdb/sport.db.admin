@@ -1,8 +1,6 @@
 class CreateDb < ActiveRecord::Migration
   def up
-
-    # do nothing for now
-
+    SportDB::CreateDB.up
   end
 
   def down

@@ -27,10 +27,19 @@ a {
   &:visited { color: black; }
 }
 
+
+.team-count,
+.city-count {
+  color: $dark-gray;
+  font-size: 12px;   // ~80%
+}
+
 table {
   td.event-key,
   td.team-key,
-  td.round-key {
+  td.round-key,
+  td.city-key,
+  td.country-key {
     color: $dark-gray;
     font-size: 12px;   // ~80%
     * {

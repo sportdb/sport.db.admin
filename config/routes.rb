@@ -3,7 +3,7 @@ Sportdb::Application.routes.draw do
   get "pages/index"
   get "pages/about"
 
-  
+  resources :countries
   resources :rounds
   resources :events
   resources :teams

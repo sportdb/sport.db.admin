@@ -6,6 +6,7 @@ task :sportdb_load => [:environment] do |t|
   
   SportDB.load([
    'countries',
+   'cities',
    'leagues',
    'seasons',
    'at/teams',

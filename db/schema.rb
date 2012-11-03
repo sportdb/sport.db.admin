@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006123833) do
+ActiveRecord::Schema.define(:version => 20121004210237) do
 
   create_table "badges", :force => true do |t|
     t.integer  "team_id",    :null => false
     t.integer  "league_id",  :null => false
     t.integer  "season_id",  :null => false
     t.string   "title",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "cities", :force => true do |t|
+    t.string   "title",      :null => false
+    t.string   "key",        :null => false
+    t.string   "synonyms"
+    t.integer  "country_id", :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -145,6 +154,7 @@ ActiveRecord::Schema.define(:version => 20121006123833) do
     t.string   "tag"
     t.string   "synonyms"
     t.integer  "country_id",                    :null => false
+    t.integer  "city_id"
     t.boolean  "club",       :default => false, :null => false
     t.boolean  "national",   :default => false, :null => false
     t.datetime "created_at",                    :null => false

@@ -1,17 +1,20 @@
-
-module SportDB::Models
-
-class Team
-
-  ### fix - how to do it with has_many macro? possible??
-  def games
-    Game.where( 'team1_id = ? or team2_id = ?', id, id ).order( 'play_at' ).all
-  end
-
-end # class Team
-
-end # module SportDB::Models
-
+# == Schema Information
+#
+# Table name: teams
+#
+#  id         :integer         not null, primary key
+#  title      :string(255)     not null
+#  title2     :string(255)
+#  key        :string(255)     not null
+#  tag        :string(255)
+#  synonyms   :string(255)
+#  country_id :integer         not null
+#  city_id    :integer
+#  club       :boolean         default(FALSE), not null
+#  national   :boolean         default(FALSE), not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
 
 
 Team = SportDB::Models::Team

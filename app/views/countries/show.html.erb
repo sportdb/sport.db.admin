@@ -1,0 +1,54 @@
+
+<h3>
+<%= image_tag "flags/24x24/#{@country.key}.png" %>
+<%= @country.title %> 
+(<%= @country.tag %>)
+</h3>
+
+<h4><%= @country.cities.count %> Cities</h4>
+
+<table>
+  <% @country.cities.each do |city| %>
+    <tr>
+      <td class='city-key'>
+        <%= city.key %>
+      </td>
+      <td>
+        <%= city.title %>
+        <%= " | #{city.synonyms.split('|').join(' | ')}" if city.synonyms.present? %>
+      </td>
+      <td>
+        <span class='team-count'>(<%= city.teams.count %>)</span>
+      </td>
+      <td>
+        <% city.teams.each_with_index do |team,index| %>
+          <%= '•' if index > 0 %>
+          <%= link_to team.title, team_path(team) %>
+        <% end %><!-- each team -->
+      </td>
+    </tr>
+  <% end %> <!-- each city -->
+</table>
+
+
+<h4><%= @country.teams.count %> Teams</h4>
+
+
+<table>
+ <% @country.teams.each do |team| %>
+   <tr>
+     <td class='team-key'><%= team.key %></td>
+     <td>
+       <%= link_to team.title, team_path( team ) %>
+       <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
+     </td>
+     <td>
+       <%= "(#{team.tag})" if team.tag.present? %>
+     </td>
+     <td>
+       <%= team.title2  if team.title2.present? %>
+     </td>
+   </tr>
+ <% end %><!-- teams.each -->
+</table>
+

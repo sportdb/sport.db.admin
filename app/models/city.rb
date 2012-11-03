@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: props
+# Table name: cities
 #
 #  id         :integer         not null, primary key
+#  title      :string(255)     not null
 #  key        :string(255)     not null
-#  value      :string(255)     not null
+#  synonyms   :string(255)
+#  country_id :integer         not null
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
 #
 
 
-Prop = SportDB::Models::Prop
-
+City = SportDB::Models::City

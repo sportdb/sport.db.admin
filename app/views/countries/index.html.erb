@@ -1,0 +1,31 @@
+
+
+<h3><%= @countries.count %> Countries / <%= City.count %> Cities</h3>
+
+<table>
+<% @countries.each do |country| %>
+  <tr>
+    <td class='country-key'>
+      <%= country.key %>
+    </td>
+    <td style='white-space: nowrap;'>
+<%= image_tag "flags/24x24/#{country.key}.png" %>  
+<%= link_to country.title, country_path( country ) %>
+    </td>
+    <td>
+      (<%= country.tag %>)
+    </td>
+    <td>
+<span class='city-count'>
+(<%= country.cities.count %>)
+</span>
+    </td>
+    <td>
+  <% country.cities.each do |city| %>
+    <%= city.title %>
+    <span class='team-count'>(<%= city.teams.count %>)</span>
+  <% end %> <!-- each city -->      
+    </td>
+  </tr>
+<% end %><!-- each country -->
+</table>
