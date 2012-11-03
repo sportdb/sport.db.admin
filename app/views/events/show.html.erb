@@ -27,7 +27,7 @@
      </td>
      <td>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= team.country.title %>
+       <%= link_to team.country.title, country_path( team.country ) %>
        (<%= team.country.tag %>)
      <td>
 <% end %>
@@ -69,7 +69,7 @@
 <% end %> <!-- if event.groups.count > 0 -->
 
 <!-- add games count -- how? --> 
-<h4><!-- x  --> Games</h4>
+<h4><%= @event.games.count %> Games</h4>
 
 <p>
 <!-- todo: add anchors for intra page links -->

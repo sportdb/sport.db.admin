@@ -29,7 +29,8 @@ a {
 
 
 .team-count,
-.city-count {
+.city-count,
+.event-count {
   color: $dark-gray;
   font-size: 12px;   // ~80%
 }
@@ -39,7 +40,9 @@ table {
   td.team-key,
   td.round-key,
   td.city-key,
-  td.country-key {
+  td.country-key,
+  td.region-key,
+  td.league-key {
     color: $dark-gray;
     font-size: 12px;   // ~80%
     * {

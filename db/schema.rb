@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.string   "key",        :null => false
     t.string   "synonyms"
     t.integer  "country_id", :null => false
+    t.integer  "region_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -114,6 +115,7 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   create_table "leagues", :force => true do |t|
     t.string   "key",                           :null => false
     t.string   "title",                         :null => false
+    t.integer  "country_id"
     t.boolean  "club",       :default => false, :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
@@ -126,12 +128,20 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "regions", :force => true do |t|
+    t.string   "title",      :null => false
+    t.string   "key",        :null => false
+    t.integer  "country_id", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "rounds", :force => true do |t|
     t.integer  "event_id",                      :null => false
     t.string   "title",                         :null => false
     t.string   "title2"
     t.integer  "pos",                           :null => false
-    t.boolean  "playoff",    :default => false, :null => false
+    t.boolean  "knockout",   :default => false, :null => false
     t.datetime "start_at",                      :null => false
     t.datetime "end_at"
     t.datetime "created_at",                    :null => false

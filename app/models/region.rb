@@ -1,16 +1,15 @@
 # == Schema Information
 #
-# Table name: leagues
+# Table name: regions
 #
 #  id         :integer         not null, primary key
-#  key        :string(255)     not null
 #  title      :string(255)     not null
-#  country_id :integer
-#  club       :boolean         default(FALSE), not null
+#  key        :string(255)     not null
+#  country_id :integer         not null
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
 #
 
 
-League = SportDB::Models::League
+Region = SportDB::Models::Region
 

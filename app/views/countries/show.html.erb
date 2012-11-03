@@ -5,6 +5,36 @@
 (<%= @country.tag %>)
 </h3>
 
+<h4><%= @country.regions.count %> Regions</h4>
+
+<table>
+  <% @country.regions.each do |region| %>
+     <tr>
+      <td class='region-key'>
+        <%= region.key %>
+      </td>
+      <td>
+        <%= region.title %>
+      </td>
+      <td>
+      <span class='city-count'>
+          (<%= region.cities.count %>)
+      </span>
+      </td>
+      <td>
+         <% region.cities.each_with_index do |city,index| %>
+           <%= '•' if index > 0 %>
+           <%= city.title %>
+         <% end %><!-- each city -->
+      </td>
+     </tr>
+  <% end %> <!-- each region -->
+</table>
+      
+
+
+
+
 <h4><%= @country.cities.count %> Cities</h4>
 
 <table>
@@ -28,6 +58,28 @@
       </td>
     </tr>
   <% end %> <!-- each city -->
+</table>
+
+<h4><%= @country.leagues.count %> Leagues</h4>
+
+<table>
+ <% @country.leagues.each do |league| %>
+ <tr>
+   <td class='league-key'><%= league.key %></td>
+   <td><%= league.title %></td>
+   <td>
+    <span class='event-count'>
+      (<%= league.events.count %>)
+    </span>
+   </td>
+   <td>
+     <% league.events.each_with_index do |event,index| %>
+          <%= '•' if index > 0 %>
+          <%= link_to event.season.title, event_path(event) %>
+     <% end %>
+   </td>
+ </tr>
+ <% end %>
 </table>
 
 
