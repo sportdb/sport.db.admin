@@ -1,2 +1,38 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+
+
+<h2>What's <code>sport.db</code>?</h2>
+
+<p>
+A free open sports database &amp; schema.
+  <a href="https://github.com/geraldb/sport.db">More &raquo;</a>
+</p>
+
+<hr>
+
+
+<table>
+  <tr><td style='text-align: right'><%= Badge.count %>   </td><td>Badges</td></tr>
+  <tr><td style='text-align: right'><%= City.count %>    </td><td>Cities</td></tr>
+  <tr><td style='text-align: right'><%= Country.count %> </td><td>Countries</td></tr>
+  <tr><td style='text-align: right'><%= Event.count %>   </td><td>Events</td></tr>
+  <tr><td style='text-align: right'><%= Game.count %>    </td><td>Games</td></tr>
+  <tr><td style='text-align: right'><%= Group.count %>   </td><td>Groups</td></tr>
+  <tr><td style='text-align: right'><%= League.count %>  </td><td>Leagues</td></tr>
+  <tr><td style='text-align: right'><%= Region.count %>  </td><td>Regions</td></tr>
+  <tr><td style='text-align: right'><%= Round.count %>   </td><td>Rounds</td></tr>
+  <tr><td style='text-align: right'><%= Season.count %>  </td><td>Seasons</td></tr>
+  <tr><td style='text-align: right'><%= Team.count %>    </td><td>Teams</td></tr>
+  <tr><td></td><td></td></tr>
+  <tr><td style='text-align: right'><%= Badge.count+
+              City.count+
+              Country.count+
+              Event.count+
+              Game.count+
+              Group.count+
+              League.count+
+              Region.count+
+              Round.count+
+              Season.count+
+              Team.count  %></td><td>Total</td></tr>
+</table>
+

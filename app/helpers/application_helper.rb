@@ -3,8 +3,9 @@ module ApplicationHelper
   def powered_by
     ## todo/fix: use version from wettpool module
     content_tag :div do
-      link_to( 'sport.db.admin/1', 'https://github.com/geraldb/sport.db.admin' )  + ', ' +
-      link_to( "sport.db/#{SportDB::VERSION}", 'https://github.com/geraldb/sport.db' ) + ' - ' +
+      link_to( 'Questions? Comments?', 'http://groups.google.com/group/opensport' ) + " | " +
+      link_to( "sport.db/#{SportDB::VERSION}", 'https://github.com/geraldb/sport.db' )  + ', ' +
+      link_to( 'sport.db.admin/1', 'https://github.com/geraldb/sport.db.admin' ) + ' - ' + 
       content_tag( :span, "Ruby/#{RUBY_VERSION} (#{RUBY_RELEASE_DATE}/#{RUBY_PLATFORM}) on") + ' ' +
       content_tag( :span, "Rails/#{Rails.version} (#{Rails.env})" ) + " | " + 
       link_to( 'Icon Drawer Flags', 'http://www.icondrawer.com' )
