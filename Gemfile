@@ -9,7 +9,7 @@ gem 'rails', '3.2.1'
 ############
 ## lets use open sport.db schema & fixtures
 
-gem 'sportdb', '0.6.0'
+gem 'sportdb', '0.7.1'
 
 
 group :production do

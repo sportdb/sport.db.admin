@@ -23,19 +23,25 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   end
 
   create_table "cities", :force => true do |t|
-    t.string   "title",      :null => false
-    t.string   "key",        :null => false
+    t.string   "title",                         :null => false
+    t.string   "key",                           :null => false
     t.string   "synonyms"
-    t.integer  "country_id", :null => false
+    t.integer  "country_id",                    :null => false
     t.integer  "region_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "pop"
+    t.integer  "area"
+    t.boolean  "capital",    :default => false, :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "countries", :force => true do |t|
     t.string   "title",      :null => false
-    t.string   "tag",        :null => false
     t.string   "key",        :null => false
+    t.string   "tag",        :null => false
+    t.string   "synonyms"
+    t.integer  "pop"
+    t.integer  "area"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -131,7 +137,10 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   create_table "regions", :force => true do |t|
     t.string   "title",      :null => false
     t.string   "key",        :null => false
+    t.string   "synonyms"
     t.integer  "country_id", :null => false
+    t.integer  "pop"
+    t.integer  "area"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -7,7 +7,7 @@
 #  title      :string(255)     not null
 #  title2     :string(255)
 #  pos        :integer         not null
-#  playoff    :boolean         default(FALSE), not null
+#  knockout   :boolean         default(FALSE), not null
 #  start_at   :datetime        not null
 #  end_at     :datetime
 #  created_at :datetime        not null

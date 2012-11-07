@@ -2,21 +2,25 @@
 desc "sportdb: load all seed data from sportdb gem"
 task :sportdb_load => [:environment] do |t|
   
+  WorldDB.delete!  # danger zone! deletes all records
   SportDB.delete!  # danger zone! deletes all records
   
-  SportDB.load([
+  WorldDB.load([
    'countries',
    'cities',
+   'at/cities',
+   'de/cities'
+  ])
+  
+  SportDB.load([
    'leagues',
    'seasons',
-   'at/cities',
    'at/teams',
    'at/badges',
    'at/2011_12/bl',
    'at/2011_12/cup',
    'at/2012_13/bl',
    'at/2012_13/cup',
-   'de/cities',
    'de/teams',
    'en/teams',
    'cl/teams',
