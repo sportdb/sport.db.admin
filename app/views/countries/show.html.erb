@@ -2,7 +2,7 @@
 <h3>
 <%= image_tag "flags/24x24/#{@country.key}.png" %>
 <%= @country.title %> 
-(<%= @country.tag %>)
+(<%= @country.code %>)
 </h3>
 
 <h4><%= @country.regions.count %> Regions</h4>
@@ -95,7 +95,7 @@
        <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
      </td>
      <td>
-       <%= "(#{team.tag})" if team.tag.present? %>
+       <%= "(#{team.code})" if team.code.present? %>
      </td>
      <td>
        <%= team.title2  if team.title2.present? %>

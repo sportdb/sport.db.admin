@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+WorldDB.delete!  # danger zone! deletes all records
+SportDB.delete!  # danger zone! deletes all records
+
+WorldDB.read_all
+
+SportDB.load_all # ruby fixtures
+SportDB.read_all # plaint text fixtures

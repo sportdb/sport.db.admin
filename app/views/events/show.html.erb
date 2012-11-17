@@ -14,7 +14,7 @@
         <%= link_to team.title, team_path( team ) %>
      </td>
      <td>
-       <%= "(#{team.tag})" if team.tag.present? %>
+       <%= "(#{team.code})" if team.code.present? %>
      </td>
      <td>
        <%= team.title2  if team.title2.present? %>
@@ -28,7 +28,7 @@
      <td>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
        <%= link_to team.country.title, country_path( team.country ) %>
-       (<%= team.country.tag %>)
+       (<%= team.country.code %>)
      <td>
 <% end %>
    </tr>
