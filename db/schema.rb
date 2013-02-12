@@ -29,27 +29,44 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.string   "synonyms"
     t.integer  "country_id",                    :null => false
     t.integer  "region_id"
+    t.integer  "city_id"
     t.integer  "pop"
+    t.integer  "popm"
     t.integer  "area"
-    t.boolean  "capital",    :default => false, :null => false
+    t.float    "lat"
+    t.float    "lng"
+    t.boolean  "m",          :default => false, :null => false
+    t.boolean  "c",          :default => false, :null => false
+    t.boolean  "d",          :default => false, :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
 
   create_table "countries", :force => true do |t|
-    t.string   "title",      :null => false
-    t.string   "key",        :null => false
-    t.string   "code",       :null => false
+    t.string   "title",                         :null => false
+    t.string   "key",                           :null => false
+    t.string   "code",                          :null => false
     t.string   "synonyms"
+    t.integer  "pop",                           :null => false
+    t.integer  "area",                          :null => false
+    t.integer  "country_id"
+    t.boolean  "s",          :default => false, :null => false
+    t.boolean  "c",          :default => false, :null => false
+    t.boolean  "d",          :default => false, :null => false
     t.string   "motor"
-    t.integer  "pop"
-    t.integer  "area"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "iso2"
+    t.string   "iso3"
+    t.string   "fifa"
+    t.string   "net"
+    t.string   "wikipedia"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
+  add_index "countries", ["code"], :name => "index_countries_on_code", :unique => true
+  add_index "countries", ["key"], :name => "index_countries_on_key", :unique => true
+
   create_table "events", :force => true do |t|
-    t.string   "title",                        :null => false
     t.string   "key",                          :null => false
     t.integer  "league_id",                    :null => false
     t.integer  "season_id",                    :null => false
@@ -121,6 +138,13 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   add_index "groups_teams", ["group_id", "team_id"], :name => "index_groups_teams_on_group_id_and_team_id", :unique => true
   add_index "groups_teams", ["group_id"], :name => "index_groups_teams_on_group_id"
 
+  create_table "langs", :force => true do |t|
+    t.string   "key",        :null => false
+    t.string   "title",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "leagues", :force => true do |t|
     t.string   "key",                           :null => false
     t.string   "title",                         :null => false
@@ -140,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   create_table "regions", :force => true do |t|
     t.string   "title",      :null => false
     t.string   "key",        :null => false
+    t.string   "code"
     t.string   "synonyms"
     t.integer  "country_id", :null => false
     t.integer  "pop"
@@ -147,6 +172,8 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "regions", ["key", "country_id"], :name => "index_regions_on_key_and_country_id", :unique => true
 
   create_table "rounds", :force => true do |t|
     t.integer  "event_id",                      :null => false
@@ -181,11 +208,15 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   add_index "taggings", ["taggable_id", "taggable_type"], :name => "index_taggings_on_taggable_id_and_taggable_type"
 
   create_table "tags", :force => true do |t|
-    t.string   "key",        :null => false
+    t.string   "key",                       :null => false
+    t.string   "slug",                      :null => false
     t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "grade",      :default => 1, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
+
+  add_index "tags", ["key"], :name => "index_tags_on_key", :unique => true
 
   create_table "teams", :force => true do |t|
     t.string   "title",                         :null => false
@@ -202,5 +233,15 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
   end
 
   add_index "teams", ["key"], :name => "index_teams_on_key", :unique => true
+
+  create_table "usages", :force => true do |t|
+    t.integer  "country_id",                    :null => false
+    t.integer  "lang_id",                       :null => false
+    t.boolean  "official",   :default => true,  :null => false
+    t.boolean  "minor",      :default => false, :null => false
+    t.float    "percent"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
 
 end
