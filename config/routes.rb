@@ -1,6 +1,8 @@
+
 Sportdb::Application.routes.draw do
   
   match 'about',    :to => 'pages#about'
+  match 'logs',     :to => 'logs#index'
   
   resources :countries
   resources :rounds

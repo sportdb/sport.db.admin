@@ -11,8 +11,12 @@ gem 'rails', '3.2.12'
 
 # gem 'sportdb', '0.8.0'
 
-gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
-gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
+# gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
+# gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
+
+gem "worlddb-data", "999", :path => "../world.db"
+gem "sportdb-data", "999", :path => "../football.db"
+
 
 gem "logutils", "0.1.0",  :path => "../logutils"
 
@@ -46,18 +50,3 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
