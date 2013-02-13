@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/geraldb/football.db.git
-  revision: b5b04f2ed20474958a115935227838fc2234c92e
+  revision: e7ea71787cfc4e5ebc8b67d97f224c79f34ecb53
   specs:
     sportdb-data (99)
 
@@ -9,6 +9,11 @@ GIT
   revision: 9ed98b0c722f64eb283fc66c7fe69a42346ad747
   specs:
     worlddb-data (99)
+
+PATH
+  remote: ../logutils
+  specs:
+    logutils (0.1.0)
 
 PATH
   remote: ../sport.db.ruby
@@ -141,6 +146,7 @@ DEPENDENCIES
   annotate (~> 2.4.1.beta)
   coffee-rails (~> 3.2.1)
   jquery-rails
+  logutils (= 0.1.0)!
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)

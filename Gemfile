@@ -14,6 +14,8 @@ gem 'rails', '3.2.12'
 gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
 gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
 
+gem "logutils", "0.1.0",  :path => "../logutils"
+
 gem "worlddb", "0.10.0", :path => "../world.db.ruby"
 gem "sportdb", "0.10.0", :path => "../sport.db.ruby"
 
