@@ -1,25 +1,36 @@
-PATH
-  remote: ../football.db
+GIT
+  remote: git://github.com/geraldb/football.db.git
+  revision: d2e53023afaacbad241a7d1aefc398b4ef3842d4
   specs:
-    sportdb-data (999)
+    sportdb-data (99)
 
-PATH
-  remote: ../logutils
+GIT
+  remote: git://github.com/geraldb/logutils
+  revision: 1fc071e2c0eeef03c401ddbfa006925840304728
   specs:
     logutils (0.1.0)
 
-PATH
-  remote: ../sport.db.ruby
+GIT
+  remote: git://github.com/geraldb/sport.db.ruby.git
+  revision: 2dfc4210d89511e7cf62e35317a7296cfbe6ada0
   specs:
     sportdb (0.10.0)
 
-PATH
-  remote: ../world.db
+GIT
+  remote: git://github.com/geraldb/textutils
+  revision: 69eca87f069fbb8d666c8c3d6b2441db3a28015e
   specs:
-    worlddb-data (999)
+    textutils (0.3.0)
 
-PATH
-  remote: ../world.db.ruby
+GIT
+  remote: git://github.com/geraldb/world.db.git
+  revision: 9ed98b0c722f64eb283fc66c7fe69a42346ad747
+  specs:
+    worlddb-data (99)
+
+GIT
+  remote: git://github.com/geraldb/world.db.ruby.git
+  revision: ad86860307db528cce4c1a24d7df4bc8112ddba6
   specs:
     worlddb (0.10.0)
 
@@ -149,9 +160,10 @@ DEPENDENCIES
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sportdb (= 0.10.0)!
-  sportdb-data (= 999)!
+  sportdb-data (= 99)!
   sqlite3
+  textutils (= 0.3.0)!
   thin
   uglifier (>= 1.0.3)
   worlddb (= 0.10.0)!
-  worlddb-data (= 999)!
+  worlddb-data (= 99)!

@@ -154,6 +154,18 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "logs", :force => true do |t|
+    t.string   "msg",        :null => false
+    t.string   "level",      :null => false
+    t.string   "app"
+    t.string   "tag"
+    t.integer  "pid"
+    t.string   "tid"
+    t.string   "ts"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "props", :force => true do |t|
     t.string   "key",        :null => false
     t.string   "value",      :null => false

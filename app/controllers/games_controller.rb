@@ -13,7 +13,15 @@ class GamesController < ApplicationController
   def past
     limit = params[:limit] || '50'
     
-    @games = Game.where( 'play_at < ?', Time.now ).order( 'play_at desc').limit(limit)
+    if params[:null].present?   # e.g. use ?null=t
+      ## find all past games w/ missing score
+      @games = Game.where( 'play_at < ?', Time.now ).
+                    where( 'score1 is null or score2 is null').
+                    order( 'play_at desc').limit(limit)
+    else
+      @games = Game.where( 'play_at < ?', Time.now ).order( 'play_at desc').limit(limit)
+    end
+    
     @show_upcoming = false
     
     render :action => 'index'

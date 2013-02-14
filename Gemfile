@@ -2,26 +2,29 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 ############
 # lets use open sport.db schema & fixtures
 
 # gem 'sportdb', '0.8.0'
 
-# gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
-# gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
+gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
+gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
 
-gem "worlddb-data", "999", :path => "../world.db"
-gem "sportdb-data", "999", :path => "../football.db"
+gem "logutils", "0.1.0",  :git => "git://github.com/geraldb/logutils"
+gem "textutils", "0.3.0", :git => "git://github.com/geraldb/textutils"
+
+gem "worlddb", "0.10.0", :git => "git://github.com/geraldb/world.db.ruby.git"
+gem "sportdb", "0.10.0", :git => "git://github.com/geraldb/sport.db.ruby.git"
 
 
-gem "logutils", "0.1.0",  :path => "../logutils"
+# gem "worlddb-data", "999", :path => "../world.db"
+# gem "sportdb-data", "999", :path => "../football.db"
 
-gem "worlddb", "0.10.0", :path => "../world.db.ruby"
-gem "sportdb", "0.10.0", :path => "../sport.db.ruby"
+# gem "logutils", "0.1.0",  :path => "../logutils"
+# gem "textutils", "0.3.0",  :path => "../textutils"
+
+# gem "worlddb", "0.10.0", :path => "../world.db.ruby"
+# gem "sportdb", "0.10.0", :path => "../sport.db.ruby"
 
 
 
