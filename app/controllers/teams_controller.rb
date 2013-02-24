@@ -9,6 +9,12 @@ class TeamsController < ApplicationController
     @club_teams     = Team.where( club: true ).order( 'country_id' ).all
   end
 
+  # GET /:key  e.g  /barcelona or /rapid etc.
+  def shortcut
+    @team = Team.find_by_key!( params[:key] )
+    render :show
+  end
+
   # GET /teams/1
   def show
     @team = Team.find(params[:id])

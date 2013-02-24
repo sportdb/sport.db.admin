@@ -21,7 +21,7 @@
    <td style='white-space: nowrap;'>
     <% if league.country.present? %>
        <%= image_tag "flags/24x24/#{league.country.key}.png" %>
-       <%= link_to league.country.title, country_path(league.country) %>
+       <%= link_to league.country.title, short_country_path(league.country) %>
        (<%= league.country.code %>)
     <% end %>
    </td>

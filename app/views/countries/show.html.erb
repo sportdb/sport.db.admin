@@ -5,6 +5,52 @@
 (<%= @country.code %>)
 </h3>
 
+
+<h4><%= @country.leagues.count %> Leagues</h4>
+
+<table>
+ <% @country.leagues.each do |league| %>
+ <tr>
+   <td class='league-key'><%= league.key %></td>
+   <td><%= league.title %></td>
+   <td>
+    <span class='event-count'>
+      (<%= league.events.count %>)
+    </span>
+   </td>
+   <td>
+     <% league.events.each_with_index do |event,index| %>
+          <%= '•' if index > 0 %>
+          <%= link_to event.season.title, event_path(event) %>
+     <% end %>
+   </td>
+ </tr>
+ <% end %>
+</table>
+
+
+<h4><%= @country.teams.count %> Teams</h4>
+
+
+<table>
+ <% @country.teams.each do |team| %>
+   <tr>
+     <td class='team-key'><%= team.key %></td>
+     <td>
+       <%= link_to team.title, short_team_path( team ) %>
+       <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
+     </td>
+     <td>
+       <%= "(#{team.code})" if team.code.present? %>
+     </td>
+     <td>
+       <%= team.title2  if team.title2.present? %>
+     </td>
+   </tr>
+ <% end %><!-- teams.each -->
+</table>
+
+
 <h4><%= @country.regions.count %> Regions</h4>
 
 <table>
@@ -53,54 +99,9 @@
       <td>
         <% city.teams.each_with_index do |team,index| %>
           <%= '•' if index > 0 %>
-          <%= link_to team.title, team_path(team) %>
+          <%= link_to team.title, short_team_path(team) %>
         <% end %><!-- each team -->
       </td>
     </tr>
   <% end %> <!-- each city -->
 </table>
-
-<h4><%= @country.leagues.count %> Leagues</h4>
-
-<table>
- <% @country.leagues.each do |league| %>
- <tr>
-   <td class='league-key'><%= league.key %></td>
-   <td><%= league.title %></td>
-   <td>
-    <span class='event-count'>
-      (<%= league.events.count %>)
-    </span>
-   </td>
-   <td>
-     <% league.events.each_with_index do |event,index| %>
-          <%= '•' if index > 0 %>
-          <%= link_to event.season.title, event_path(event) %>
-     <% end %>
-   </td>
- </tr>
- <% end %>
-</table>
-
-
-<h4><%= @country.teams.count %> Teams</h4>
-
-
-<table>
- <% @country.teams.each do |team| %>
-   <tr>
-     <td class='team-key'><%= team.key %></td>
-     <td>
-       <%= link_to team.title, team_path( team ) %>
-       <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
-     </td>
-     <td>
-       <%= "(#{team.code})" if team.code.present? %>
-     </td>
-     <td>
-       <%= team.title2  if team.title2.present? %>
-     </td>
-   </tr>
- <% end %><!-- teams.each -->
-</table>
-

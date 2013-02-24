@@ -160,7 +160,7 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.string   "app"
     t.string   "tag"
     t.integer  "pid"
-    t.string   "tid"
+    t.integer  "tid"
     t.string   "ts"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

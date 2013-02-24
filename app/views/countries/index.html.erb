@@ -10,7 +10,7 @@
     </td>
     <td style='white-space: nowrap;'>
 <%= image_tag "flags/24x24/#{country.key}.png" %>  
-<%= link_to country.title, country_path( country ) %>
+<%= link_to country.title, short_country_path( country ) %>
     </td>
     <td>
       (<%= country.code %>)
@@ -30,6 +30,7 @@
 <% end %><!-- each country -->
 </table>
 
+<!-- fix: move to its own view -->
 
 <h3><%= Region.count %> Regions</h3>
 
@@ -43,7 +44,7 @@
     </td>
     <td style='white-space: nowrap; vertical-align: top;'>
 <%= image_tag "flags/24x24/#{country.key}.png" %>  
-<%= link_to country.title, country_path( country ) %>
+<%= link_to country.title, short_country_path( country ) %>
     </td>
     <td  style='vertical-align: top;'>
       (<%= country.code %>)

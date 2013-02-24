@@ -8,7 +8,7 @@
    <tr>
      <td class='team-key'><%= team.key %></td>
      <td>
-       <%= link_to team.title, team_path( team ) %>
+       <%= link_to team.title, short_team_path( team ) %>
      </td>
      <td>
        <%= "(#{team.code})" if team.code.present? %>
@@ -21,7 +21,7 @@
      </td>
      <td>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, country_path(team.country) %>
+       <%= link_to team.country.title, short_country_path(team.country) %>
        (<%= team.country.code %>)
      <td>
      
@@ -37,7 +37,7 @@
    <tr>
      <td class='team-key'><%= team.key %></td>
      <td>
-       <%= link_to team.title, team_path( team ) %>
+       <%= link_to team.title, short_team_path( team ) %>
        <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
      </td>
      <td>
@@ -51,7 +51,7 @@
      </td>
      <td style='white-space: nowrap;'>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, country_path(team.country) %>
+       <%= link_to team.country.title, short_country_path(team.country) %>
        (<%= team.country.code %>)
        <% if team.city.present? %>
           <%= ", #{team.city.title}" %>

@@ -11,7 +11,7 @@
         <% if team.national? %>
           <%= image_tag "flags/32x32/#{team.country.key}.png" %>
         <% end %>
-        <%= link_to team.title, team_path( team ) %>
+        <%= link_to team.title, short_team_path( team ) %>
      </td>
      <td>
        <%= "(#{team.code})" if team.code.present? %>
@@ -27,7 +27,7 @@
      </td>
      <td>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, country_path( team.country ) %>
+       <%= link_to team.country.title, short_country_path( team.country ) %>
        (<%= team.country.code %>)
      <td>
 <% end %>
@@ -59,7 +59,7 @@
     <% if team.national? %>
       <%= image_tag "flags/32x32/#{team.country.key}.png" %>
     <% end %>
-    <%= link_to team.title, team_path( team ) %>
+    <%= link_to team.title, short_team_path( team ) %>
    </td>
   <% end %>
 </tr>
