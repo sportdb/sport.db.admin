@@ -6,25 +6,12 @@ Sportdb::Application.routes.draw do
   
   ###
   # mount sinatra app (bundled into sportdb-service gem) for json api service
-  
-  ## match '/api/v1' => SportDB::Service::Service, :anchor => false
-  ## mount SportDB::Service::Service => '/api'
-  
-  
-  #####
-  # NB: only works with http://localhost:3000/api/  for now e.g. requires api/
-  #       only http://localhost:3000/api will NOT work - check why and how to fix
-  
+
   # todo: add  JSON API link to layout
-  # todo add js basedocumenturl or similar to link in erb html and js
-  
-  match '/api'                 => SportDB::Service::Service, :anchor => false
-  match '/api(/*other_params)' => SportDB::Service::Service, :anchor => false
-  
-  # todo: check if mount => works - why not?
-  
-  # match '/api/v1'                 => SportDB::Service::Service, :anchor => false
-  # match '/api/v1(/*other_params)' => SportDB::Service::Service, :anchor => false
+ 
+  match '/api' => redirect('/api/v1')
+  mount SportDB::Service::Service, :at => '/api/v1'  
+
   
   #######################
   # add shortcut routing  (friendly urls)
