@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
+gem "sinatra"
+
 ############
 # lets use open sport.db schema & fixtures
 
 # gem 'sportdb', '0.8.0'
+
+gem "logutils", "0.6.0"
 
 gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
 gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
@@ -21,8 +25,8 @@ gem "sportdb", "1.3.0"
 
 # gem "sportdb-service", "0.1.0"    # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 
-gem "sinatra"
-gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
+gem "sportdb-service", "0.1.3"
+# gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
 
 # gem "worlddb-data", "999", :path => "../world.db"
 # gem "sportdb-data", "999", :path => "../football.db"

@@ -2,16 +2,18 @@
 Sportdb::Application.routes.draw do
   
   match 'about',    :to => 'pages#about'
-  match 'logs',     :to => 'logs#index'
   
   ###
-  # mount sinatra app (bundled into sportdb-service gem) for json api service
+  # mount sinatra app (bundled w/ sportdb-service gem) for json api service
 
   # todo: add  JSON API link to layout
- 
-  match '/api' => redirect('/api/v1')
-  mount SportDB::Service::Service, :at => '/api/v1'  
 
+  match '/api' => redirect('/api/v1')
+  mount SportDB::Service::Server, :at => '/api/v1'
+
+  ## mount sinatra app (bundled w/ logutils gem)
+  mount LogDb::Server, :at => '/logs'
+  
   
   #######################
   # add shortcut routing  (friendly urls)

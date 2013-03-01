@@ -1,10 +1,6 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 
-# Initialize the rails application
-Sportdb::Application.initialize!
-
-
 ######################
 # logging config
 
@@ -14,4 +10,10 @@ Sportdb::Application.initialize!
 require 'logutils/db'
 
 LogUtils::Logger.root.level = :info    # do not output debug msgs
+
+
+# Initialize the rails application
+Sportdb::Application.initialize!
+
+
 
