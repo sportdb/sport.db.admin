@@ -55,7 +55,7 @@ Sportdb::Application.routes.draw do
   #
   # shortcut -- 3+ letters  (w/ digits w/ dots) - assume shortcut for event
   match '/:key', :to => 'events#shortcut', :as => :short_event_worker,
-    :key => /.+\.[0-9_]/   # for now -> must end with   .2012 or .2012_13 etc.
+    :key => /.+\.[0-9_]+/   # for now -> must end with   .2012 or .2012_13 etc.
 
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team
