@@ -1,5 +1,9 @@
 
+puts "[debug] routes.rb - before Application.routes.draw"
+
 Sportdb::Application.routes.draw do
+  
+  puts "[debug] routes.rb - enter Application.routes.draw"
   
   match 'about',    :to => 'pages#about'
   
@@ -9,10 +13,10 @@ Sportdb::Application.routes.draw do
   # todo: add  JSON API link to layout
 
   match '/api' => redirect('/api/v1')
-  mount SportDB::Service::Server, :at => '/api/v1'
+  mount SportDB::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
 
   ## mount sinatra app (bundled w/ logutils gem)
-  mount LogDb::Server, :at => '/logs'
+  mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
   
   
   #######################
@@ -52,5 +56,9 @@ Sportdb::Application.routes.draw do
 
 
   root :to => 'games#index'
+  
+   puts "[debug] routes.rb - leave Application.routes.draw"
 
 end
+
+puts "[debug] routes.rb - after Application.routes.draw"

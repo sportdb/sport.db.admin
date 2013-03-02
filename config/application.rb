@@ -1,6 +1,14 @@
-require File.expand_path('../boot', __FILE__)
 
+
+puts "[debug] application.rb - before require 'boot'"
+require File.expand_path('../boot', __FILE__)
+puts "[debug] application.rb - after require 'boot'"
+
+
+puts "[debug] application.rb - before require 'rails/all'"
 require 'rails/all'
+puts "[debug] application.rb - after require 'rails/all'"
+
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -8,6 +16,9 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
+
+
+puts "[debug] application.rb - before Application"
 
 module Sportdb
   class Application < Rails::Application
@@ -59,3 +70,5 @@ module Sportdb
     config.assets.initialize_on_precompile = false
   end
 end
+
+puts "[debug] application.rb - after Application"
