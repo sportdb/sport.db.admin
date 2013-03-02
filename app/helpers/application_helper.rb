@@ -1,5 +1,24 @@
 module ApplicationHelper
 
+  def game_team1_style_class( game )
+    ## fix: move to game model in game.rb
+    buf = ''
+    buf << game.team1_style_class
+    buf << ' game-knockout ' if game.knockout?
+    ### fix: loser - add method for checking winner/loser on ko pairs using (1st leg/2nd leg totals)
+    buf << ' game-team-loser '  if game.complete? && (game.score1 < game.score2)
+    buf
+  end
+  
+  def game_team2_style_class( game )
+    ## fix: move to game model in game.rb
+    buf = ''
+    buf << game.team2_style_class
+    buf << ' game-knockout ' if game.knockout?
+    buf << ' game-team-loser '  if game.complete? && (game.score1 > game.score2)
+    buf
+  end
+
   def powered_by
     ## todo/fix: use version from wettpool module
     content_tag :div do

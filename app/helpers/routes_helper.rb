@@ -13,5 +13,10 @@ module RoutesHelper
     short_team_worker_path( team.key )
   end
 
+  def short_event_path( event )
+    key = event.key.tr('/', '_')
+    short_event_worker_path( key )
+  end
+
 end # module RoutesHelper
 

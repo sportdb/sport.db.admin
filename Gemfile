@@ -20,8 +20,8 @@ gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
 # gem "worlddb", "0.10.0", :git => "git://github.com/geraldb/world.db.ruby.git"
 # gem "sportdb", "0.10.0", :git => "git://github.com/geraldb/sport.db.ruby.git"
 
-gem "worlddb", "1.3.0"
-gem "sportdb", "1.3.0"
+gem "worlddb", "1.4.0"
+gem "sportdb", "1.4.1"
 
 # gem "sportdb-service", "0.1.0"    # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 

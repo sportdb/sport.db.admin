@@ -8,7 +8,7 @@
 
 
 <td class='game-team1' style='text-align: right;'>
-  <span class=''>
+  <span class='<%= game_team1_style_class( game ) %>'>
     <%= link_to game.team1.title, short_team_path( game.team1 ) %>
   </span>
   <%= "(#{game.team1.title2})" if game.team1.title2.present? %>

@@ -12,4 +12,10 @@ class EventsController < ApplicationController
     @event = Event.find( params[:id] )
   end
   
+  # GET /:key  e.g  /euro.2012  or /at.2011_12 etc.
+  def shortcut
+    @event = Event.find_by_key!( params[:key].tr('_','/') )
+    render :show
+  end
+  
 end # class EventsController

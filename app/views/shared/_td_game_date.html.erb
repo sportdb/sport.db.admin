@@ -1,3 +1,4 @@
 <td class='game-date'>
-  <%= game.play_at %>
+  <%= game.play_at.strftime('(%a) %Y-%b-%-d / %H:%M %Z' ) %>
+  <!-- e.g. Sun, 12 March, 2011 / 20:11-->
 </td>

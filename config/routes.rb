@@ -25,10 +25,6 @@ Sportdb::Application.routes.draw do
   #  two letters (e.g. at,mx,us) assume country (fix!!  az for Alkmaar in nl)
   #    - do NOT allow two letter keys
   #
-  #  todo/todo:
-  #
-  #  todo: allow multiple shortcuts for years e.g.  de1 -> bundesliga current/last season
-  #       euro2012 or euro12  12->2012    de12 -> bundesliga 11/12
   #   
   #  short-cut [a-z]+[0-9.\]+ for event
   #   - NOT team keys can NOT contain numbers
@@ -42,12 +38,24 @@ Sportdb::Application.routes.draw do
   
   
   resources :countries
+  resources :regions
   resources :rounds
   resources :events
   resources :teams
   resources :games do
     get 'past',   :on => :collection
   end
+
+  ###################
+  #  - nb: event key must contain dots
+  #  todo/todo:
+  #
+  #  todo: allow multiple shortcuts for years e.g.  de1 -> bundesliga current/last season
+  #       euro2012 or euro12  12->2012    de12 -> bundesliga 11/12
+  #
+  # shortcut -- 3+ letters  (w/ digits w/ dots) - assume shortcut for event
+  match '/:key', :to => 'events#shortcut', :as => :short_event_worker,
+    :key => /.+\.[0-9_]{4,}/   # for now -> must end with   .2012 or .2012_13 etc.
 
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team

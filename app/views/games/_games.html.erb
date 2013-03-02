@@ -39,8 +39,12 @@
   <%= render_game_score( game ) %>
   <%= render_game_team2( game ) %>
 
+  <td>
+      <%= "[k.o.]" if game.knockout? %>
+  </td>
+
   <td class='game-round'>
-    (<%= link_to game.round.event.title, event_path( game.round.event ) %> / <%= game.round.title %>)
+    (<%= link_to game.round.event.title, short_event_path( game.round.event ) %> / <%= game.round.title %>)
   </td>
   
    

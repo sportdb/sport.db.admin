@@ -30,6 +30,12 @@
 <% end %>
 </p>
 
+<ul>
+  <% @team.events.each do |event| %>
+      <li><%= link_to event.full_title, short_event_path(event) %></li>
+  <% end %>
+</ul>
+
 
 <!-- todo: use different css class e.g. db?? -->
 <table class='play'>
@@ -42,9 +48,13 @@
 <%= render_game_score( game ) %>
 <%= render_game_team2( game ) %>
 
+<td>
+   <%= "[k.o.]" if game.knockout? %>
+</td>
+
 <!-- fix/todo: use part helper -->
 <td class='game-round'>
-  (<%= link_to game.round.event.title, event_path(game.round.event) %> - <%= game.round.title %>)
+  (<%= link_to game.round.event.full_title, short_event_path(game.round.event) %> - <%= game.round.title %>)
 <td>
 
 </tr>

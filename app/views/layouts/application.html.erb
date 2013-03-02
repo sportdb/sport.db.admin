@@ -12,10 +12,13 @@
   <%= link_to 'Events', events_path() %>  &bull;
   <%= link_to 'Teams', teams_path() %>  &bull;
   <%= link_to 'Countries & Cities', countries_path() %>  &bull;  
+  <%= link_to 'Regions', regions_path() %>  &bull;  
   <%= link_to 'Rounds', rounds_path() %>  &bull;
   <%= link_to 'Past Games', past_games_path() %> &bull;
   <%= link_to 'Upcoming Games', games_path() %>  &bull;
-  <%= link_to 'About', about_path() %>   .::.  
+  <%= link_to 'About', about_path() %>   .::.
+  
+  <!-- fix: use named url_helper for /api -->
   <%= link_to "Web Service Demo & Docu / JSON API", '/api' %>
   <!-- todo: add some more links -->
  </p>

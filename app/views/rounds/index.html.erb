@@ -35,7 +35,7 @@
        <%= round.start_at.strftime( '%b/%d %a') %>
      </td>
      <td>
-       <%= link_to round.event.title, event_path( round.event ) %>
+       <%= link_to round.event.full_title, short_event_path( round.event ) %>
      </td>
      <td>
         <%= round.title %>
