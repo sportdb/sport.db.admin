@@ -100,14 +100,22 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.boolean  "home",         :default => true,  :null => false
     t.integer  "score1"
     t.integer  "score2"
-    t.integer  "score3"
-    t.integer  "score4"
-    t.integer  "score5"
-    t.integer  "score6"
+    t.integer  "score1ot"
+    t.integer  "score2ot"
+    t.integer  "score1p"
+    t.integer  "score2p"
+    t.integer  "score1i"
+    t.integer  "score2i"
+    t.integer  "score1ii"
+    t.integer  "score2ii"
     t.integer  "next_game_id"
     t.integer  "prev_game_id"
     t.string   "toto12x"
     t.string   "key"
+    t.integer  "score3"
+    t.integer  "score4"
+    t.integer  "score5"
+    t.integer  "score6"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
