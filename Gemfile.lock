@@ -1,11 +1,11 @@
 GIT
-  remote: git://github.com/geraldb/football.db.git
+  remote: https://github.com/geraldb/football.db.git
   revision: 43f4edee84fba692813c5c717931992173a13e3d
   specs:
     sportdb-data (99)
 
 GIT
-  remote: git://github.com/geraldb/world.db.git
+  remote: https://github.com/geraldb/world.db.git
   revision: 0b675bb1ff29f41880c1222ee1e405ff8b2cfd19
   specs:
     worlddb-data (99)

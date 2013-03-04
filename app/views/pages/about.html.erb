@@ -12,16 +12,26 @@ A free open sports database &amp; schema.
 
 <table>
   <tr><td style='text-align: right'><%= Badge.count %>   </td><td>Badges</td></tr>
-  <tr><td style='text-align: right'><%= City.count %>    </td><td>Cities</td></tr>
-  <tr><td style='text-align: right'><%= Country.count %> </td><td>Countries</td></tr>
   <tr><td style='text-align: right'><%= Event.count %>   </td><td>Events</td></tr>
   <tr><td style='text-align: right'><%= Game.count %>    </td><td>Games</td></tr>
   <tr><td style='text-align: right'><%= Group.count %>   </td><td>Groups</td></tr>
   <tr><td style='text-align: right'><%= League.count %>  </td><td>Leagues</td></tr>
-  <tr><td style='text-align: right'><%= Region.count %>  </td><td>Regions</td></tr>
   <tr><td style='text-align: right'><%= Round.count %>   </td><td>Rounds</td></tr>
   <tr><td style='text-align: right'><%= Season.count %>  </td><td>Seasons</td></tr>
   <tr><td style='text-align: right'><%= Team.count %>    </td><td>Teams</td></tr>
+
+  <!-- todo: split in two sections, that is, world.db and sport.db -->
+  
+  <tr><td style='text-align: right'><%= Country.count %> </td><td>Countries</td></tr>
+  <tr><td style='text-align: right'><%= Region.count %>  </td><td>Regions</td></tr>
+  <tr><td style='text-align: right'><%= City.count %>    </td><td>Cities</td></tr>
+  <tr><td style='text-align: right'><%= WorldDB::Models::Tag.count %>    </td><td>Tags</td></tr>
+  <tr><td style='text-align: right'><%= WorldDB::Models::Tagging.count %>    </td><td>Taggings</td></tr>
+
+  <!-- todo: add prop count -->
+
+  <tr><td style='text-align: right'><%= LogDb::Models::Log.count %>   </td><td>Logs</td></tr>
+  
   <tr><td></td><td></td></tr>
   <tr><td style='text-align: right'><%= Badge.count+
               City.count+
@@ -33,6 +43,9 @@ A free open sports database &amp; schema.
               Region.count+
               Round.count+
               Season.count+
-              Team.count  %></td><td>Total</td></tr>
+              Team.count+
+              LogDb::Models::Log.count + 
+              WorldDB::Models::Tag.count+
+              WorldDB::Models::Tagging.count %></td><td>Total</td></tr>
 </table>
 

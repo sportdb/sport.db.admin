@@ -11,8 +11,8 @@ gem "sinatra"
 
 gem "logutils", "0.6.0"
 
-gem "worlddb-data", "99", :git => "git://github.com/geraldb/world.db.git"
-gem "sportdb-data", "99", :git => "git://github.com/geraldb/football.db.git"
+gem "worlddb-data", "99", :git => "https://github.com/geraldb/world.db.git"
+gem "sportdb-data", "99", :git => "https://github.com/geraldb/football.db.git"
 
 # gem "logutils", "0.1.0",  :git => "git://github.com/geraldb/logutils"
 # gem "textutils", "0.3.0", :git => "git://github.com/geraldb/textutils"
