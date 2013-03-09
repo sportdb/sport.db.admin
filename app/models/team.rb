@@ -17,4 +17,4 @@
 #
 
 
-Team = SportDB::Models::Team
+Team = SportDb::Models::Team

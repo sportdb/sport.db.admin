@@ -26,7 +26,7 @@
 #
 
 
-module SportDB::Models
+module SportDb::Models
 
 class Game
   
@@ -52,8 +52,8 @@ class Game
   
 end # class Game
 
-end # module SportDB::Models
+end # module SportDb::Models
 
 
 
-Game = SportDB::Models::Game
+Game = SportDb::Models::Game

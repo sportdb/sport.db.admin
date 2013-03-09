@@ -10,4 +10,4 @@
 #
 
 
-EventTeam = SportDB::Models::EventTeam
+EventTeam = SportDb::Models::EventTeam

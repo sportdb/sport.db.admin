@@ -15,4 +15,4 @@
 #
 
 
-Round = SportDB::Models::Round
+Round = SportDb::Models::Round

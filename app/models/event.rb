@@ -14,4 +14,4 @@
 #
 
 
-Event = SportDB::Models::Event
+Event = SportDb::Models::Event

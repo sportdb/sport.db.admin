@@ -10,5 +10,5 @@
 #
 
 
-Prop = SportDB::Models::Prop
+Prop = SportDb::Models::Prop
 

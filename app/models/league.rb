@@ -12,5 +12,5 @@
 #
 
 
-League = SportDB::Models::League
+League = SportDb::Models::League
 

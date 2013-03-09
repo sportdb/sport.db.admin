@@ -10,4 +10,4 @@
 #
 
 
-GroupTeam = SportDB::Models::GroupTeam
+GroupTeam = SportDb::Models::GroupTeam

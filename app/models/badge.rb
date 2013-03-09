@@ -12,5 +12,5 @@
 #
 
 
-Badge = SportDB::Models::Badge
+Badge = SportDb::Models::Badge
 

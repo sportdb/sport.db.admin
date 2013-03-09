@@ -10,5 +10,5 @@
 #
 
 
-Season = SportDB::Models::Season
+Season = SportDb::Models::Season
 
