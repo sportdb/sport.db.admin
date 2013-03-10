@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/geraldb/football.db.git
-  revision: 1a6806767788b0541ed170e568799a24bed0eea5
+  revision: 2f333257ef106f8b7de60eec6223bc306338cc50
   specs:
     sportdb-data (99)
 
@@ -112,7 +112,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
-    sportdb (1.6.2)
+    sportdb (1.6.3)
       commander (~> 4.1.3)
       worlddb (~> 1.6)
     sportdb-service (0.1.3)
@@ -157,7 +157,7 @@ DEPENDENCIES
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sinatra
-  sportdb (= 1.6.2)
+  sportdb (= 1.6.3)
   sportdb-data (= 99)!
   sportdb-service (= 0.1.3)
   sqlite3

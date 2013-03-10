@@ -16,8 +16,8 @@
       (<%= country.code %>)
     </td>
     <td  style='vertical-align: top;'>
-<span class='city-count'>
-(<%= country.regions.count %>)
+<span class='team-count'>
+(<%= country.teams.count %>)
 </span>
     </td>
     <td>
@@ -29,8 +29,8 @@
         <%= region.title %>
       </td>
       <td style='white-space: nowrap;'>
-      <span class='city-count'>
-          (<%= region.cities.count %>)
+      <span class='team-count'>
+           (<%= region.teams.count %>)
       </span>
         | 
       </td>
@@ -41,10 +41,6 @@
              (<%= city.teams.count %>)
            </span>
          <% end %><!-- each city -->
-         | 
-         <span class='team-count'>
-           (<%= region.teams.count %>)
-         </span>
       </td>
      </tr>
   <% end %> <!-- each region -->

@@ -18,6 +18,7 @@ pickle-email-*.html
 
 db/*.db
 db/sport.db
+db/sport.db-journal
 
 # Ignore komodo project files
 *.kpf

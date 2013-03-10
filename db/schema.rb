@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.string   "key",                          :null => false
     t.integer  "league_id",                    :null => false
     t.integer  "season_id",                    :null => false
-    t.datetime "start_at",                     :null => false
-    t.datetime "end_at"
+    t.date     "start_at",                     :null => false
+    t.date     "end_at"
     t.boolean  "team3",      :default => true, :null => false
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
@@ -112,10 +112,6 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.integer  "prev_game_id"
     t.string   "toto12x"
     t.string   "key"
-    t.integer  "score3"
-    t.integer  "score4"
-    t.integer  "score5"
-    t.integer  "score6"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
@@ -201,8 +197,8 @@ ActiveRecord::Schema.define(:version => 20121004210237) do
     t.string   "title2"
     t.integer  "pos",                           :null => false
     t.boolean  "knockout",   :default => false, :null => false
-    t.datetime "start_at",                      :null => false
-    t.datetime "end_at"
+    t.date     "start_at",                      :null => false
+    t.date     "end_at"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
