@@ -18,7 +18,10 @@ Sportdb::Application.routes.draw do
   ## mount sinatra app (bundled w/ logutils gem)
   mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
   
-  
+
+  match 'clubs',          :to => 'teams#index_clubs', :as => 'clubs'
+  match 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
+
   resources :countries
   resources :regions
   resources :rounds

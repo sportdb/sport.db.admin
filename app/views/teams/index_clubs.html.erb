@@ -1,0 +1,39 @@
+
+<h3><%= @teams.size %> Clubs</h3>
+
+<p>
+  Sort By: <%= link_to 'Key A-Z', clubs_path(order: 'key') %>  &bull;
+           <%= link_to 'Title A-Z', clubs_path(order: 'title') %>  &bull;
+           <%= link_to 'Code A-Z', clubs_path(order: 'code') %>
+</p>
+
+
+<table>
+ <% @teams.each do |team| %>
+   <tr>
+     <td class='team-key'><%= team.key %></td>
+     <td>
+       <%= link_to team.title, short_team_path( team ) %>
+       <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
+     </td>
+     <td>
+       <%= "(#{team.code})" if team.code.present? %>
+     </td>
+     <td>
+       <%= team.title2  if team.title2.present? %>
+     </td>
+     
+     <td class='team-key'><%= team.country.key %>
+     </td>
+     <td style='white-space: nowrap;'>
+       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
+       <%= link_to team.country.title, short_country_path(team.country) %>
+       (<%= team.country.code %>)
+       <% if team.city.present? %>
+          <%= ", #{team.city.title}" %>
+          <%= "/ #{team.city.region.title}" if team.city.region.present? %>
+       <% end %>
+     <td>
+   </tr>
+ <% end %><!-- teams.each -->
+</table>

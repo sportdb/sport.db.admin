@@ -1,63 +1,7 @@
+
 <h3><%= Team.count %> Teams</h3>
 
+<p>nb: no longer used; split into two views (national teams n clubs)
+   - club view is default
+</p>
 
-<h4><%= @national_teams.size %> National Teams</h4>
-
-<table>
- <% @national_teams.each do |team| %>
-   <tr>
-     <td class='team-key'><%= team.key %></td>
-     <td>
-       <%= link_to team.title, short_team_path( team ) %>
-     </td>
-     <td>
-       <%= "(#{team.code})" if team.code.present? %>
-     </td>
-     <td>
-       <%= team.title2 if team.title2.present? %>
-     </td>
-     
-     <td class='team-key'><%= team.country.key %>
-     </td>
-     <td>
-       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, short_country_path(team.country) %>
-       (<%= team.country.code %>)
-     <td>
-     
-   </tr>
- <% end %><!-- teams.each -->
-</table>
-
-
-<h4><%= @club_teams.size %> Clubs</h4>
-
-<table>
- <% @club_teams.each do |team| %>
-   <tr>
-     <td class='team-key'><%= team.key %></td>
-     <td>
-       <%= link_to team.title, short_team_path( team ) %>
-       <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
-     </td>
-     <td>
-       <%= "(#{team.code})" if team.code.present? %>
-     </td>
-     <td>
-       <%= team.title2  if team.title2.present? %>
-     </td>
-     
-     <td class='team-key'><%= team.country.key %>
-     </td>
-     <td style='white-space: nowrap;'>
-       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, short_country_path(team.country) %>
-       (<%= team.country.code %>)
-       <% if team.city.present? %>
-          <%= ", #{team.city.title}" %>
-          <%= "/ #{team.city.region.title}" if team.city.region.present? %>
-       <% end %>
-     <td>
-   </tr>
- <% end %><!-- teams.each -->
-</table>
