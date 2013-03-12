@@ -6,33 +6,36 @@
 
 <table>
  <% @event.teams.each do |team| %>
-   <tr>
-     <td>
-        <% if team.national? %>
-          <%= image_tag "flags/32x32/#{team.country.key}.png" %>
-        <% end %>
-        <%= link_to team.title, short_team_path( team ) %>
-     </td>
-     <td>
-       <%= "(#{team.code})" if team.code.present? %>
-     </td>
-     <td>
-       <%= team.title2  if team.title2.present? %>
-     </td>
 
 <% if team.national? %>
-<% else %>
-     <td>
-       |
-     </td>
+ <tr>
+ <td>
+     <%= image_tag "flags/32x32/#{team.country.key}.png" %>
+     <%= link_to team.title, short_team_path( team ) %>
+     <%= "(#{team.code})" if team.code.present? %>
+      >
+     <%= team.country.continent.title if team.country.continent.present? %>
+ </td>
+ </tr>
+<% else %><!-- club -->
+ <tr>
+   <td>
+     <%= link_to team.title, short_team_path( team ) %>
+     <%= "(#{team.code})" if team.code.present? %>
+    </td>
+    <td>
+       <%= team.title2  if team.title2.present? %>
+    </td>
      <td>
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
        <%= link_to team.country.title, short_country_path( team.country ) %>
        (<%= team.country.code %>)
-     <td>
+       >
+       <%= team.country.continent.title if team.country.continent.present? %>
+     </td>
+ </tr>
 <% end %>
-   </tr>
- <% end %><!-- teams.each -->
+<% end %><!-- teams.each -->
 </table>
 
 <% if @event.groups.count > 0 %>

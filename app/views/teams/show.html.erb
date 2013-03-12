@@ -9,12 +9,18 @@
   <% if @team.national? %>
   <% else %>
        <%= image_tag "flags/24x24/#{@team.country.key}.png" %>
-       <%= link_to @team.country.title, short_country_path( @team.country) %>
-       (<%= @team.country.code %>)
        
          <% if @team.city.present? %>
-          , <%= @team.city.title %>
+           <%= @team.city.title %> >
+           <% if @team.city.region.present? %>
+             <%= @team.city.region.title %> >
+           <% end %>
          <% end %>
+
+       <%= link_to @team.country.title, short_country_path( @team.country) %>
+       (<%= @team.country.code %>)
+       >
+       <%= @team.country.continent.title if @team.country.continent.present? %>
        
   <% end %>
   

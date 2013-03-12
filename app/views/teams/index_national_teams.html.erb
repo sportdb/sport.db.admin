@@ -1,6 +1,21 @@
 
 <h3><%= @teams.size %> National Teams</h3>
 
+<p>
+  All
+   <span class='team-count'>
+    (<%= @teams.count %>)
+   </span>
+<% Continent.all.each do |continent| %>
+    &bull; 
+   <%= continent.title %>
+   <span class='country-count'>
+      (<%= continent.teams.where( club: false ).count %>)
+   </span>
+<% end %>
+</p>
+
+
 <table>
  <% @teams.each do |team| %>
    <tr>
@@ -21,6 +36,8 @@
        <%= image_tag "flags/24x24/#{team.country.key}.png" %>
        <%= link_to team.country.title, short_country_path(team.country) %>
        (<%= team.country.code %>)
+       >
+       <%= team.country.continent.title if team.country.continent.present? %>
      <td>
      
    </tr>
