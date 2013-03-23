@@ -20,12 +20,12 @@ gem "sportdb-data", "99", :git => "https://github.com/geraldb/football.db.git"
 # gem "worlddb", "0.10.0", :git => "git://github.com/geraldb/world.db.ruby.git"
 # gem "sportdb", "0.10.0", :git => "git://github.com/geraldb/sport.db.ruby.git"
 
-gem 'worlddb', '1.6.1'
-gem 'sportdb', '1.6.4'
+gem 'worlddb', '1.6.3'
+gem 'sportdb', '1.6.5'
 
-# gem "sportdb-service", "0.1.0"    # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
+gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
-gem "sportdb-service", "0.1.3"
+gem 'sportdb-service', '0.1.3'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 # gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
 
 # gem "worlddb-data", "999", :path => "../world.db"

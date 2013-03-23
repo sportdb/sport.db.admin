@@ -42,14 +42,7 @@
      <td class='team-key'><%= team.country.key %>
      </td>
      <td style='white-space: nowrap;'>
-       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <% if team.city.present? %>
-          <%= "#{team.city.title} >" %>
-          <%= "#{team.city.region.title} >" if team.city.region.present? %>
-       <% end %>
-        <%= link_to team.country.title, short_country_path(team.country) %>
-       (<%= team.country.code %>) >
-        <%= team.country.continent.title if team.country.continent.present? %>
+      <%= render_team_world_tree( team ) %>
      <td>
    </tr>
  <% end %><!-- teams.each -->

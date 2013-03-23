@@ -8,20 +8,7 @@
  
   <% if @team.national? %>
   <% else %>
-       <%= image_tag "flags/24x24/#{@team.country.key}.png" %>
-       
-         <% if @team.city.present? %>
-           <%= @team.city.title %> >
-           <% if @team.city.region.present? %>
-             <%= @team.city.region.title %> >
-           <% end %>
-         <% end %>
-
-       <%= link_to @team.country.title, short_country_path( @team.country) %>
-       (<%= @team.country.code %>)
-       >
-       <%= @team.country.continent.title if @team.country.continent.present? %>
-       
+    <%= render_team_world_tree( @team ) %>
   <% end %>
   
    <%= " | #{@team.title2}" if @team.title2.present? %>
@@ -53,15 +40,10 @@
 <%= render_game_team1( game ) %>
 <%= render_game_score( game ) %>
 <%= render_game_team2( game ) %>
+<%= render_game_flags( game ) %>
+<%= render_game_round( game ) %>
 
-<td>
-   <%= "[k.o.]" if game.knockout? %>
-</td>
 
-<!-- fix/todo: use part helper -->
-<td class='game-round'>
-  (<%= link_to game.round.event.full_title, short_event_path(game.round.event) %> - <%= game.round.title %>)
-<td>
 
 </tr>
 <% end %> <!-- games -->

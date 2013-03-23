@@ -1,0 +1,13 @@
+
+
+<td class='game-flags'>
+  <%= "[k.o.]" if game.knockout? %>
+  
+  <!-- todo: check for postponed flag etc. -->
+   <% if game.postponed? %>
+        [postponed =>
+          <%= game.play_at_v2.strftime('(%a) %Y-%b-%-d / %H:%M %Z' ) %>
+        ]
+      <% end %>
+
+</td>

@@ -27,11 +27,7 @@
        <%= team.title2  if team.title2.present? %>
     </td>
      <td>
-       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, short_country_path( team.country ) %>
-       (<%= team.country.code %>)
-       >
-       <%= team.country.continent.title if team.country.continent.present? %>
+      <%= render_team_world_tree( team ) %>
      </td>
  </tr>
 <% end %>
@@ -105,13 +101,13 @@
 <%= render_game_team1( game ) %>
 <%= render_game_score( game ) %>
 <%= render_game_team2( game ) %>
-      
-        
+
     <td>
       <!-- todo: move to partial -->
       <%= "(#{game.group.title})" if game.group.present? %>
-      <%= "[k.o.]" if game.knockout? %>
     </td>
+
+<%= render_game_flags( game ) %>
         
      </tr>
   <% end %> <!-- games -->

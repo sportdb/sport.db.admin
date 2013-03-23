@@ -34,24 +34,13 @@
   <td class='game-hour'>
     <%= game.play_at.strftime('%H:%M') %>
   </td>
- 
+
   <%= render_game_team1( game ) %>
   <%= render_game_score( game ) %>
   <%= render_game_team2( game ) %>
+  <%= render_game_flags( game ) %>
+  <%= render_game_round( game ) %>
 
-  <td>
-      <%= "[k.o.]" if game.knockout? %>
-  </td>
-
-  <td class='game-round'>
-    (<%= link_to game.round.event.title, short_event_path( game.round.event ) %> / <%= game.round.title %>)
-  </td>
-  
-   
-  <td class='game-debug'><!-- for debugging dates/time zones; show in UTC raw from db -->
-    <%= game.play_at %>
-  </td>
-    
  </tr> 
 <% last_play_at = game.play_at
    end %><!-- each game -->
