@@ -21,7 +21,7 @@ gem "sportdb-data", "99", :git => "https://github.com/geraldb/football.db.git"
 # gem "sportdb", "0.10.0", :git => "git://github.com/geraldb/sport.db.ruby.git"
 
 gem 'worlddb', '1.6.3'
-gem 'sportdb', '1.6.5'
+gem 'sportdb', '1.6.6'
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
