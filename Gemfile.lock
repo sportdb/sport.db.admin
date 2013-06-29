@@ -1,14 +1,38 @@
 GIT
-  remote: https://github.com/geraldb/football.db.git
-  revision: 4dbfa466ec2cd672301e12959ed8f6ac0c40a1d5
+  remote: https://github.com/geraldb/world.db.git
+  revision: a81caaf4f8326d74e3c04e0c2607f797b9ed6f88
   specs:
-    sportdb-data (99)
+    worlddb-data (9.9.9)
 
 GIT
-  remote: https://github.com/geraldb/world.db.git
-  revision: e6d7b1099b065638829f390714bb06b6ee801305
+  remote: https://github.com/openfootball/at-austria.git
+  revision: eca22201832017a8dde185106a6c58030a677991
   specs:
-    worlddb-data (99)
+    footballdb-data-at (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/de-deutschland.git
+  revision: 49c9592fa5b2e92ecb89b8ea2775d64e90d03ca4
+  specs:
+    footballdb-data-de (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/en-england.git
+  revision: bc51b72f8e96a7d4c287095382c4b02843b75634
+  specs:
+    footballdb-data-en (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/es-espana.git
+  revision: 233b9464e606d323d2185e12b8bfefb1b84aea96
+  specs:
+    footballdb-data-es (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/world.git
+  revision: 113b932984ce7ecfae752a7c4e449d41c4911060
+  specs:
+    footballdb-data-world (9.9.9)
 
 GEM
   remote: https://rubygems.org/
@@ -58,23 +82,24 @@ GEM
     eventmachine (1.0.3-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    highline (1.6.16)
-    hike (1.2.1)
+    gli (2.6.1)
+    highline (1.6.19)
+    hike (1.2.3)
     i18n (0.6.4)
     journey (1.0.4)
-    jquery-rails (2.2.1)
+    jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.7.7)
+    json (1.8.0)
     logutils (0.6.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.21)
-    multi_json (1.7.2)
-    pg (0.14.1)
-    pg (0.14.1-x86-mingw32)
+    mime-types (1.23)
+    multi_json (1.7.7)
+    pg (0.15.1)
+    pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -100,10 +125,10 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.0.3)
+    rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.2.7)
+    sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -112,9 +137,9 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
-    sportdb (1.6.6)
-      commander (~> 4.1.3)
-      worlddb (~> 1.6)
+    sportdb (1.6.18)
+      gli (>= 2.5.6)
+      worlddb (~> 1.7)
     sportdb-service (0.1.3)
       sinatra (~> 1.3.5)
     sprockets (2.2.2)
@@ -124,25 +149,25 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
     sqlite3 (1.3.7-x86-mingw32)
-    textutils (0.5.2)
+    textutils (0.6.6)
       logutils (~> 0.5)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    thor (0.17.0)
-    tilt (1.3.6)
-    treetop (1.4.12)
+    thor (0.18.1)
+    tilt (1.4.1)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
-    uglifier (1.3.0)
+    uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    worlddb (1.6.3)
+    worlddb (1.7.2)
       activerecord (~> 3.2)
       commander (~> 4.1.3)
-      textutils (~> 0.5)
+      textutils (~> 0.6)
     worlddb-flags (0.1.0)
 
 PLATFORMS
@@ -152,18 +177,22 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
   coffee-rails (~> 3.2.1)
+  footballdb-data-at (= 9.9.9)!
+  footballdb-data-de (= 9.9.9)!
+  footballdb-data-en (= 9.9.9)!
+  footballdb-data-es (= 9.9.9)!
+  footballdb-data-world (= 9.9.9)!
   jquery-rails
   logutils (= 0.6.0)
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sinatra
-  sportdb (= 1.6.6)
-  sportdb-data (= 99)!
+  sportdb (= 1.6.18)
   sportdb-service (= 0.1.3)
   sqlite3
   thin
   uglifier (>= 1.0.3)
-  worlddb (= 1.6.3)
-  worlddb-data (= 99)!
+  worlddb (= 1.7.2)
+  worlddb-data (= 9.9.9)!
   worlddb-flags (= 0.1.0)

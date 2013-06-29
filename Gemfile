@@ -7,21 +7,25 @@ gem 'sinatra'
 ############
 # lets use open sport.db schema & fixtures
 
-# gem 'sportdb', '0.8.0'
-
 gem 'logutils', '0.6.0'
 
-gem "worlddb-data", "99", :git => "https://github.com/geraldb/world.db.git"
-gem "sportdb-data", "99", :git => "https://github.com/geraldb/football.db.git"
+gem 'worlddb-data', '9.9.9', :git => 'https://github.com/geraldb/world.db.git'
 
-# gem "logutils", "0.1.0",  :git => "git://github.com/geraldb/logutils"
-# gem "textutils", "0.3.0", :git => "git://github.com/geraldb/textutils"
+gem 'footballdb-data-world', '9.9.9', :git => 'https://github.com/openfootball/world.git'
+gem 'footballdb-data-at',    '9.9.9', :git => 'https://github.com/openfootball/at-austria.git'
+gem 'footballdb-data-de',    '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
+gem 'footballdb-data-en',    '9.9.9', :git => 'https://github.com/openfootball/en-england.git'
+gem 'footballdb-data-es',    '9.9.9', :git => 'https://github.com/openfootball/es-espana.git'
 
-# gem "worlddb", "0.10.0", :git => "git://github.com/geraldb/world.db.ruby.git"
-# gem "sportdb", "0.10.0", :git => "git://github.com/geraldb/sport.db.ruby.git"
 
-gem 'worlddb', '1.6.3'
-gem 'sportdb', '1.6.6'
+# gem 'logutils', '0.1.0',  :git => 'git://github.com/geraldb/logutils'
+# gem 'textutils', '0.3.0', :git => 'git://github.com/geraldb/textutils'
+
+# gem 'worlddb', '0.10.0', :git => 'git://github.com/geraldb/world.db.ruby.git'
+# gem 'sportdb', '0.10.0', :git => 'git://github.com/geraldb/sport.db.ruby.git'
+
+gem 'worlddb', '1.7.2'
+gem 'sportdb', '1.6.18'
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
