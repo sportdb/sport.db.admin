@@ -11,11 +11,12 @@ gem 'logutils', '0.6.0'
 
 gem 'worlddb-data', '9.9.9', :git => 'https://github.com/geraldb/world.db.git'
 
-gem 'footballdb-data-world', '9.9.9', :git => 'https://github.com/openfootball/world.git'
-gem 'footballdb-data-at',    '9.9.9', :git => 'https://github.com/openfootball/at-austria.git'
-gem 'footballdb-data-de',    '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
-gem 'footballdb-data-en',    '9.9.9', :git => 'https://github.com/openfootball/en-england.git'
-gem 'footballdb-data-es',    '9.9.9', :git => 'https://github.com/openfootball/es-espana.git'
+gem 'footballdb-data-world',  '9.9.9', :git => 'https://github.com/openfootball/world.git'
+gem 'footballdb-data-europe', '9.9.9', :git => 'https://github.com/openfootball/europe.git'
+gem 'footballdb-data-at',     '9.9.9', :git => 'https://github.com/openfootball/at-austria.git'
+gem 'footballdb-data-de',     '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
+gem 'footballdb-data-en',     '9.9.9', :git => 'https://github.com/openfootball/en-england.git'
+gem 'footballdb-data-es',     '9.9.9', :git => 'https://github.com/openfootball/es-espana.git'
 
 
 # gem 'logutils', '0.1.0',  :git => 'git://github.com/geraldb/logutils'

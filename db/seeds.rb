@@ -1,11 +1,3 @@
-
-LogDb.delete!
-WorldDb.delete!  # danger zone! deletes all records
-SportDb.delete!  # danger zone! deletes all records
-
-WorldDb.read_setup( 'setups/sport.db.admin', find_world_db_path_from_gemfile_gitref!, { skip_tags: true } )
-
-
 ###
 # todo/fix: move to textutils??
 
@@ -34,8 +26,18 @@ def find_data_path_from_gemfile_gitref( name )
 end
 
 
+LogDb.delete!
+WorldDb.delete!  # danger zone! deletes all records
+SportDb.delete!  # danger zone! deletes all records
 
+WorldDb.read_setup( 'setups/sport.db.admin', find_world_db_path_from_gemfile_gitref!, { skip_tags: true } )
+
+
+# national teams
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('world') )
+SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('europe') )
+
+# clubs
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('at-austria') )
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('de-deutschland') )
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('en-england') )

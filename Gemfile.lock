@@ -29,6 +29,12 @@ GIT
     footballdb-data-es (9.9.9)
 
 GIT
+  remote: https://github.com/openfootball/europe.git
+  revision: aef0a9e4cd179dae0819c11f4df6c60e7a97947a
+  specs:
+    footballdb-data-europe (9.9.9)
+
+GIT
   remote: https://github.com/openfootball/world.git
   revision: 113b932984ce7ecfae752a7c4e449d41c4911060
   specs:
@@ -181,6 +187,7 @@ DEPENDENCIES
   footballdb-data-de (= 9.9.9)!
   footballdb-data-en (= 9.9.9)!
   footballdb-data-es (= 9.9.9)!
+  footballdb-data-europe (= 9.9.9)!
   footballdb-data-world (= 9.9.9)!
   jquery-rails
   logutils (= 0.6.0)
