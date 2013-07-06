@@ -30,7 +30,7 @@ gem 'sportdb', '1.6.18'
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
-gem 'sportdb-service', '0.2.0'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
+gem 'sportdb-service', '0.3.0'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 # gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
 
 # gem "worlddb-data", "999", :path => "../world.db"
