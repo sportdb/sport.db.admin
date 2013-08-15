@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+module SportDbAdmin
 module RoutesHelper
 
   ##############################
@@ -19,4 +20,4 @@ module RoutesHelper
   end
 
 end # module RoutesHelper
-
+end # module SportDbAdmin

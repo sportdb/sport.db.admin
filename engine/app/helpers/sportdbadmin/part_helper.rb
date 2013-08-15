@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+module SportDbAdmin
 module PartHelper
 
   ###################################
@@ -43,3 +44,4 @@ module PartHelper
 
 
 end # module PartHelper
+end # module SportDbAdmin

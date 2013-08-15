@@ -1,3 +1,4 @@
+module SportDbAdmin
 module ApplicationHelper
 
   def game_team1_style_class( game )
@@ -46,3 +47,4 @@ module ApplicationHelper
   
 
 end # module ApplicationHelper
+end # module SportDbAdmin
