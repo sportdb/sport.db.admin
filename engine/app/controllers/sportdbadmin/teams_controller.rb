@@ -1,3 +1,7 @@
+# encoding: utf-8
+
+module SportDbAdmin
+
 class TeamsController < ApplicationController
 
   # GET /teams
@@ -41,3 +45,5 @@ class TeamsController < ApplicationController
   end
 
 end # class TeamsController
+
+end # module SportDbAdmin

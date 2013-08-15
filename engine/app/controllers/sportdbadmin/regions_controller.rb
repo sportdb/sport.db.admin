@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+module SportDbAdmin
+
 class RegionsController < ApplicationController
 
   # GET /countries
@@ -10,3 +12,5 @@ class RegionsController < ApplicationController
 
 
 end # class RegionsController
+
+end # module SportDbAdmin

@@ -1,3 +1,6 @@
+# encoding: utf-8
+
+module SportDbAdmin
 
 class RoundsController < ApplicationController
 
@@ -8,3 +11,5 @@ class RoundsController < ApplicationController
 
 
 end # class RoundsController
+
+end # module SportDbAdmin

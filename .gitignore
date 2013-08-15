@@ -30,7 +30,5 @@ pickle-email-*.html
 
 # Ignore gem artifacts/outputs in subfolder
 
-/engines/sportdbadmin/pkg
-/engines/sportdbadmin/pkg/*
-
-
+/engine/pkg
+/engine/pkg/*

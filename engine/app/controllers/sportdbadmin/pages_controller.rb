@@ -1,3 +1,7 @@
+# encoding: utf-8
+
+module SportDbAdmin
+
 class PagesController < ApplicationController
   def index
   end
@@ -5,3 +9,5 @@ class PagesController < ApplicationController
   def about
   end
 end
+
+end # module SportDbAdmin

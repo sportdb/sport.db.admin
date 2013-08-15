@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+module SportDbAdmin
+
 class EventsController < ApplicationController
 
   # GET /events
@@ -19,3 +21,5 @@ class EventsController < ApplicationController
   end
   
 end # class EventsController
+
+end # module SportDbAdmin

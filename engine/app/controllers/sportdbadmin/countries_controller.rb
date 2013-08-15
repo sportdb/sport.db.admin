@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+module SportDbAdmin
+
 class CountriesController < ApplicationController
 
   # GET /countries
@@ -18,6 +20,6 @@ class CountriesController < ApplicationController
     @country = Country.find( params[:id] )
   end
 
-
-
 end # class CountriesController
+
+end # module SportDbAdmin
