@@ -11,7 +11,9 @@ gem 'logutils', '0.6.0'
 
 gem 'worlddb-data', '9.9.9', :git => 'https://github.com/geraldb/world.db.git'
 
-gem 'footballdb-data-world',  '9.9.9', :git => 'https://github.com/openfootball/world.git'
+gem 'footballdb-data-world-cup',  '9.9.9', :git => 'https://github.com/openfootball/world-cup.git'
+gem 'footballdb-data-euro-cup',   '9.9.9', :git => 'https://github.com/openfootball/euro-cup.git'
+
 gem 'footballdb-data-europe', '9.9.9', :git => 'https://github.com/openfootball/europe.git'
 gem 'footballdb-data-at',     '9.9.9', :git => 'https://github.com/openfootball/at-austria.git'
 gem 'footballdb-data-de',     '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
@@ -26,7 +28,7 @@ gem 'footballdb-data-es',     '9.9.9', :git => 'https://github.com/openfootball/
 # gem 'sportdb', '0.10.0', :git => 'git://github.com/geraldb/sport.db.ruby.git'
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.6.18'
+gem 'sportdb', '1.7.0'
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
