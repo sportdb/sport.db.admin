@@ -1,0 +1,7 @@
+History.md
+Manifest.txt
+README.md
+Rakefile
+lib/sportdb/admin.rb
+lib/sportdb/admin/engine.rb
+lib/sportdb/admin/version.rb

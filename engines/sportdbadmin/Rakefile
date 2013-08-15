@@ -1,0 +1,27 @@
+require 'hoe'
+require './lib/sportdb/admin/version.rb'
+
+
+Hoe.spec 'sportdb-admin' do
+
+  self.version = SportDbAdmin::VERSION
+
+  self.summary = 'sportdb admin addon - rails engine'
+  self.description = summary
+
+  self.urls    = ['https://github.com/geraldb/sport.db.admin']
+
+  self.author  = 'Gerald Bauer'
+  self.email   = 'opensport@googlegroups.com'
+
+  self.readme_file  = 'README.md'
+  self.history_file = 'History.md'
+
+  self.licenses = ['Public Domain']
+
+  self.spec_extras = {
+   :required_ruby_version => '>= 1.9.2'
+  }
+
+end
+
