@@ -11,7 +11,7 @@ Open sports web admin addon / rails engine
 ## Demo
 
 Try the `sport.db` web admin demo running
-on Heroku [`football.herokuapp.com`](http://football.herokuapp.com).
+on Heroku [`footballdb.herokuapp.com`](http://footballdb.herokuapp.com).
 
 ## Usage
 

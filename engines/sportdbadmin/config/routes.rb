@@ -1,9 +1,9 @@
 
-puts "[debug] routes.rb - before Application.routes.draw"
+puts "[boot] routes.rb - before SportDbAdmin::Engine.routes.draw"
 
-Sportdb::Application.routes.draw do
-  
-  puts "[debug] routes.rb - enter Application.routes.draw"
+SportDbAdmin::Engine.routes.draw do
+
+  puts "[boot] routes.rb - enter SportDbAdmin::Engine.routes.draw"
   
   match 'about',    :to => 'pages#about'
   
@@ -72,8 +72,8 @@ Sportdb::Application.routes.draw do
 
   root :to => 'games#index'
   
-   puts "[debug] routes.rb - leave Application.routes.draw"
+   puts "[boot] routes.rb - leave SportDbAdmin::Engine.routes.draw"
 
 end
 
-puts "[debug] routes.rb - after Application.routes.draw"
+puts "[boot] routes.rb - after SportDbAdmin::Engine.routes.draw"

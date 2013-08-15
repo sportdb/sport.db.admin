@@ -5,8 +5,8 @@ Open Sports Database Web Admin Tool in Ruby on Rails 3.2+
 
 ## Demo
 
-Try the `sport.db` Web Admin demo running
-on Heroku [`sportdbdemo.herokuapp.com`](http://sportdbdemo.herokuapp.com).
+Try the `sport.db` web admin demo running
+on Heroku [`footballdb.herokuapp.com`](http://footballdb.herokuapp.com).
 
 
 ## License
