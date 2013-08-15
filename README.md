@@ -1,5 +1,4 @@
-sport.db.admin
-==============
+# sport.db.admin
 
 Open Sports Database Web Admin Tool in Ruby on Rails 3.2+
 
