@@ -1,79 +1,58 @@
+Sportdbhost::Application.routes.draw do
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
 
-puts "[debug] routes.rb - before Application.routes.draw"
+  # Sample of regular route:
+  #   match 'products/:id' => 'catalog#view'
+  # Keep in mind you can assign values other than :controller and :action
 
-Sportdb::Application.routes.draw do
-  
-  puts "[debug] routes.rb - enter Application.routes.draw"
-  
-  match 'about',    :to => 'pages#about'
-  
-  ###
-  # mount sinatra app (bundled w/ sportdb-service gem) for json api service
+  # Sample of named route:
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  # This route can be invoked with purchase_url(:id => product.id)
 
-  # todo: add  JSON API link to layout
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
 
-  match '/api' => redirect('/api/v1')
-  mount SportDB::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
-
-  ## mount sinatra app (bundled w/ logutils gem)
-  mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
-  
-
-  match 'clubs',          :to => 'teams#index_clubs', :as => 'clubs'
-  match 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
-
-  resources :countries
-  resources :regions
-  resources :rounds
-  resources :events
-  resources :teams
-  resources :games do
-    get 'past',   :on => :collection
-  end
-
-  
-  #######################
-  # add shortcut routing  (friendly urls)
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
   #
-  #  two letters (e.g. at,mx,us) assume country (fix!!  az for Alkmaar in nl)
-  #    - do NOT allow two letter keys
-  #
-  #   
-  #  short-cut [a-z]+[0-9.\]+ for event
-  #   - NOT team keys can NOT contain numbers
-  #
-  #  more than three letters for now assume
-  #   team page
-  
-  
-  ###################
-  #  - nb: event key must contain dots
-  #  todo/todo:
-  #
-  #  todo: allow multiple shortcuts for years e.g.  de1 -> bundesliga current/last season
-  #       euro2012 or euro12  12->2012    de12 -> bundesliga 11/12
-  #
-  # shortcut -- 3+ letters  (w/ digits w/ dots) - assume shortcut for event
-  #  
-  # NB: for now -> must end with   .2012 or .2012_13 etc.
-  match '/:key', :to => 'events#shortcut', :as => :short_event_worker, :key => /.+\.[0-9_]+/
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
 
-  ####
-  # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team
-  #  nb: do NOT use team keys like az with only two lower case letters; always use at least three minimum
-  match '/:key', :to => 'teams#shortcut', :as => :short_team_worker, :key => /[a-z]{3,}/
+  # Sample resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
 
+  # Sample resource route with more complex sub-resources
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', :on => :collection
+  #     end
+  #   end
 
-  ####
-  # shortcut -- 2 lower case letters - assume shortcut for country
-  match '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /[a-z]{2}/
-  
+  # Sample resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
 
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
 
-  root :to => 'games#index'
-  
-   puts "[debug] routes.rb - leave Application.routes.draw"
+  # See how all your routes lay out with "rake routes"
 
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id))(.:format)'
 end
-
-puts "[debug] routes.rb - after Application.routes.draw"

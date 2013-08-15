@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Sportdbhost::Application.config.secret_token = 'd8cfa91a704b2ca9107f790d5ee6512264880681755cf5c833b8b2867555702f8c02ac44f5d9562b04c75e893bd55738f9efd51d034c2886e8e1bc45380cb3b2'
+Sportdb::Application.config.secret_token = '899d6fea11c0c6aa3cd93d6f1f47d00d5e0a27fcc8b16e019467746a0243c5132fb120a095920926aed47577d85e5e7acb879a2a7d92a447fe13fdb10346943d'

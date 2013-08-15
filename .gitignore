@@ -3,11 +3,7 @@
 .sass-cache
 capybara-*.html
 .rspec
-/.bundle
 /vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
 /public/system/*
 /coverage/
 /spec/tmp/*
@@ -16,7 +12,20 @@ rerun.txt
 pickle-email-*.html
 
 
-db/*.db
-db/sport.db
-db/sport.db-journal
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/log/*
+/tmp
+/tmp/*
+
+
+# Ignore SQLite databases
+/db/*.sqlite3
+/db/*.db
+/db/sport.db
+/db/sport.db-journal
+
 
