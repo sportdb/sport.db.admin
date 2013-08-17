@@ -46,6 +46,11 @@ GIT
   specs:
     footballdb-data-world-cup (9.9.9)
 
+PATH
+  remote: ./engine
+  specs:
+    sportdb-admin (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -166,7 +171,7 @@ GEM
       rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
@@ -199,6 +204,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sinatra
   sportdb (= 1.7.0)
+  sportdb-admin (= 0.0.1)!
   sportdb-service (= 0.3.1)
   sqlite3
   thin

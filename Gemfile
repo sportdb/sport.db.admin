@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 
 gem 'sinatra'
 
+
 ############
 # lets use open sport.db schema & fixtures
 
@@ -31,6 +32,11 @@ gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 gem 'sportdb-service', '0.3.1'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 
 # gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
+
+########
+# add engines
+
+gem 'sportdb-admin', '0.0.1', :path => './engine'
 
 
 group :production do

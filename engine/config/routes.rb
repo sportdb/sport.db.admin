@@ -6,18 +6,7 @@ SportDbAdmin::Engine.routes.draw do
   puts "[boot] routes.rb - enter SportDbAdmin::Engine.routes.draw"
   
   match 'about',    :to => 'pages#about'
-  
-  ###
-  # mount sinatra app (bundled w/ sportdb-service gem) for json api service
 
-  # todo: add  JSON API link to layout
-
-  match '/api' => redirect('/api/v1')
-  mount SportDB::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
-
-  ## mount sinatra app (bundled w/ logutils gem)
-  mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
-  
 
   match 'clubs',          :to => 'teams#index_clubs', :as => 'clubs'
   match 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
