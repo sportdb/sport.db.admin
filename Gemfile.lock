@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/geraldb/sport.db.logos.ruby
+  revision: 0357b88c283dac0ba88d64eeabac406184c2670d
+  specs:
+    sportdb-logos (0.1.1)
+
+GIT
   remote: https://github.com/geraldb/world.db.git
   revision: a81caaf4f8326d74e3c04e0c2607f797b9ed6f88
   specs:
@@ -205,6 +211,7 @@ DEPENDENCIES
   sinatra
   sportdb (= 1.7.0)
   sportdb-admin (= 0.0.1)!
+  sportdb-logos (= 0.1.1)!
   sportdb-service (= 0.3.1)
   sqlite3
   thin

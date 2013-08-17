@@ -2,7 +2,7 @@
 
 module SportDbAdmin
 
-class RoundsController < ApplicationController
+class RoundsController < SportDbAdminController
 
   # GET /rounds
   def index

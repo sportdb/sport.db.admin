@@ -2,7 +2,7 @@
 
 module SportDbAdmin
 
-class CountriesController < ApplicationController
+class CountriesController < SportDbAdminController
 
   # GET /countries
   def index

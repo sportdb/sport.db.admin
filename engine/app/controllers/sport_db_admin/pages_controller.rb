@@ -2,7 +2,7 @@
 
 module SportDbAdmin
 
-class PagesController < ApplicationController
+class PagesController < SportDbAdminController
   def index
   end
 

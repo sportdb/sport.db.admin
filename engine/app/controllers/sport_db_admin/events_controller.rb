@@ -2,7 +2,7 @@
 
 module SportDbAdmin
 
-class EventsController < ApplicationController
+class EventsController < SportDbAdminController
 
   # GET /events
   def index

@@ -33,6 +33,12 @@ gem 'sportdb-service', '0.3.1'  # mountable JSON api service w/ Sinatra packaged
 
 # gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
 
+
+## add logos
+
+gem 'sportdb-logos', '0.1.1',  :git => 'https://github.com/geraldb/sport.db.logos.ruby'
+
+
 ########
 # add engines
 
