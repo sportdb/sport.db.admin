@@ -12,10 +12,13 @@ Sportdbhost::Application.routes.draw do
   # todo: add  JSON API link to layout
 
   match '/api' => redirect('/api/v1')
-  mount SportDB::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
+  mount SportDb::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
 
   ## mount sinatra app (bundled w/ logutils gem)
   mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
+
+
+  mount SportDbAdmin::Engine, :at => '/'  # mount a root possible?
 
   puts "[boot] routes.rb - leave Application.routes.draw"
 
