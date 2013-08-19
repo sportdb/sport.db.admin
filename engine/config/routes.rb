@@ -1,15 +1,15 @@
 
-puts "[boot] routes.rb - before SportDbAdmin::Engine.routes.draw"
+puts '[boot] routes.rb - before SportDbAdmin::Engine.routes.draw'
 
 SportDbAdmin::Engine.routes.draw do
 
-  puts "[boot] routes.rb - enter SportDbAdmin::Engine.routes.draw"
+  puts '[boot] routes.rb - enter SportDbAdmin::Engine.routes.draw'
   
-  match 'about',    :to => 'pages#about'
+  get 'about',    :to => 'pages#about'
 
 
-  match 'clubs',          :to => 'teams#index_clubs', :as => 'clubs'
-  match 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
+  get 'clubs',          :to => 'teams#index_clubs',          :as => 'clubs'
+  get 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
 
   resources :countries
   resources :regions
@@ -45,24 +45,24 @@ SportDbAdmin::Engine.routes.draw do
   # shortcut -- 3+ letters  (w/ digits w/ dots) - assume shortcut for event
   #  
   # NB: for now -> must end with   .2012 or .2012_13 etc.
-  match '/:key', :to => 'events#shortcut', :as => :short_event_worker, :key => /.+\.[0-9_]+/
+  get '/:key', :to => 'events#shortcut', :as => :short_event_worker, :key => /.+\.[0-9_]+/
 
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team
   #  nb: do NOT use team keys like az with only two lower case letters; always use at least three minimum
-  match '/:key', :to => 'teams#shortcut', :as => :short_team_worker, :key => /[a-z]{3,}/
+  get '/:key', :to => 'teams#shortcut', :as => :short_team_worker, :key => /[a-z]{3,}/
 
 
   ####
   # shortcut -- 2 lower case letters - assume shortcut for country
-  match '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /[a-z]{2}/
-  
+  get '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /[a-z]{2}/
+
 
 
   root :to => 'games#index'
   
-   puts "[boot] routes.rb - leave SportDbAdmin::Engine.routes.draw"
+  puts '[boot] routes.rb - leave SportDbAdmin::Engine.routes.draw'
 
 end
 
-puts "[boot] routes.rb - after SportDbAdmin::Engine.routes.draw"
+puts '[boot] routes.rb - after SportDbAdmin::Engine.routes.draw'

@@ -1,5 +1,5 @@
 
-desc "sportdb: load all seed data from sportdb gem"
+desc 'sportdb: load all seed data from sportdb gem'
 task :sportdb_load => [:environment] do |t|
 
   # SportDB.delete!  # danger zone! deletes all records
@@ -12,7 +12,7 @@ task :sportdb_load => [:environment] do |t|
 end
 
 
-desc "sportdb: load seed data for cl from sportdb gem"
+desc 'sportdb: load seed data for cl from sportdb gem'
 task :sportdb_load_cl => [:environment] do |t|
   
   # SportDB.load([
