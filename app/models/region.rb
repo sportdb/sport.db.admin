@@ -14,5 +14,4 @@
 #
 
 
-Region = SportDb::Models::Region
-
+Region = WorldDb::Models::Region

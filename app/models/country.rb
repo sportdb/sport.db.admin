@@ -14,4 +14,4 @@
 #
 
 
-Country = SportDb::Models::Country
+Country = WorldDb::Models::Country

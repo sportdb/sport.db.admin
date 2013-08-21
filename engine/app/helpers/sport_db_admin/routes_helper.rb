@@ -4,7 +4,7 @@ module SportDbAdmin
 module RoutesHelper
 
   ##############################
-  ## routes for shortcuts
+  # routes for shortcuts
   
   def short_country_path( country )
     short_country_worker_path( country.key )

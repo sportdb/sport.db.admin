@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>sport.db Web Admin</title>
-  <%= stylesheet_link_tag    "sport_db_admin/application", :media => "all" %>
-  <%= javascript_include_tag "sport_db_admin/application" %>
+  <%= stylesheet_link_tag    'sport_db_admin/application', :media => 'all' %>
+  <%= javascript_include_tag 'sport_db_admin/application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,11 +17,15 @@
   <%= link_to 'Rounds', rounds_path() %>  &bull;
   <%= link_to 'Past Games', past_games_path() %> &bull;
   <%= link_to 'Upcoming Games', games_path() %>  &bull;
-  <%= link_to 'About', about_path() %>   .::.
-
-  <!-- fix: use named url_helper for /api -->
-  <%= link_to "Web Service / HTTP JSON API", '/api' %>
+  <%= link_to 'About', about_path() %>
   <!-- todo: add some more links -->
+  
+  <% if sportdb_api_defined? %>
+     .::.
+  
+  <!-- fix/check: does it work for nested routes /e.g. db/api/v1 or /api/v1 ?? -->
+  <%= link_to 'Web Service / HTTP JSON API', api_path() %>
+  <% end %>
  </p>
 
 <div class='content'>

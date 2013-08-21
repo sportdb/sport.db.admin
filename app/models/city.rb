@@ -16,4 +16,5 @@
 #
 
 
-City = SportDb::Models::City
+City = WorldDb::Models::City
+
