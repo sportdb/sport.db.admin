@@ -1,16 +1,6 @@
 module SportDbAdmin
 module ApplicationHelper
 
-  def game_team1_style_class( game )
-    ## fix: remove - use team1_style_class directly
-    game.team1_style_class
-  end
-  
-  def game_team2_style_class( game )
-    ## fix: remove - use team2_style_class directly
-    game.team2_style_class
-  end
-
 
   def powered_by
     ## todo/fix: use version from wettpool module

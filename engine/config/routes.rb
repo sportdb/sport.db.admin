@@ -50,6 +50,7 @@ SportDbAdmin::Engine.routes.draw do
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team
   #  nb: do NOT use team keys like az with only two lower case letters; always use at least three minimum
+  #  todo: allow numbers in key too
   get '/:key', :to => 'teams#shortcut', :as => :short_team_worker, :key => /[a-z]{3,}/
 
 

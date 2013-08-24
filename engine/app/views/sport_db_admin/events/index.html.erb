@@ -15,7 +15,7 @@
    <td>
      <% league.events.each_with_index do |event,index| %>
           <%= '•' if index > 0 %>
-          <%= link_to event.season.title, short_event_path(event) %>
+          <%= link_to_event( event ) %>
      <% end %>
    </td>
    <td style='white-space: nowrap;'>

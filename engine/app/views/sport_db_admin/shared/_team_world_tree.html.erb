@@ -10,7 +10,7 @@
   <% end %>
 
 
-  <%= link_to team.country.title, short_country_path(team.country) %>
+  <%= link_to_country( team.country ) %>
   (<%= team.country.code %>) >
   <%= team.country.continent.title if team.country.continent.present? %>
 </span>

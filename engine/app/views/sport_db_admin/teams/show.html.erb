@@ -22,7 +22,7 @@
 
 <ul>
   <% @team.events.each do |event| %>
-      <li><%= link_to event.full_title, short_event_path(event) %></li>
+      <li><%= link_to_event( event, full_title: true ) %></li>
   <% end %>
 </ul>
 

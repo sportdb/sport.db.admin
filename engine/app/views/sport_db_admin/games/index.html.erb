@@ -7,14 +7,14 @@
 <h3>Past Games</h3>
 <% end %>
 
-<%= render :partial => 'games',  :locals => { :games  => @games } %>
+<%= render partial: 'games', locals: { :games  => @games } %>
 
 <% if @games.count > 0 %>
 <p>
   <% if @show_upcoming %>
-     <%= link_to 'Mehr Spiele »', games_path(:limit => 100) %>
+     <%= link_to 'Mehr Spiele »', games_path( limit: 100 ) %>
   <% else %>
-     <%= link_to 'Mehr Spiele »', past_games_path(:limit => 100) %>
+     <%= link_to 'Mehr Spiele »', past_games_path( limit: 100 ) %>
   <% end %>
 </p>
 <% else %>

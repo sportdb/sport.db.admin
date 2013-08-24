@@ -3,7 +3,7 @@
   -->
 
 <td class='game-round'>
-  (<%= link_to game.round.event.title, short_event_path( game.round.event ) %>
+  (<%= link_to_event( game.round.event, league: true ) %>
    <%= "/ #{game.round.title}" %>
    <%= "/ #{game.group.title}" if game.group.present? %>)
 </td>
