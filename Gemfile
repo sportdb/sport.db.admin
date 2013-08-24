@@ -21,21 +21,17 @@ gem 'footballdb-data-de',     '9.9.9', :git => 'https://github.com/openfootball/
 gem 'footballdb-data-en',     '9.9.9', :git => 'https://github.com/openfootball/en-england.git'
 gem 'footballdb-data-es',     '9.9.9', :git => 'https://github.com/openfootball/es-espana.git'
 
-# gem 'logutils', '0.1.0',  :git => 'git://github.com/geraldb/logutils'
-# gem 'textutils', '0.3.0', :git => 'git://github.com/geraldb/textutils'
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.0'
+gem 'sportdb', '1.7.1'
 
-gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
 gem 'sportdb-service', '0.3.1'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
 
-# gem "sportdb-service", "999", :path => "../sport.db.api", :require => 'sportdb/service'
 
+## add logos n flags
 
-## add logos
-
+gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 gem 'sportdb-logos', '0.1.1',  :git => 'https://github.com/geraldb/sport.db.logos.ruby'
 
 
