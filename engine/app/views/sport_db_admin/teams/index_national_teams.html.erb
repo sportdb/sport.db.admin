@@ -16,30 +16,4 @@
 </p>
 
 
-<table>
- <% @teams.each do |team| %>
-   <tr>
-     <td class='team-key'><%= team.key %></td>
-     <td>
-       <%= link_to team.title, short_team_path( team ) %>
-     </td>
-     <td>
-       <%= "(#{team.code})" if team.code.present? %>
-     </td>
-     <td>
-       <%= team.title2 if team.title2.present? %>
-     </td>
-     
-     <td class='team-key'><%= team.country.key %>
-     </td>
-     <td>
-       <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-       <%= link_to team.country.title, short_country_path(team.country) %>
-       (<%= team.country.code %>)
-       >
-       <%= team.country.continent.title if team.country.continent.present? %>
-     <td>
-     
-   </tr>
- <% end %><!-- teams.each -->
-</table>
+<%= render partial: 'teams', locals: { teams: @teams } %>

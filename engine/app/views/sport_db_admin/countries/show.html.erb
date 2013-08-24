@@ -1,6 +1,6 @@
 
 <h3>
-<%= image_tag "flags/24x24/#{@country.key}.png" %>
+<%= flag_for_country( @country ) %>
 <%= @country.title %> 
 (<%= @country.code %>)
 </h3>
@@ -37,7 +37,8 @@
    <tr>
      <td class='team-key'><%= team.key %></td>
      <td>
-       <%= link_to team.title, short_team_path( team ) %>
+       <%= logo_for_team( team ) %>
+       <%= link_to_team( team ) %>
        <%= " | #{team.synonyms.split('|').join(' | ')}" if team.synonyms.present? %>
      </td>
      <td>
@@ -99,7 +100,8 @@
       <td>
         <% city.teams.each_with_index do |team,index| %>
           <%= '•' if index > 0 %>
-          <%= link_to team.title, short_team_path(team) %>
+          <%= logo_for_team( team ) %>
+          <%= link_to_team( team ) %>
         <% end %><!-- each team -->
       </td>
     </tr>

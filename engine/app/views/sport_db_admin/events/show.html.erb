@@ -7,22 +7,12 @@
 <table>
  <% @event.teams.each do |team| %>
 
-<% if team.national? %>
  <tr>
  <td>
-     <%= image_tag "flags/32x32/#{team.country.key}.png" %>
-     <%= link_to team.title, short_team_path( team ) %>
+     <%= logo_for_team( team ) %>
+     <%= link_to_team( team ) %>
      <%= "(#{team.code})" if team.code.present? %>
-      >
-     <%= team.country.continent.title if team.country.continent.present? %>
- </td>
- </tr>
-<% else %><!-- club -->
- <tr>
-   <td>
-     <%= link_to team.title, short_team_path( team ) %>
-     <%= "(#{team.code})" if team.code.present? %>
-    </td>
+
     <td>
        <%= team.title2  if team.title2.present? %>
     </td>
@@ -30,9 +20,9 @@
       <%= render_team_world_tree( team ) %>
      </td>
  </tr>
-<% end %>
 <% end %><!-- teams.each -->
 </table>
+
 
 <% if @event.groups.count > 0 %>
 <h4><%= @event.groups.count %> Groups</h4>
@@ -55,10 +45,8 @@
   <% group.teams.each do |team| %>
 
    <td>
-    <% if team.national? %>
-      <%= image_tag "flags/32x32/#{team.country.key}.png" %>
-    <% end %>
-    <%= link_to team.title, short_team_path( team ) %>
+    <%= logo_for_team( team ) %>
+    <%= link_to_team( team ) %>
    </td>
   <% end %>
 </tr>

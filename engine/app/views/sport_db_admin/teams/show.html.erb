@@ -6,10 +6,7 @@
 
 <p>
  
-  <% if @team.national? %>
-  <% else %>
-    <%= render_team_world_tree( @team ) %>
-  <% end %>
+   <%= render_team_world_tree( @team ) %>
   
    <%= " | #{@team.title2}" if @team.title2.present? %>
 

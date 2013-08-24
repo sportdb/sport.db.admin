@@ -1,7 +1,7 @@
 
 <span>
-  <%= image_tag "flags/24x24/#{team.country.key}.png" %>
-  
+  <%= flag_for_country( team.country ) %>
+
   <% if team.city.present? %>
     <%= team.city.title %> >
     <% if team.city.region.present? %>
@@ -9,7 +9,7 @@
     <% end %>
   <% end %>
 
-  
+
   <%= link_to team.country.title, short_country_path(team.country) %>
   (<%= team.country.code %>) >
   <%= team.country.continent.title if team.country.continent.present? %>

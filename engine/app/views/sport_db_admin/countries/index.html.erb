@@ -27,8 +27,8 @@
       <%= country.key %>
     </td>
     <td style='white-space: nowrap;'>
-<%= image_tag "flags/24x24/#{country.key}.png" %>  
-<%= link_to country.title, short_country_path( country ) %>
+<%= flag_for_country( country ) %>  
+<%= link_to_country( country ) %>
     </td>
     <td>
       (<%= country.code %>)

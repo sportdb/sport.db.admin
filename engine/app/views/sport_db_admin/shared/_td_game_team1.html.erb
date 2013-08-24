@@ -13,9 +13,5 @@
   </span>
   <%= "(#{game.team1.title2})" if game.team1.title2.present? %>
   
-  <!-- todo: move code to model ?? -->
-  <% if game.team1.national? %>
-    <%= image_tag "flags/32x32/#{game.team1.country.key}.png" %>
-  <% end %>
-  
+  <%= logo_for_team( game.team1 ) %>
 </td>
