@@ -3,6 +3,12 @@ class CreateDb < ActiveRecord::Migration
     LogDb.create
     WorldDb.create
     SportDb.create
+    
+    # check for plugins/addons
+    if defined?( SportDb::Market )
+      SportDb::Market.create
+    end
+
   end
 
   def down

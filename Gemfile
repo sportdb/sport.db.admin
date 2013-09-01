@@ -23,12 +23,15 @@ gem 'footballdb-data-es',     '9.9.9', :git => 'https://github.com/openfootball/
 
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.1'
+gem 'sportdb', '1.7.3'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
-gem 'sportdb-service', '0.3.1'  # mountable JSON api service w/ Sinatra packaged into a gem for easy reuse
+##################################
+# optional sportdb plugins
 
+gem 'sportdb-market', '0.3.0'
 
+########################
 ## add logos n flags
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
