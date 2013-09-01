@@ -17,6 +17,7 @@ require 'logutils/server'  # LogDb::Server
 LogUtils::Logger.root.level = :info    # do not output debug msgs
 
 
+require 'sportdb/service'   # SportDb::Service  (lets use HTTP API service/server)
 
 
 # Initialize the rails application

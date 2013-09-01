@@ -27,7 +27,8 @@ SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('es-espana
 
 # check for plugins/addons
 if defined?( SportDb::Market )
-  # todo: read quotes here
+  SportDb::Market.load_all( find_data_path_from_gemfile_gitref('football.db-market') )
+  SportDb::Market.read_all( find_data_path_from_gemfile_gitref('football.db-market') )
 end
 
 

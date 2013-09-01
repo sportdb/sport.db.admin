@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/geraldb/sport.db.logos.ruby
+  remote: https://github.com/geraldb/sport.db.logos.ruby.git
   revision: 0357b88c283dac0ba88d64eeabac406184c2670d
   specs:
     sportdb-logos (0.1.1)
@@ -9,6 +9,12 @@ GIT
   revision: a81caaf4f8326d74e3c04e0c2607f797b9ed6f88
   specs:
     worlddb-data (9.9.9)
+
+GIT
+  remote: https://github.com/openbookie/football.db-market.git
+  revision: 33811617f9d4b6f940bd2274ae407bea03a0ab28
+  specs:
+    footballdb-data-market (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/at-austria.git
@@ -165,7 +171,7 @@ GEM
       fetcher (>= 0.3)
       gli (>= 2.5.6)
       worlddb (>= 1.7)
-    sportdb-market (0.3.0)
+    sportdb-market (0.4.1)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -207,6 +213,7 @@ DEPENDENCIES
   footballdb-data-es (= 9.9.9)!
   footballdb-data-euro-cup (= 9.9.9)!
   footballdb-data-europe (= 9.9.9)!
+  footballdb-data-market (= 9.9.9)!
   footballdb-data-world-cup (= 9.9.9)!
   jquery-rails
   logutils (= 0.6.0)
@@ -217,7 +224,7 @@ DEPENDENCIES
   sportdb (= 1.7.3)
   sportdb-admin (= 0.0.1)!
   sportdb-logos (= 0.1.1)!
-  sportdb-market (= 0.3.0)
+  sportdb-market (= 0.4.1)
   sqlite3
   thin
   uglifier (>= 1.0.3)

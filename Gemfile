@@ -29,13 +29,16 @@ gem 'sportdb', '1.7.3'   # NB: starting w/ 1.7.3 includes mountable JSON api ser
 ##################################
 # optional sportdb plugins
 
-gem 'sportdb-market', '0.3.0'
+gem 'sportdb-market', '0.4.1'
+
+gem 'footballdb-data-market', '9.9.9',  :git => 'https://github.com/openbookie/football.db-market.git'
+
 
 ########################
 ## add logos n flags
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
-gem 'sportdb-logos', '0.1.1',  :git => 'https://github.com/geraldb/sport.db.logos.ruby'
+gem 'sportdb-logos', '0.1.1',  :git => 'https://github.com/geraldb/sport.db.logos.ruby.git'
 
 
 ########
