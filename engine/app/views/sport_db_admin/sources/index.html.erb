@@ -1,0 +1,55 @@
+
+<h3><%= Event.count %> Events</h3>
+
+
+<table>
+ <% League.all.each do |league| %>
+ <% if league.events.count > 0 %>
+ <tr>
+   <td class='league-key'><%= league.key %></td>
+   <td><%= league.title %></td>
+   <td>
+    <span class='event-count'>
+      (<%= league.events.count %>)
+    </span>
+   </td>
+   <td>
+
+     <table>
+      <!-- todo: !!! event sort by season title/year -->
+     <% league.events.each_with_index do |event,index| %>
+      <tr>
+        <td style='white-space: nowrap;'>
+          <%= link_to_event( event ) %>
+            |
+          <%= event.config %> • 
+          <%  event.sources.gsub(' ','' ).split(',').each do |source| %>
+                <%= source %>
+                <!-- todo/fix: add new map for edit !!!! -->
+                <%
+                   dlbase = SportDb::Updater.new.map_event_to_dlurl( event )
+                   if dlbase.present?
+                     dlbase = dlbase.sub('master/', 'blob/master/').sub('raw.','')
+                 %>
+                   <%= link_to '[Edit]', "#{dlbase}/#{source}.txt" %>
+                 <% else %>
+                    !!FIX
+                <% end %>
+          <% end %>
+        </td>
+      </tr>
+     <% end %>
+     </table>
+
+   </td>
+   <td style='white-space: nowrap;'>
+    <% if league.country.present? %>
+       <%= flag_for_country( league.country) %>
+       <%= link_to_country( league.country ) %>
+       (<%= league.country.code %>)
+    <% end %>
+   </td>
+ </tr>
+ <% end %><!-- if league.events.count > 0 -->
+ <% end %><!-- each league -->
+</table>

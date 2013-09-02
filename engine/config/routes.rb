@@ -11,6 +11,7 @@ SportDbAdmin::Engine.routes.draw do
   get 'clubs',          :to => 'teams#index_clubs',          :as => 'clubs'
   get 'national_teams', :to => 'teams#index_national_teams', :as => 'national_teams'
 
+  resources :sources
   resources :countries
   resources :regions
   resources :rounds
@@ -20,7 +21,15 @@ SportDbAdmin::Engine.routes.draw do
     get 'past',   :on => :collection
   end
 
-  
+  # NB: optional routes for market plugin/addon
+  if defined?( SportDb::Market )
+    resources :services
+    resources :event_quotes
+    resources :group_quotes
+    resources :quotes
+  end
+
+
   #######################
   # add shortcut routing  (friendly urls)
   #

@@ -17,15 +17,30 @@
   <%= link_to 'Rounds', rounds_path() %>  &bull;
   <%= link_to 'Past Games', past_games_path() %> &bull;
   <%= link_to 'Upcoming Games', games_path() %>  &bull;
+  <%= link_to 'Sources', sources_path() %>  &bull;
   <%= link_to 'About', about_path() %>
+  
+  
   <!-- todo: add some more links -->
   
+
+  <% if defined?( SportDb::Market ) %>
+    || Market |
+    <%= link_to 'Services', services_path() %>  &bull;    
+    <%= link_to 'Event Quotes', event_quotes_path() %>  &bull;
+    <%= link_to 'Group Quotes', group_quotes_path() %>  &bull;
+    <%= link_to 'Quotes', quotes_path() %>
+  <% end %>
+
+
   <% if sportdb_api_defined? %>
      .::.
   
-  <!-- fix/check: does it work for nested routes /e.g. db/api/v1 or /api/v1 ?? -->
-  <%= link_to 'Web Service / HTTP JSON API', api_path() %>
+    <!-- fix/check: does it work for nested routes /e.g. db/api/v1 or /api/v1 ?? -->
+    <%= link_to 'Web Service / HTTP JSON API', api_path() %>
   <% end %>
+
+
  </p>
 
 <div class='content'>
