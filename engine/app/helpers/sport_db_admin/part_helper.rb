@@ -8,6 +8,23 @@ module PartHelper
   #
   # by convention all start w/ render_
 
+  ############
+  # partial for market plugin
+
+
+  def render_event_quotes( event, opts={} )
+    render partial: 'sport_db_admin/shared/table_event_quotes', locals: { event: event }
+  end
+
+  ## todo: add render_group_goutes !!!!
+
+  def render_game_quotes( game, opts={} )
+    render partial: 'sport_db_admin/shared/table_game_quotes', locals: { game: game }
+  end
+
+
+  ###########
+  # partial for core/regular code
 
   def render_game_date( game, opts={} )
     render partial: 'sport_db_admin/shared/td_game_date', locals: { game: game }

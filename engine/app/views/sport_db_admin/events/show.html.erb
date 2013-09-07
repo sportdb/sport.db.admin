@@ -24,6 +24,13 @@
 </table>
 
 
+<% if defined?( SportDb::Market ) %>
+<p>
+  <%= render_event_quotes( @event ) %>
+</p>
+<% end %>
+
+
 <% if @event.groups.count > 0 %>
 <h4><%= @event.groups.count %> Groups</h4>
 
@@ -89,6 +96,12 @@
 <%= render_game_team1( game ) %>
 <%= render_game_score( game ) %>
 <%= render_game_team2( game ) %>
+
+<% if defined?( SportDb::Market ) %>
+  <td>
+  <%= render_game_quotes( game ) %>
+  </td>
+<% end %>
 
     <td>
       <!-- todo: move to partial -->

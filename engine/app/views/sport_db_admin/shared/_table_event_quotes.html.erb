@@ -1,0 +1,22 @@
+<!-- paras: requires event -->
+
+<table class='odds'>
+ <tr>
+<% Service.all.each do |srv| %>
+   <td style='vertical-align: top;'>
+    <% srv_event_quotes = srv.event_quotes.where( :event_id => event.id ) %>
+    <!-- todo: check use .size or .count ??  or nil?? -->
+    <% if srv_event_quotes.size > 0 %>
+    <table>
+      <tr><td colspan='2'><%= srv.title %></td><tr>
+      <% srv_event_quotes.each do |quote| %>
+      <tr><td><%= quote.team.title %></td>
+          <td><%= fmt_quote( quote.odds ) %></td>
+      </tr>
+  <% end %><!-- each qoute -->
+    </table>
+    <% end %>
+  </td>
+<% end %><!-- each service -->
+</tr>
+</table>

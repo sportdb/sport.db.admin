@@ -12,6 +12,14 @@ module FormatHelper
   end
 
 
+  def fmt_quote( num )
+    if num >= 10
+      "%3.0f" % num
+    else
+      "%3.2f" % num
+    end
+  end
+
 
 end # module FormatHelper
 end # module SportDbAdmin

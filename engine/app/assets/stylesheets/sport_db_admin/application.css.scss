@@ -28,6 +28,16 @@ a {
 }
 
 
+// todo/fix: move odds to its own stylesheet odds.css.csss and import?
+
+.odds  {
+  background-color: powderblue;
+  * { font-size: 16px*0.8; }
+  .center { text-align: center; }
+}
+
+
+
 .team-count,
 .city-count,
 .event-count,
