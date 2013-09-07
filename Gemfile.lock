@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/openbookie/football.db-market.git
-  revision: 33811617f9d4b6f940bd2274ae407bea03a0ab28
+  revision: 14eca1d0d32d0c81fd1e7e23f27bc957957cbebc
   specs:
     footballdb-data-market (9.9.9)
 
@@ -24,19 +24,19 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: 4088df2d14cd8e1d3949fc9c08a60059c6fb8ffc
+  revision: f867330abb8f6df61fd0e05d078414d4fd879639
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: 4c1b52335bb00b86873b9324dddf943b6bfc5091
+  revision: 223caf433225cc40d80e40c50cee9ad9c75e4591
   specs:
     footballdb-data-en (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/es-espana.git
-  revision: 18c05fbefb2a92622735a4fed50f7fd1d1be3949
+  revision: fbdbcbe6f616aeee1bb1d0fb698a854693ca1a2e
   specs:
     footballdb-data-es (9.9.9)
 
