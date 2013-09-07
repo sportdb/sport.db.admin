@@ -6,14 +6,14 @@
 
 module SportDbAdmin
 
-class QuotesController < SportDbAdminController
+class EventQuotesController < SportDbAdminController
 
   # GET /quotes
   def index
-    @quotes = Quote.joins( :game ).order( 'games.play_at desc' ).all
+    @quotes = EventQuote.joins( :event, :service ).order( 'events.start_at desc, service_id, odds' ).all
   end
 
 
-end # class QuotesController
+end # class EventQuotesController
 
 end # module SportDbAdmin

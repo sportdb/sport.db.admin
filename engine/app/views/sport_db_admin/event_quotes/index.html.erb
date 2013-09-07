@@ -1,0 +1,15 @@
+
+<h2> <%= EventQuote.count %> Event Quotes</h2>
+
+<table>
+    <% @quotes.each do |quote| %>
+      <tr>
+         <td><%= quote.service.title %></td>
+         <td class='event-key'><%= quote.event.key %></td>
+         <td><%= quote.team.title %></td>
+         <td><%= quote.odds %></td>
+         <td><%= quote.comments %></td>
+         <td><%= quote.event.title %></td>
+      </tr>
+    <% end %>
+</table>

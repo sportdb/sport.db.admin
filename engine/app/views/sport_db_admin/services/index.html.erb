@@ -1,8 +1,17 @@
 <h3><%= Service.count %> Services</h3>
 
 
+<table>
 <% @services.each do |service| %>
 
-  <%= service.inspect %>
+ <tr>
+   <td class='service-key'><%= service.key %></td>
+   <td><%= service.title %></td>
 
+   <!-- todo: add stats
+         number of event-,group-,game- quotes -->
+
+ </tr>
+ 
 <% end %>
+</table>

@@ -1,0 +1,16 @@
+
+<h2> <%= GroupQuote.count %> Group Quotes</h2>
+
+<table>
+    <% @quotes.each do |quote| %>
+      <tr>
+         <td><%= quote.service.title %></td>
+         <td class='event-key'><%= quote.group.event.key %></td>
+         <td><%= quote.group.title %></td><!-- todo: add group to key e.g. world.cu/A or similar ?? -->
+         <td><%= quote.team.title %></td>
+         <td><%= quote.odds %></td>
+         <td><%= quote.comments %></td>
+         <td><%= quote.group.event.title %></td>
+      </tr>
+    <% end %>
+</table>

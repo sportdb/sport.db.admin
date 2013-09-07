@@ -17,7 +17,7 @@
 
      <table>
       <!-- todo: !!! event sort by season title/year -->
-     <% league.events.each_with_index do |event,index| %>
+     <% league.events.order('start_at desc').each_with_index do |event,index| %>
       <tr>
         <td style='white-space: nowrap;'>
           <%= link_to_event( event ) %>

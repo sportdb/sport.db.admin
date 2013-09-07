@@ -1,9 +1,24 @@
 <h3><%= Quote.count %> Quotes</h3>
 
-
+<table>
 <% @quotes.each do |quote| %>
+ <tr>
+    <td><%= quote.service.title %></td>
+    <td class='event-key'><%= quote.game.round.event.key %></td>
+    
+    <%= render_game_team1( quote.game ) %>
+    
+    <td><%= quote.odds1 %></td>
+    <td style='white-space: nowrap;'>X <%= quote.oddsx %></td>
 
-  <%= quote.inspect %>
+    <%= render_game_team2( quote.game ) %>
 
+    <td><%= quote.odds2 %></td>
+    <td><%= quote.comments %></td>
+    
+    <td><%= quote.game.play_at %></td>
+    
+     <%= render_game_round( quote.game ) %>
+ </tr>
 <% end %>
-
+</table>
