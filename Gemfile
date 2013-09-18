@@ -10,7 +10,7 @@ gem 'sinatra'
 
 gem 'logutils', '0.6.0'
 
-gem 'worlddb-data', '9.9.9', :git => 'https://github.com/geraldb/world.db.git'
+gem 'worlddb-data', '9.9.9', :git => 'https://github.com/openmundi/world.db.git'
 
 gem 'footballdb-data-world-cup',  '9.9.9', :git => 'https://github.com/openfootball/world-cup.git'
 gem 'footballdb-data-euro-cup',   '9.9.9', :git => 'https://github.com/openfootball/euro-cup.git'
@@ -20,25 +20,28 @@ gem 'footballdb-data-at',     '9.9.9', :git => 'https://github.com/openfootball/
 gem 'footballdb-data-de',     '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
 gem 'footballdb-data-en',     '9.9.9', :git => 'https://github.com/openfootball/en-england.git'
 gem 'footballdb-data-es',     '9.9.9', :git => 'https://github.com/openfootball/es-espana.git'
+gem 'footballdb-data-it',     '9.9.9', :git => 'https://github.com/openfootball/it-italy.git'
 
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.3'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
+gem 'sportdb', '1.7.5'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
 ##################################
 # optional sportdb plugins
 
-gem 'sportdb-market', '0.4.1'
+gem 'sportdb-market', '0.5.0'
 
-gem 'footballdb-data-market', '9.9.9',  :git => 'https://github.com/openbookie/football.db-market.git'
+gem 'footballdb-data-market', '9.9.9',  :git => 'https://github.com/openbookie/football.db.market.git'
 
 
 ########################
 ## add logos n flags
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
-gem 'sportdb-logos', '0.1.1',  :git => 'https://github.com/geraldb/sport.db.logos.ruby.git'
+
+gem 'sportdb-logos',    '0.1.0',  :git => 'https://github.com/sportlogos/sport.db.logos.ruby.git'
+gem 'footballdb-logos', '0.1.0',  :git => 'https://github.com/sportlogos/football.db.logos.ruby.git'
 
 
 ########

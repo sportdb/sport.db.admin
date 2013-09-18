@@ -1,4 +1,13 @@
 
+
+desc 'sportdb: auto-update fixtures'
+task :update => [:environment] do |t|
+
+    SportDb.update!
+
+end
+
+
 desc 'sportdb: load all seed data from sportdb gem'
 task :sportdb_load => [:environment] do |t|
 
