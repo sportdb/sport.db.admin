@@ -1,30 +1,30 @@
 GIT
   remote: https://github.com/openbookie/football.db.market.git
-  revision: 09d7ec7bb9272763dd06920bd2c2428d1cbef250
+  revision: e152d978ac6b0e03ec033bcc22a83ab18b281cb7
   specs:
     footballdb-data-market (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/at-austria.git
-  revision: 7204226008dd41211a9ee78e89bf631bf1673356
+  revision: 4f88b83a11f7d91dceea681174976dd116e21c97
   specs:
     footballdb-data-at (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: 4867680974638eb878560fee7b289b334e3686a1
+  revision: 745d67515d79d52772ab9711ee10a10607f3bbf3
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: 3b01cd244241124f309d3d0f8e1b0f8562f7f6c7
+  revision: 7ebc587a1b0ede7b61a1e8102db38beb46acb0e3
   specs:
     footballdb-data-en (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/es-espana.git
-  revision: f813f5654886aa33dddaa9290e0292f2c1fca956
+  revision: 2353a1233aa4ee51fbd18b1109f1fadf4dc8f99d
   specs:
     footballdb-data-es (9.9.9)
 
@@ -36,25 +36,25 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/europe.git
-  revision: b7d010c2f5c46d8b1bc7d3f796b933a2ee87e2a4
+  revision: a5a582a6a090035660666951d0de75de9435bb83
   specs:
     footballdb-data-europe (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/it-italy.git
-  revision: d8d10b4c7798271f4b809d4012fd65ad5e674516
+  revision: 7329e06e1500a7021bc14d51e7748431343c5886
   specs:
     footballdb-data-it (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/world-cup.git
-  revision: 195d2ff91ae439cc0e58e4e75c84e027f385fd91
+  revision: 83c92d4f5f61ee0e96d681d8f9a145d679880719
   specs:
     footballdb-data-world-cup (9.9.9)
 
 GIT
   remote: https://github.com/openmundi/world.db.git
-  revision: d7f29db6d8fd70cf68c365a80f09cdb548e372bb
+  revision: d11d8ce0b32185882f8744cac081b444edd626ff
   specs:
     worlddb-data (9.9.9)
 
@@ -78,6 +78,9 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    about (0.1.0)
+      logutils (>= 0.5)
+      textutils (>= 0.7)
     actionmailer (3.2.12)
       actionpack (= 3.2.12)
       mail (~> 2.4.4)
@@ -118,28 +121,30 @@ GEM
     commander (4.1.5)
       highline (~> 1.6.11)
     daemons (1.1.9)
+    dbbrowser (0.1.0)
+      logutils (>= 0.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
-    execjs (2.0.1)
-    fetcher (0.4.0)
+    execjs (2.0.2)
+    fetcher (0.4.1)
       logutils (>= 0.6)
-    gli (2.8.0)
-    highline (1.6.19)
+    gli (2.8.1)
+    highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.0)
+    json (1.8.1)
     logutils (0.6.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
-    multi_json (1.8.0)
+    multi_json (1.8.2)
     pg (0.17.0)
     pg (0.17.0-x86-mingw32)
     polyglot (0.3.3)
@@ -170,7 +175,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.2.10)
+    sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -191,7 +196,7 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.8)
     sqlite3 (1.3.8-x86-mingw32)
-    textutils (0.6.8)
+    textutils (0.7.0)
       logutils (~> 0.5)
     thin (1.5.1)
       daemons (>= 1.0.9)
@@ -202,7 +207,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
+    tzinfo (0.3.38)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
@@ -217,8 +222,10 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  about
   annotate (~> 2.4.1.beta)
   coffee-rails (~> 3.2.1)
+  dbbrowser
   footballdb-data-at (= 9.9.9)!
   footballdb-data-de (= 9.9.9)!
   footballdb-data-en (= 9.9.9)!

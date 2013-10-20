@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-gem 'sinatra'
+gem 'sinatra', :require => 'sinatra/base'
 
 
 ############
@@ -48,6 +48,13 @@ gem 'footballdb-logos', '0.1.0',  :git => 'https://github.com/sportlogos/footbal
 # add engines
 
 gem 'sportdb-admin', '0.0.1', :path => './engine'
+
+##########
+# add sinatra (mountable) app(let)s
+
+gem 'about'      # mountable app - about - sys info pages
+gem 'dbbrowser'  # mountable app
+
 
 
 group :production do
