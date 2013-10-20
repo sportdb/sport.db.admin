@@ -121,7 +121,7 @@ GEM
     commander (4.1.5)
       highline (~> 1.6.11)
     daemons (1.1.9)
-    dbbrowser (0.1.0)
+    dbbrowser (0.1.2)
       logutils (>= 0.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
