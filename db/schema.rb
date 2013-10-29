@@ -137,7 +137,8 @@ ActiveRecord::Schema.define(:version => 1) do
     t.integer  "score2ii"
     t.integer  "next_game_id"
     t.integer  "prev_game_id"
-    t.string   "toto12x"
+    t.integer  "winner"
+    t.integer  "winner90"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end

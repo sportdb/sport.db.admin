@@ -23,12 +23,13 @@ SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('at-austri
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('de-deutschland') )
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('en-england') )
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('es-espana') )
+SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('it-italy') )
 
 
 # check for plugins/addons
 if defined?( SportDb::Market )
-  SportDb::Market.load_all( find_data_path_from_gemfile_gitref('football.db-market') )
-  SportDb::Market.read_all( find_data_path_from_gemfile_gitref('football.db-market') )
+  # SportDb::Market.load_all( find_data_path_from_gemfile_gitref('football.db-market') )
+  # SportDb::Market.read_all( find_data_path_from_gemfile_gitref('football.db-market') )
 end
 
 

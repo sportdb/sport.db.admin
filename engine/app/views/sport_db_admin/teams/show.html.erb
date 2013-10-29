@@ -27,9 +27,16 @@
 </ul>
 
 
+<div id='tabs-games'>
+ <ul>
+  <li>Upcoming</li>
+  <li>Past</li>
+ </ul>
+
+<div>
 <!-- todo: use different css class e.g. db?? -->
 <table class='play'>
-<% @team.games.each do |game| %>
+<% @team.upcoming_games.all.each do |game| %>
 <tr>
    
 <%= render_game_date( game ) %>
@@ -40,8 +47,31 @@
 <%= render_game_flags( game ) %>
 <%= render_game_round( game ) %>
 
+</tr>
+<% end %> <!-- games -->
+</table>
+</div>
 
+<div>
+<!-- todo: use different css class e.g. db?? -->
+<table class='play'>
+<% @team.past_games.all.each do |game| %>
+<tr>
+   
+<%= render_game_date( game ) %>
+
+<%= render_game_team1( game ) %>
+<%= render_game_score( game ) %>
+<%= render_game_team2( game ) %>
+<%= render_game_flags( game ) %>
+<%= render_game_round( game ) %>
 
 </tr>
 <% end %> <!-- games -->
 </table>
+</div>
+</div> <!-- div.tabs-games -->
+
+<script>
+   tabify( '#tabs-games' );
+</script>

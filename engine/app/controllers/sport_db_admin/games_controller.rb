@@ -9,6 +9,8 @@ class GamesController < SportDbAdminController
     # find next upcoming games
     limit = params[:limit] || '50'
     
+    ## fix: use scope upcoming - add to game model!!!
+    
     @games = Game.where( 'play_at > ?', Time.now ).order( 'play_at').limit(limit)
     @show_upcoming = true
   end
@@ -23,6 +25,9 @@ class GamesController < SportDbAdminController
                     where( 'score1 is null or score2 is null').
                     order( 'play_at desc').limit(limit)
     else
+
+      ## fix: use scope past - add to game model!!!
+
       @games = Game.where( 'play_at < ?', Time.now ).order( 'play_at desc').limit(limit)
     end
     

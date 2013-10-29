@@ -1,13 +1,11 @@
 
 <table class='play'>
-<% last_play_at = Time.local( 1999, 1, 1 )
-   games.each do |game| %>
- 
-  <% unless last_play_at.year   == game.play_at.year  &&
-            last_play_at.month  == game.play_at.month &&
-            last_play_at.day    == game.play_at.day %>
-    
-    <% unless last_play_at.year == game.play_at.year %>
+ <!-- fix: add GameCursor shortcut -->
+<% SportDb::Models::GameCursor.new( games ).each do |game,gamep| %>
+
+  <% if gamep.new_date? %>
+            
+    <% if gamep.new_year? %>
      <tr class='game-year'>
        <td colspan='2'></td>
        <td colspan='7'> <%= game.play_at.strftime('%Y') %></td>
@@ -15,7 +13,7 @@
     <% end %>
 
     <!-- todo: find a method for week number; do NOT use strftime; there must be something easier -->
-    <% unless last_play_at.strftime('%V') == game.play_at.strftime('%V') %>
+    <% if gamep.new_week? %>
      <tr class='game-week'>
        <td colspan='2'></td>
        <td colspan='7'>Week <%= game.play_at.strftime('%V') %></td>
@@ -42,6 +40,5 @@
   <%= render_game_round( game ) %>
 
  </tr> 
-<% last_play_at = game.play_at
-   end %><!-- each game -->
+<% end %><!-- each game -->
 </table>

@@ -16,5 +16,4 @@
 #  updated_at :datetime        not null
 #
 
-
 Team = SportDb::Models::Team

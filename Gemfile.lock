@@ -1,30 +1,30 @@
 GIT
   remote: https://github.com/openbookie/football.db.market.git
-  revision: e152d978ac6b0e03ec033bcc22a83ab18b281cb7
+  revision: 979313ded9af876f329d391d6a7ed0091cc89a3c
   specs:
     footballdb-data-market (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/at-austria.git
-  revision: 4f88b83a11f7d91dceea681174976dd116e21c97
+  revision: 51bff3f3ab6df056498a15155205eb673ca6ffb9
   specs:
     footballdb-data-at (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: 745d67515d79d52772ab9711ee10a10607f3bbf3
+  revision: 6d61ea298c124673c13ddfe9cbb9fa1a4edf706b
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: 7ebc587a1b0ede7b61a1e8102db38beb46acb0e3
+  revision: 8ed7f1c49725b1079eb6b67c232b03d2546b3fc8
   specs:
     footballdb-data-en (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/es-espana.git
-  revision: 2353a1233aa4ee51fbd18b1109f1fadf4dc8f99d
+  revision: cac8216d97f3c41fd6e54603796269731688c3ce
   specs:
     footballdb-data-es (9.9.9)
 
@@ -36,13 +36,13 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/europe.git
-  revision: a5a582a6a090035660666951d0de75de9435bb83
+  revision: 300db3c7cdc2c3f5adf1f09e5b6bd841a54db466
   specs:
     footballdb-data-europe (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/it-italy.git
-  revision: 7329e06e1500a7021bc14d51e7748431343c5886
+  revision: a264f603bb4c160f9de24230404c3184d6f9bd46
   specs:
     footballdb-data-it (9.9.9)
 
@@ -151,7 +151,7 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-protection (1.5.0)
+    rack-protection (1.5.1)
       rack
     rack-ssl (1.3.3)
       rack
@@ -180,11 +180,11 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    sinatra (1.4.3)
+    sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sportdb (1.7.6)
+    sportdb (1.7.7)
       fetcher (>= 0.3)
       gli (>= 2.5.6)
       worlddb (>= 1.7)
@@ -208,9 +208,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     worlddb (1.7.2)
       activerecord (~> 3.2)
       commander (~> 4.1.3)
@@ -242,7 +242,7 @@ DEPENDENCIES
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sinatra
-  sportdb (= 1.7.6)
+  sportdb (= 1.7.7)
   sportdb-admin (= 0.0.1)!
   sportdb-logos (= 0.1.0)!
   sportdb-market (= 0.5.0)
