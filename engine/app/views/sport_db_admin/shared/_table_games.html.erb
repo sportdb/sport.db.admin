@@ -1,0 +1,44 @@
+
+<table class='play'>
+ <!-- fix: add GameCursor shortcut -->
+<% SportDb::Models::GameCursor.new( games ).each do |game,gamep| %>
+
+  <% if gamep.new_date? %>
+            
+    <% if gamep.new_year? %>
+     <tr class='game-year'>
+       <td colspan='2'></td>
+       <td colspan='7'> <%= game.play_at.strftime('%Y') %></td>
+     </tr>
+    <% end %>
+
+    <!-- todo: find a method for week number; do NOT use strftime; there must be something easier -->
+    <% if gamep.new_week? %>
+     <tr class='game-week'>
+       <td colspan='2'></td>
+       <td colspan='7'>Week <%= game.play_at.strftime('%V') %></td>
+     </tr>
+    <% end %>
+        
+    <tr class='game-day'>
+      <td></td>
+      <td colspan='8'><%= game.play_at.strftime('%A, %d. %B') %></td>
+    </tr> 
+        
+  <% end %>
+ 
+ 
+ <tr>
+  <td class='game-hour'>
+    <%= game.play_at.strftime('%H:%M') %>
+  </td>
+
+  <%= render_game_team1( game ) %>
+  <%= render_game_score( game ) %>
+  <%= render_game_team2( game ) %>
+  <%= render_game_flags( game ) %>
+  <%= render_game_round( game ) %>
+
+ </tr> 
+<% end %><!-- each game -->
+</table>

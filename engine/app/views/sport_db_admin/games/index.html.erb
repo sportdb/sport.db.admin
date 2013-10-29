@@ -7,7 +7,9 @@
 <h3>Past Games</h3>
 <% end %>
 
-<%= render partial: 'games', locals: { :games  => @games } %>
+
+<%= render_games( @games ) %>
+
 
 <% if @games.count > 0 %>
 <p>

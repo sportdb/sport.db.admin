@@ -26,6 +26,11 @@ module PartHelper
   ###########
   # partial for core/regular code
 
+  def render_games( games, opts={} )
+    render partial: 'sport_db_admin/shared/table_games', locals: { games: games }
+  end
+  
+
   def render_game_date( game, opts={} )
     render partial: 'sport_db_admin/shared/td_game_date', locals: { game: game }
   end
