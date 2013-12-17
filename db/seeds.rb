@@ -13,17 +13,20 @@ WorldDb.read_setup( 'setups/sport.db.admin', find_data_path_from_gemfile_gitref(
 
 
 SportDb.read_builtin
+
 # national teams
+SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('euro-cup') )
+SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('africa-cup') )
+SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('america-cup') )
 SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('world-cup') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('euro-cup') )
 
 # clubs
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('europe') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('at-austria') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('de-deutschland') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('en-england') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('es-espana') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('it-italy') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('europe') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('at-austria') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('de-deutschland') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('en-england') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('es-espana') )
+# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('it-italy') )
 
 
 # check for plugins/addons

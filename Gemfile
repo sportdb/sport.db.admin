@@ -12,9 +12,13 @@ gem 'logutils', '0.6.0'
 
 gem 'worlddb-data', '9.9.9', :git => 'https://github.com/openmundi/world.db.git'
 
-gem 'footballdb-data-world-cup',  '9.9.9', :git => 'https://github.com/openfootball/world-cup.git'
-gem 'footballdb-data-euro-cup',   '9.9.9', :git => 'https://github.com/openfootball/euro-cup.git'
+gem 'footballdb-data-world-cup',   '9.9.9', :git => 'https://github.com/openfootball/world-cup.git'
+gem 'footballdb-data-euro-cup',    '9.9.9', :git => 'https://github.com/openfootball/euro-cup.git'
+gem 'footballdb-data-africa-cup',  '9.9.9', :git => 'https://github.com/openfootball/africa-cup.git'
+gem 'footballdb-data-amercia-cup', '9.9.9', :git => 'https://github.com/openfootball/america-cup.git'
 
+
+gem 'footballdb-data-europe-champions-league', '9.9.9', :git => 'https://github.com/openfootball/europe-champions-league.git'
 gem 'footballdb-data-europe', '9.9.9', :git => 'https://github.com/openfootball/europe.git'
 gem 'footballdb-data-at',     '9.9.9', :git => 'https://github.com/openfootball/at-austria.git'
 gem 'footballdb-data-de',     '9.9.9', :git => 'https://github.com/openfootball/de-deutschland.git'
@@ -24,7 +28,7 @@ gem 'footballdb-data-it',     '9.9.9', :git => 'https://github.com/openfootball/
 
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.7'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
+gem 'sportdb', '1.7.8'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
 ##################################
@@ -32,7 +36,9 @@ gem 'sportdb', '1.7.7'   # NB: starting w/ 1.7.3 includes mountable JSON api ser
 
 gem 'sportdb-market', '0.5.0'
 
-gem 'footballdb-data-market', '9.9.9',  :git => 'https://github.com/openbookie/football.db.market.git'
+####
+# fix: use new repo names europe-champions-league, etc.
+# gem 'footballdb-data-market', '9.9.9',  :git => 'https://github.com/openbookie/football.db.market.git'
 
 
 ########################
