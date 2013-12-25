@@ -28,7 +28,7 @@ gem 'footballdb-data-it',     '9.9.9', :git => 'https://github.com/openfootball/
 
 
 gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.8'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
+gem 'sportdb', '1.7.9'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
 ##################################

@@ -1,6 +1,10 @@
 
+skip_worlddb = true
+# skip_worlddb = false
+
+
 LogDb.delete!
-WorldDb.delete!  # danger zone! deletes all records
+WorldDb.delete!  unless skip_worlddb    # danger zone! deletes all records
 SportDb.delete!  # danger zone! deletes all records
 
 # check for plugins/addons
@@ -9,24 +13,37 @@ if defined?( SportDb::Market )
 end
 
 
-WorldDb.read_setup( 'setups/sport.db.admin', find_data_path_from_gemfile_gitref('world.db'), { skip_tags: true } )
+WorldDb.read_setup( 'setups/sport.db.admin', find_data_path_from_gemfile_gitref('world.db'), { skip_tags: true } )  unless skip_worlddb
 
 
 SportDb.read_builtin
 
+sportdb_setups = []
+
 # national teams
-SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('euro-cup') )
-SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('africa-cup') )
-SportDb.read_setup( 'setups/teams',  find_data_path_from_gemfile_gitref('america-cup') )
-SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('world-cup') )
+
+sportdb_setups +=[
+  ['euro-cup',    'all'],
+  ['africa-cup',  'teams'],
+  ['america-cup', 'teams'],
+  ['world-cup',   'all' ]
+]
 
 # clubs
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('europe') )
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('at-austria') )
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('de-deutschland') )
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('en-england') )
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('es-espana') )
-# SportDb.read_setup( 'setups/all',  find_data_path_from_gemfile_gitref('it-italy') )
+
+sportdb_setups +=[
+  ['europe',         'all'],
+  ['at-austria',     'all'],
+  ['de-deutschland', 'all'],
+  ['en-england',     'all'],
+  ['es-espana',      'all'],
+  ['it-italy',       'all'],
+  ['europe-champions-league', 'all']
+]
+
+sportdb_setups.each do |setup|
+  SportDb.read_setup( "setups/#{setup[1]}", find_data_path_from_gemfile_gitref( setup[0]) )
+end
 
 
 # check for plugins/addons
