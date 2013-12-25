@@ -1,6 +1,10 @@
 
-skip_worlddb = true
-# skip_worlddb = false
+###
+# fix: add support for/use ENV[:worlddb] ??  =false|f|skip 
+
+
+# skip_worlddb = true
+skip_worlddb = false
 
 
 LogDb.delete!

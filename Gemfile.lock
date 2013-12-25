@@ -208,7 +208,7 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.8)
     sqlite3 (1.3.8-x86-mingw32)
-    textutils (0.7.0)
+    textutils (0.7.1)
       logutils (~> 0.5)
     thin (1.6.1)
       daemons (>= 1.0.9)
