@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/es-espana.git
-  revision: 320690e9f2d090a3388ac32701b48350436be06f
+  revision: f83a50fd23404c6c1ca42703281d0e58953a5041
   specs:
     footballdb-data-es (9.9.9)
 

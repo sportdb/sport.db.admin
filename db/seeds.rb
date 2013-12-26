@@ -1,10 +1,19 @@
 
-###
-# fix: add support for/use ENV[:worlddb] ??  =false|f|skip 
+####
+# e.g. use like
+#   rake db:seed WORLD=f   or
+#   rake db:seed WORLDDB=skip
 
 
-# skip_worlddb = true
-skip_worlddb = false
+skip_worlddb_str =  ENV['WORLD'] || ENV['WORLDDB']
+
+if skip_worlddb_str.present? && ['f', 'false', 'skip'].include?( skip_worlddb_str )
+  skip_worlddb = true
+  puts 'skipping setup for world.db'
+else
+  skip_worlddb = false
+end
+
 
 
 LogDb.delete!
@@ -24,6 +33,7 @@ SportDb.read_builtin
 
 sportdb_setups = []
 
+######################
 # national teams
 
 sportdb_setups +=[
@@ -33,6 +43,7 @@ sportdb_setups +=[
   ['world-cup',   'all' ]
 ]
 
+################
 # clubs
 
 sportdb_setups +=[
