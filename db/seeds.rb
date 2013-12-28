@@ -37,23 +37,31 @@ sportdb_setups = []
 # national teams
 
 sportdb_setups +=[
-  ['euro-cup',    'all'],
+  ['euro-cup',    '2012'],
   ['africa-cup',  'teams'],
-  ['america-cup', 'teams'],
-  ['world-cup',   'all' ]
+  ['north-america-gold-cup', 'teams'],
+  ['copa-america', 'teams'],
+  ['world-cup',   '2014' ]
 ]
 
 ################
 # clubs
 
 sportdb_setups +=[
-  ['europe',         'all'],
-  ['at-austria',     'all'],
-  ['de-deutschland', 'all'],
-  ['en-england',     'all'],
-  ['es-espana',      'all'],
-  ['it-italy',       'all'],
-  ['europe-champions-league', 'all']
+  ['world',          'teams'],
+  ['europe',         'teams'],
+  ['at-austria',     '2013_14'],
+  ['de-deutschland', '2013_14'],
+  ['en-england',     '2013_14'],
+  ['es-espana',      '2013_14'],
+  ['it-italy',       '2013_14'],
+  ['europe-champions-league', '2013_14'],
+  ['america','teams'],
+  ['mx-mexico','2013_14'],
+  ['north-america-champions-league','2013_14'],
+  ['br-brazil','2013'],
+  ['copa-libertadores','2013'],
+  ['world',          '2013'],    # circular reference; requires other teams
 ]
 
 sportdb_setups.each do |setup|

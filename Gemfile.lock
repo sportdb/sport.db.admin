@@ -5,10 +5,10 @@ GIT
     footballdb-data-africa-cup (9.9.9)
 
 GIT
-  remote: https://github.com/openfootball/america-cup.git
-  revision: 6958a8fbd7b64a8afcc7816ae3447a35daaf1790
+  remote: https://github.com/openfootball/america.git
+  revision: 8c9a92a1792bf187194ee94e6e52a1417002736c
   specs:
-    footballdb-data-amercia-cup (9.9.9)
+    footballdb-data-america (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/at-austria.git
@@ -17,14 +17,32 @@ GIT
     footballdb-data-at (9.9.9)
 
 GIT
+  remote: https://github.com/openfootball/br-brazil.git
+  revision: 9c387be48737dc5a2af0f561e1099243309b2f79
+  specs:
+    footballdb-data-br-brazil (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/copa-america.git
+  revision: 8f74ab7b298c87fec5727cec9313d727cc689433
+  specs:
+    footballdb-data-copa-america (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/copa-libertadores.git
+  revision: 798e7b55547c6f5e507da047401e80d9bc596a7c
+  specs:
+    footballdb-data-copa-libertadores (9.9.9)
+
+GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: c37adfca96a63d34c92842e77ec540821d2ffab1
+  revision: 1afb5a2d63ec39aff708deb4cde5f1a5c63db780
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: a2ee999fa63b40840dc51db5e0690a4394f27636
+  revision: 8ae34a36f650531b9f9895ed2e7874f1023fd3b0
   specs:
     footballdb-data-en (9.9.9)
 
@@ -36,7 +54,7 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/euro-cup.git
-  revision: 017b257f59c506dbe03afedf391480a9c08c1fb9
+  revision: 75db2a7890cc496d5b7a4033a890c3a046c4a6ee
   specs:
     footballdb-data-euro-cup (9.9.9)
 
@@ -54,15 +72,39 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/it-italy.git
-  revision: 0e210b3b7ac2e27884fab2985e052938a493d2d9
+  revision: 93ba819470ba71485c7c201e0278df4ba9a33f49
   specs:
     footballdb-data-it (9.9.9)
 
 GIT
+  remote: https://github.com/openfootball/mx-mexico.git
+  revision: 82de7efdfdd3fc0e1bb0c424a9bd73482fe0a0d5
+  specs:
+    footballdb-data-mx-mexico (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/north-america-champions-league.git
+  revision: 920807cc5c52b501bada982cef3a38b5d8b9c0a4
+  specs:
+    footballdb-data-north-america-champions-league (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/north-america-gold-cup.git
+  revision: 93397dc9f0701a560add5ee4432dd91f7c31b8e8
+  specs:
+    footballdb-data-north-america-gold-cup (9.9.9)
+
+GIT
   remote: https://github.com/openfootball/world-cup.git
-  revision: a9d38a9db5ac436b29ea31ada6156a5324a15c31
+  revision: e6cfa2715843a96569baeeba9387977cef04f616
   specs:
     footballdb-data-world-cup (9.9.9)
+
+GIT
+  remote: https://github.com/openfootball/world.git
+  revision: 979648b43df8c5d70047c01f246b78d66ed2bc40
+  specs:
+    footballdb-data-world (9.9.9)
 
 GIT
   remote: https://github.com/openmundi/world.db.git
@@ -239,8 +281,11 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dbbrowser
   footballdb-data-africa-cup (= 9.9.9)!
-  footballdb-data-amercia-cup (= 9.9.9)!
+  footballdb-data-america (= 9.9.9)!
   footballdb-data-at (= 9.9.9)!
+  footballdb-data-br-brazil (= 9.9.9)!
+  footballdb-data-copa-america (= 9.9.9)!
+  footballdb-data-copa-libertadores (= 9.9.9)!
   footballdb-data-de (= 9.9.9)!
   footballdb-data-en (= 9.9.9)!
   footballdb-data-es (= 9.9.9)!
@@ -248,6 +293,10 @@ DEPENDENCIES
   footballdb-data-europe (= 9.9.9)!
   footballdb-data-europe-champions-league (= 9.9.9)!
   footballdb-data-it (= 9.9.9)!
+  footballdb-data-mx-mexico (= 9.9.9)!
+  footballdb-data-north-america-champions-league (= 9.9.9)!
+  footballdb-data-north-america-gold-cup (= 9.9.9)!
+  footballdb-data-world (= 9.9.9)!
   footballdb-data-world-cup (= 9.9.9)!
   footballdb-logos (= 0.1.0)!
   jquery-rails
