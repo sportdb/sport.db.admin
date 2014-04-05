@@ -8,7 +8,7 @@ gem 'sinatra', require: 'sinatra/base'
 ############
 # lets use open sport.db schema & fixtures
 
-gem 'logutils', '0.6.0'
+gem 'logutils'   ###, '0.6.0'
 
 gem 'worlddb-data', '9.9.9', git: 'https://github.com/openmundi/world.db.git'
 
@@ -34,14 +34,14 @@ gem 'footballdb-data-br-brazil',         '9.9.9', git: 'https://github.com/openf
 gem 'footballdb-data-copa-libertadores', '9.9.9', git: 'https://github.com/openfootball/copa-libertadores.git'
 
 
-gem 'worlddb', '1.7.2'
-gem 'sportdb', '1.7.9'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
+gem 'worlddb', '2.0.3'
+gem 'sportdb', '1.8.9'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
 ##################################
 # optional sportdb plugins
 
-gem 'sportdb-market', '0.5.0'
+gem 'sportdb-market', '0.5.1'
 
 ####
 # fix: use new repo names europe-champions-league, etc.

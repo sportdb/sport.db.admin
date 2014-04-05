@@ -13,6 +13,7 @@ puts "[boot] environment.rb - after require 'application'"
 
 require 'logutils/db'      # LogDb n LogDb::Models
 require 'logutils/server'  # LogDb::Server
+require 'props/db'  # fix: also include textutils/db (move from_fixture to textutils)
 
 LogUtils::Logger.root.level = :info    # do not output debug msgs
 

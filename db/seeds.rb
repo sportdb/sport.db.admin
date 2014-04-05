@@ -17,12 +17,19 @@ end
 
 
 LogDb.delete!
-WorldDb.delete!  unless skip_worlddb    # danger zone! deletes all records
+ConfDb.delete!
+
+unless skip_worlddb    # danger zone! deletes all records
+  TagDb.delete!
+  WorldDb.delete!  
+end
+
 SportDb.delete!  # danger zone! deletes all records
+
 
 # check for plugins/addons
 if defined?( SportDb::Market )
-  SportDb::Market.delete!
+  ### SportDb::Market.delete!
 end
 
 
