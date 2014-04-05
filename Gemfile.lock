@@ -114,13 +114,15 @@ GIT
 
 GIT
   remote: https://github.com/sportlogos/football.db.logos.ruby.git
-  revision: d850fddfc09ca7c61aa2844b961bbca8e0c6c718
+  revision: 23b39b269966583e0b2adc6354b9c9f7bce7e4fe
+  branch: gh-pages
   specs:
     footballdb-logos (0.1.0)
 
 GIT
   remote: https://github.com/sportlogos/sport.db.logos.ruby.git
-  revision: 9ec090009312cc8c4a575c9350532a59e1435a24
+  revision: b6c0d7196ccbefb1cc248e4ed64ad54dc6aef01d
+  branch: gh-pages
   specs:
     sportdb-logos (0.1.0)
 
