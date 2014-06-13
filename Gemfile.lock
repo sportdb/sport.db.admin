@@ -1,78 +1,66 @@
 GIT
   remote: https://github.com/openfootball/africa-cup.git
-  revision: 85dd47e412880aeb605ae0d13c12d1e55e4a9571
+  revision: 21fc2277c84b4dae675976d69ee042eeb9a896c8
   specs:
     footballdb-data-africa-cup (9.9.9)
 
 GIT
-  remote: https://github.com/openfootball/america.git
-  revision: 8c9a92a1792bf187194ee94e6e52a1417002736c
-  specs:
-    footballdb-data-america (9.9.9)
-
-GIT
   remote: https://github.com/openfootball/at-austria.git
-  revision: ae5ca23d0708ddfc83e4eb0f1210637d43973bbb
+  revision: e8c6d8bed6f6a5937d44e74b5fbb953157538e91
   specs:
     footballdb-data-at (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/br-brazil.git
-  revision: 9c387be48737dc5a2af0f561e1099243309b2f79
+  revision: 757b7731a7812894066877a3447b85d6dea13442
   specs:
     footballdb-data-br-brazil (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/copa-america.git
-  revision: 8f74ab7b298c87fec5727cec9313d727cc689433
+  revision: 2bb756573a6bb4c3f27769fce6951852155a2387
   specs:
     footballdb-data-copa-america (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/copa-libertadores.git
-  revision: 798e7b55547c6f5e507da047401e80d9bc596a7c
+  revision: 81a52593672de72e06d253e02ae409f42a8aa65f
   specs:
     footballdb-data-copa-libertadores (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: 41e8e28590f679acda302d7be00e371426659f6e
+  revision: 81d69e62bfc8a8992fc47f08e1c11614345d0e40
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: 54a687604394b2dc59b8b1f918596783b28ca542
+  revision: 61a9dc8a284462896047c18a80b5f72b9423779a
   specs:
     footballdb-data-en (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/es-espana.git
-  revision: 2398ecd3c62cbb60d91d37ead6985f18cb7d1be8
+  revision: d57b4dcc18d9457d2fc7ef844d5a9aa0c2d9600b
   specs:
     footballdb-data-es (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/euro-cup.git
-  revision: e8f76f79b8d0668164235f3915a9da8cc1338cfc
+  revision: e4733195807299370373858bdb47d6792c5e42f4
   specs:
     footballdb-data-euro-cup (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/europe-champions-league.git
-  revision: 31dce01dc3a653a2c24d3b617a3ce7a01e36c7ae
+  revision: eb4b98d41d60e9b7272a5af3fcd6089359b10352
   specs:
     footballdb-data-europe-champions-league (9.9.9)
 
 GIT
-  remote: https://github.com/openfootball/europe.git
-  revision: b7d1c9619a54c0841ad9e9df0dc7052594f468dc
-  specs:
-    footballdb-data-europe (9.9.9)
-
-GIT
   remote: https://github.com/openfootball/it-italy.git
-  revision: e274f55b6c4c9c6ef48083123645b752c77ed406
+  revision: 8bff6c8f782f24f2e35de22136ca97f994fcefcc
   specs:
     footballdb-data-it (9.9.9)
 
@@ -83,6 +71,12 @@ GIT
     footballdb-data-mx-mexico (9.9.9)
 
 GIT
+  remote: https://github.com/openfootball/national-teams.git
+  revision: 3d53688059461c4cdf5c3a8eee8698123988abe6
+  specs:
+    footballdb-data-national-teams (9.9.9)
+
+GIT
   remote: https://github.com/openfootball/north-america-champions-league.git
   revision: 920807cc5c52b501bada982cef3a38b5d8b9c0a4
   specs:
@@ -90,25 +84,25 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/north-america-gold-cup.git
-  revision: 93397dc9f0701a560add5ee4432dd91f7c31b8e8
+  revision: 29274138bb3d2fce95dda62abf39f1fc8df40d64
   specs:
     footballdb-data-north-america-gold-cup (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/world-cup.git
-  revision: 3b2c49c481b0c6dfce46d8ef2ea1fdb5ef636f85
+  revision: 3e6c0bf7d96dc0061f05159f337c7027da8fcd21
   specs:
     footballdb-data-world-cup (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/world.git
-  revision: 979648b43df8c5d70047c01f246b78d66ed2bc40
+  revision: 575b8bc8fe1ebfa6cf91d9d050bb018d1a0eb1bd
   specs:
     footballdb-data-world (9.9.9)
 
 GIT
   remote: https://github.com/openmundi/world.db.git
-  revision: 8d6e540afa023bf2d9f840a8f51bb5524e7aa45e
+  revision: d5a1be17877d58bfe41c416f2c4da1c29da54a6f
   specs:
     worlddb-data (9.9.9)
 
@@ -121,7 +115,7 @@ GIT
 
 GIT
   remote: https://github.com/sportlogos/sport.db.logos.ruby.git
-  revision: b6c0d7196ccbefb1cc248e4ed64ad54dc6aef01d
+  revision: dcef9a88c6a36539d24243b6ebef63fb804c5b9b
   branch: gh-pages
   specs:
     sportdb-logos (0.1.0)
@@ -158,6 +152,8 @@ GEM
       activesupport (= 3.2.12)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-utils (0.2.0)
+      logutils
     activeresource (3.2.12)
       activemodel (= 3.2.12)
       activesupport (= 3.2.12)
@@ -179,11 +175,10 @@ GEM
       logutils (>= 0.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    eventmachine (1.0.3-x86-mingw32)
-    execjs (2.0.2)
+    execjs (2.2.0)
     fetcher (0.4.3)
       logutils (>= 0.6)
-    gli (2.9.0)
+    gli (2.11.0)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -197,15 +192,22 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    multi_json (1.9.2)
+    multi_json (1.10.1)
+    persondb (0.3.1)
+      activerecord
+      activerecord-utils
+      logutils
+      props
+      tagutils
+      textutils
+      worlddb
     pg (0.17.1)
-    pg (0.17.1-x86-mingw32)
-    polyglot (0.3.4)
+    polyglot (0.3.5)
     props (1.1.1)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-protection (1.5.2)
+    rack-protection (1.5.3)
       rack
     rack-ssl (1.3.4)
       rack
@@ -226,23 +228,25 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.2.2)
+    rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.3.4)
+    sass (3.3.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    sinatra (1.4.4)
+    sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sportdb (1.8.9)
+    sportdb (1.9.0)
       activerecord
+      activerecord-utils
       fetcher (>= 0.3)
       gli (>= 2.5.6)
       logutils
+      persondb
       props
       tagutils
       textutils
@@ -254,8 +258,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.9)
-    sqlite3 (1.3.9-x86-mingw32)
-    tagutils (0.2.1)
+    tagutils (0.2.2)
       activerecord
       logutils (>= 0.6)
     textutils (0.9.4)
@@ -275,7 +278,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    worlddb (2.0.3)
+    worlddb (2.0.4)
       activerecord
       gli (>= 2.9)
       logutils
@@ -286,7 +289,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   about
@@ -294,7 +296,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dbbrowser
   footballdb-data-africa-cup (= 9.9.9)!
-  footballdb-data-america (= 9.9.9)!
   footballdb-data-at (= 9.9.9)!
   footballdb-data-br-brazil (= 9.9.9)!
   footballdb-data-copa-america (= 9.9.9)!
@@ -303,10 +304,10 @@ DEPENDENCIES
   footballdb-data-en (= 9.9.9)!
   footballdb-data-es (= 9.9.9)!
   footballdb-data-euro-cup (= 9.9.9)!
-  footballdb-data-europe (= 9.9.9)!
   footballdb-data-europe-champions-league (= 9.9.9)!
   footballdb-data-it (= 9.9.9)!
   footballdb-data-mx-mexico (= 9.9.9)!
+  footballdb-data-national-teams (= 9.9.9)!
   footballdb-data-north-america-champions-league (= 9.9.9)!
   footballdb-data-north-america-gold-cup (= 9.9.9)!
   footballdb-data-world (= 9.9.9)!
@@ -318,13 +319,13 @@ DEPENDENCIES
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sinatra
-  sportdb (= 1.8.9)
+  sportdb (= 1.9.0)
   sportdb-admin (= 0.0.1)!
   sportdb-logos (= 0.1.0)!
   sportdb-market (= 0.5.1)
   sqlite3
   thin
   uglifier (>= 1.0.3)
-  worlddb (= 2.0.3)
+  worlddb (= 2.0.4)
   worlddb-data (= 9.9.9)!
   worlddb-flags (= 0.1.0)

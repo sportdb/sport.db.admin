@@ -4,6 +4,7 @@ class CreateDb < ActiveRecord::Migration
     ConfDb.create
     TagDb.create
     WorldDb.create
+    PersonDb.create
     SportDb.create
 
     # check for plugins/addons

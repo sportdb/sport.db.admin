@@ -24,6 +24,7 @@ unless skip_worlddb    # danger zone! deletes all records
   WorldDb.delete!  
 end
 
+PersonDb.delete!
 SportDb.delete!  # danger zone! deletes all records
 
 
@@ -44,32 +45,29 @@ sportdb_setups = []
 # national teams
 
 sportdb_setups +=[
-  ['euro-cup',    '2012'],
-  ['africa-cup',  'teams'],
-  ['north-america-gold-cup', 'teams'],
-  ['copa-america', 'teams'],
-  ['world-cup',   '2014' ]
+  ['national-teams', 'all'  ],
+  ['euro-cup',       '2012' ],
+  ['world-cup',      '2014' ]
 ]
 
 ################
 # clubs
 
 sportdb_setups +=[
-  ['world',          'teams'],
-  ['europe',         'teams'],
+  ['world',          'all'],
   ['at-austria',     '2013_14'],
   ['de-deutschland', '2013_14'],
   ['en-england',     '2013_14'],
   ['es-espana',      '2013_14'],
   ['it-italy',       '2013_14'],
   ['europe-champions-league', '2013_14'],
-  ['america','teams'],
-  ['mx-mexico','teams'],
+  ['mx-mexico',      'teams'],
 ##  ['mx-mexico','2013_14'],
   ['north-america-champions-league','2013_14'],
-  ['br-brazil','2013'],
+##  ['br-brazil','2013'],
   ['copa-libertadores','2013'],
-  ['world',          '2013'],    # circular reference; requires other teams
+######## fix: use club-world-cup (not longer resides in world)
+##  ['world',          '2013'],    # circular reference; requires other teams
 ]
 
 sportdb_setups.each do |setup|
