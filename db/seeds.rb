@@ -44,17 +44,25 @@ sportdb_setups = []
 ######################
 # national teams
 
+=begin
 sportdb_setups +=[
   ['national-teams', 'all'  ],
-  ['euro-cup',       '2012' ],
+##  ['euro-cup',       '2012' ],
   ['world-cup',      '2014' ]
 ]
+=end
+
 
 ################
 # clubs
 
+sportdb_setups += [
+  ['fr-france', 'all' ]
+]
+
+=begin
 sportdb_setups +=[
-  ['world',          'all'],
+  ['clubs',          'all'],
   ['at-austria',     '2013_14'],
   ['de-deutschland', '2013_14'],
   ['en-england',     '2013_14'],
@@ -69,6 +77,8 @@ sportdb_setups +=[
 ######## fix: use club-world-cup (not longer resides in world)
 ##  ['world',          '2013'],    # circular reference; requires other teams
 ]
+=end
+
 
 sportdb_setups.each do |setup|
   SportDb.read_setup( "setups/#{setup[1]}", find_data_path_from_gemfile_gitref( setup[0]) )

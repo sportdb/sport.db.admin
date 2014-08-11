@@ -19,12 +19,13 @@ gem 'footballdb-data-africa-cup',             '9.9.9', git: 'https://github.com/
 gem 'footballdb-data-north-america-gold-cup', '9.9.9', git: 'https://github.com/openfootball/north-america-gold-cup.git'
 gem 'footballdb-data-copa-america',           '9.9.9', git: 'https://github.com/openfootball/copa-america.git'
 
-gem 'footballdb-data-world',  '9.9.9', git: 'https://github.com/openfootball/world.git'
+gem 'footballdb-data-clubs',  '9.9.9', git: 'https://github.com/openfootball/clubs.git'
 gem 'footballdb-data-at',     '9.9.9', git: 'https://github.com/openfootball/at-austria.git'
 gem 'footballdb-data-de',     '9.9.9', git: 'https://github.com/openfootball/de-deutschland.git'
 gem 'footballdb-data-en',     '9.9.9', git: 'https://github.com/openfootball/en-england.git'
 gem 'footballdb-data-es',     '9.9.9', git: 'https://github.com/openfootball/es-espana.git'
 gem 'footballdb-data-it',     '9.9.9', git: 'https://github.com/openfootball/it-italy.git'
+gem 'footballdb-data-fr',     '9.9.9', git: 'https://github.com/openfootball/fr-france.git'
 gem 'footballdb-data-europe-champions-league', '9.9.9', git: 'https://github.com/openfootball/europe-champions-league.git'
 
 gem 'footballdb-data-mx-mexico', '9.9.9', git: 'https://github.com/openfootball/mx-mexico.git'
@@ -34,7 +35,7 @@ gem 'footballdb-data-copa-libertadores', '9.9.9', git: 'https://github.com/openf
 
 
 gem 'worlddb', '2.0.4'
-gem 'sportdb', '1.9.0'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
+gem 'sportdb', '1.9.5'   # NB: starting w/ 1.7.3 includes mountable JSON api service w/ Sinatra
 
 
 ##################################
