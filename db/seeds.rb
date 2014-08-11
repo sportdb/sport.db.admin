@@ -57,8 +57,12 @@ sportdb_setups +=[
 # clubs
 
 sportdb_setups += [
-  ['fr-france', 'all' ]
+  ['fr-france',      '2014-15'],
+  ['at-austria',     '2014-15'],
+  ['de-deutschland', '2014-15'],
+  ['en-england',     '2014-15'],
 ]
+
 
 =begin
 sportdb_setups +=[

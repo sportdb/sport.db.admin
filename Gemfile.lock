@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/at-austria.git
-  revision: 4b6f6fe0877aa657dd816557e6f07cc027718176
+  revision: 40c7fcfc8bb8d71749b4623d8000a93fb63b70d7
   specs:
     footballdb-data-at (9.9.9)
 
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/clubs.git
-  revision: 8294cc13b48abef75199f7687710739401c92cea
+  revision: 26c9a1294e8062eeb3244fa39682090c678eae03
   specs:
     footballdb-data-clubs (9.9.9)
 
@@ -36,13 +36,13 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/de-deutschland.git
-  revision: 890bfc56f47ee82d3072f9dda06aee4e22c1ba92
+  revision: b79fa97c757d3a2b809661c0eb7c0cc9fd2d445b
   specs:
     footballdb-data-de (9.9.9)
 
 GIT
   remote: https://github.com/openfootball/en-england.git
-  revision: 487f2681ca1f5948626d4dffa9561a9414702357
+  revision: 18e9613051d3d8ae8a2213f2f815e319395c5456
   specs:
     footballdb-data-en (9.9.9)
 
@@ -66,7 +66,7 @@ GIT
 
 GIT
   remote: https://github.com/openfootball/fr-france.git
-  revision: c1a290e1b2b833d23c1bde34babed7b827502cfb
+  revision: 6fd6ef87371361ae7cafd2d6c784362cb6cf1ca7
   specs:
     footballdb-data-fr (9.9.9)
 
