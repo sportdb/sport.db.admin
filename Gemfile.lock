@@ -17,6 +17,12 @@ GIT
     footballdb-data-br-brazil (9.9.9)
 
 GIT
+  remote: https://github.com/openfootball/ch-confoederatio-helvetica.git
+  revision: 276af874aacdea0283633f86e87ed739dd7adb0f
+  specs:
+    footballdb-data-ch (9.9.9)
+
+GIT
   remote: https://github.com/openfootball/clubs.git
   revision: 4524ef40d1fd1051bb5a727ed5789bf4cdcf3d4c
   specs:
@@ -304,6 +310,7 @@ DEPENDENCIES
   footballdb-data-africa-cup (= 9.9.9)!
   footballdb-data-at (= 9.9.9)!
   footballdb-data-br-brazil (= 9.9.9)!
+  footballdb-data-ch (= 9.9.9)!
   footballdb-data-clubs (= 9.9.9)!
   footballdb-data-copa-america (= 9.9.9)!
   footballdb-data-copa-libertadores (= 9.9.9)!

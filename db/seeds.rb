@@ -57,7 +57,8 @@ sportdb_setups +=[
 # clubs
 
 sportdb_setups += [
-  ['clubs',          'clubs'],
+  ['clubs',                      'clubs'],
+  ['ch-confoederatio-helvetica', 'clubs'],
   ['at-austria',     '2014-15'],  ## - has goals - needs new schema
   ['de-deutschland', '2014-15'],
   ['en-england',     '2014-15'],

@@ -21,6 +21,7 @@ gem 'footballdb-data-copa-america',           '9.9.9', git: 'https://github.com/
 
 gem 'footballdb-data-clubs',  '9.9.9', git: 'https://github.com/openfootball/clubs.git'
 gem 'footballdb-data-at',     '9.9.9', git: 'https://github.com/openfootball/at-austria.git'
+gem 'footballdb-data-ch',     '9.9.9', git: 'https://github.com/openfootball/ch-confoederatio-helvetica.git'
 gem 'footballdb-data-de',     '9.9.9', git: 'https://github.com/openfootball/de-deutschland.git'
 gem 'footballdb-data-en',     '9.9.9', git: 'https://github.com/openfootball/en-england.git'
 gem 'footballdb-data-es',     '9.9.9', git: 'https://github.com/openfootball/es-espana.git'
