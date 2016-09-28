@@ -1,124 +1,4 @@
 GIT
-  remote: https://github.com/openfootball/africa-cup.git
-  revision: 21fc2277c84b4dae675976d69ee042eeb9a896c8
-  specs:
-    footballdb-data-africa-cup (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/at-austria.git
-  revision: 0ca9bcc2c865238bd4d272785ef989ca63b7d923
-  specs:
-    footballdb-data-at (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/br-brazil.git
-  revision: 757b7731a7812894066877a3447b85d6dea13442
-  specs:
-    footballdb-data-br-brazil (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/ch-confoederatio-helvetica.git
-  revision: 276af874aacdea0283633f86e87ed739dd7adb0f
-  specs:
-    footballdb-data-ch (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/clubs.git
-  revision: 4524ef40d1fd1051bb5a727ed5789bf4cdcf3d4c
-  specs:
-    footballdb-data-clubs (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/copa-america.git
-  revision: 2bb756573a6bb4c3f27769fce6951852155a2387
-  specs:
-    footballdb-data-copa-america (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/copa-libertadores.git
-  revision: 81a52593672de72e06d253e02ae409f42a8aa65f
-  specs:
-    footballdb-data-copa-libertadores (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/de-deutschland.git
-  revision: f8151c6ba8fed928c6bdf047670a3f3af8bfcbd9
-  specs:
-    footballdb-data-de (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/en-england.git
-  revision: cfd13a3b9e3ba95ba408dba4913d4f2f775284ef
-  specs:
-    footballdb-data-en (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/es-espana.git
-  revision: 5df93cb9bd74967164e05a4e81b5c9e2e5ab782c
-  specs:
-    footballdb-data-es (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/euro-cup.git
-  revision: e4733195807299370373858bdb47d6792c5e42f4
-  specs:
-    footballdb-data-euro-cup (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/europe-champions-league.git
-  revision: ebe3f2de19c0e028e64ff22ca65341f9d1939e93
-  specs:
-    footballdb-data-europe-champions-league (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/fr-france.git
-  revision: d217d049c32a44a3dd5798736d4140e1ea5fb212
-  specs:
-    footballdb-data-fr (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/it-italy.git
-  revision: 230c88fb7a62b14266fdec04eca35e6082921e81
-  specs:
-    footballdb-data-it (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/mx-mexico.git
-  revision: e8bd9d68ceec1e045bfecc1e621e7d652b0667f4
-  specs:
-    footballdb-data-mx-mexico (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/national-teams.git
-  revision: 0ac23e78475f78368e958ade9f6cb1b5b2b04596
-  specs:
-    footballdb-data-national-teams (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/north-america-champions-league.git
-  revision: 920807cc5c52b501bada982cef3a38b5d8b9c0a4
-  specs:
-    footballdb-data-north-america-champions-league (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/north-america-gold-cup.git
-  revision: 29274138bb3d2fce95dda62abf39f1fc8df40d64
-  specs:
-    footballdb-data-north-america-gold-cup (9.9.9)
-
-GIT
-  remote: https://github.com/openfootball/world-cup.git
-  revision: deb1459734a7de97b97b7ca14cac4ae29116ed58
-  specs:
-    footballdb-data-world-cup (9.9.9)
-
-GIT
-  remote: https://github.com/openmundi/world.db.git
-  revision: fa67418028e8a9df7ae2bcab3ea6a7a9b89a9f65
-  specs:
-    worlddb-data (9.9.9)
-
-GIT
   remote: https://github.com/sportlogos/football.db.logos.ruby.git
   revision: 23b39b269966583e0b2adc6354b9c9f7bce7e4fe
   branch: gh-pages
@@ -143,203 +23,209 @@ GEM
     about (0.1.0)
       logutils (>= 0.5)
       textutils (>= 0.7)
-    actionmailer (3.2.12)
-      actionpack (= 3.2.12)
-      mail (~> 2.4.4)
-    actionpack (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
-      builder (~> 3.0.0)
+    actionmailer (4.2.7.1)
+      actionpack (= 4.2.7.1)
+      actionview (= 4.2.7.1)
+      activejob (= 4.2.7.1)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (4.2.7.1)
+      actionview (= 4.2.7.1)
+      activesupport (= 4.2.7.1)
+      rack (~> 1.6)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (4.2.7.1)
+      activesupport (= 4.2.7.1)
+      builder (~> 3.1)
       erubis (~> 2.7.0)
-      journey (~> 1.0.4)
-      rack (~> 1.4.5)
-      rack-cache (~> 1.2)
-      rack-test (~> 0.6.1)
-      sprockets (~> 2.2.1)
-    activemodel (3.2.12)
-      activesupport (= 3.2.12)
-      builder (~> 3.0.0)
-    activerecord (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
-      arel (~> 3.0.2)
-      tzinfo (~> 0.3.29)
-    activerecord-utils (0.2.0)
-      logutils
-    activeresource (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
-    activesupport (3.2.12)
-      i18n (~> 0.6)
-      multi_json (~> 1.0)
-    annotate (2.4.1.beta1)
-    arel (3.0.3)
-    builder (3.0.4)
-    coffee-rails (3.2.2)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0)
-    coffee-script (2.3.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.8.0)
-    daemons (1.1.9)
-    dbbrowser (0.1.3)
-      logutils (>= 0.5)
-    erubis (2.7.0)
-    eventmachine (1.0.3)
-    execjs (2.2.1)
-    fetcher (0.4.3)
-      logutils (>= 0.6)
-    gli (2.12.1)
-    hike (1.2.3)
-    i18n (0.6.11)
-    journey (1.0.4)
-    jquery-rails (3.1.2)
-      railties (>= 3.0, < 5.0)
-      thor (>= 0.14, < 2.0)
-    json (1.8.1)
-    logutils (0.6.0)
-    mail (2.4.4)
-      i18n (>= 0.4.0)
-      mime-types (~> 1.16)
-      treetop (~> 1.4.8)
-    mime-types (1.25.1)
-    multi_json (1.10.1)
-    persondb (0.3.1)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    activejob (4.2.7.1)
+      activesupport (= 4.2.7.1)
+      globalid (>= 0.3.0)
+    activemodel (4.2.7.1)
+      activesupport (= 4.2.7.1)
+      builder (~> 3.1)
+    activerecord (4.2.7.1)
+      activemodel (= 4.2.7.1)
+      activesupport (= 4.2.7.1)
+      arel (~> 6.0)
+    activerecord-utils (0.4.0)
       activerecord
-      activerecord-utils
       logutils
-      props
-      tagutils
+    activesupport (4.2.7.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    annotate (2.4.1.beta1)
+    arel (6.0.3)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    builder (3.2.2)
+    byebug (9.0.5)
+    concurrent-ruby (1.0.2)
+    daemons (1.2.4)
+    dbbrowser (0.2.0)
+      activerecord
+      activerecord-utils (>= 0.4.0)
+      sinatra
       textutils
-      worlddb
-    pg (0.17.1)
-    polyglot (0.3.5)
-    props (1.1.1)
-    rack (1.4.5)
-    rack-cache (1.2)
-      rack (>= 0.4)
+    debug_inspector (0.0.2)
+    erubis (2.7.0)
+    eventmachine (1.2.0.1-x86-mingw32)
+    globalid (0.3.7)
+      activesupport (>= 4.1.0)
+    i18n (0.7.0)
+    jbuilder (2.6.0)
+      activesupport (>= 3.0.0, < 5.1)
+      multi_json (~> 1.2)
+    jquery-rails (4.2.1)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    json (1.8.3)
+    logutils (0.6.1)
+    logutils-activerecord (0.2.1)
+      activerecord
+      logutils (>= 0.6.1)
+    loofah (2.0.3)
+      nokogiri (>= 1.5.9)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
+    minitest (5.9.1)
+    multi_json (1.12.1)
+    nokogiri (1.6.8-x86-mingw32)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    persondb-models (0.5.0)
+      worlddb-models
+    pg (0.19.0-x86-mingw32)
+    pkg-config (1.1.7)
+    props (1.1.2)
+    props-activerecord (0.1.0)
+      activerecord
+      props (>= 1.1.2)
+    rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    rack-ssl (1.3.4)
-      rack
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
-    rails (3.2.12)
-      actionmailer (= 3.2.12)
-      actionpack (= 3.2.12)
-      activerecord (= 3.2.12)
-      activeresource (= 3.2.12)
-      activesupport (= 3.2.12)
-      bundler (~> 1.0)
-      railties (= 3.2.12)
-    railties (3.2.12)
-      actionpack (= 3.2.12)
-      activesupport (= 3.2.12)
-      rack-ssl (~> 1.3.2)
+    rails (4.2.7.1)
+      actionmailer (= 4.2.7.1)
+      actionpack (= 4.2.7.1)
+      actionview (= 4.2.7.1)
+      activejob (= 4.2.7.1)
+      activemodel (= 4.2.7.1)
+      activerecord (= 4.2.7.1)
+      activesupport (= 4.2.7.1)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.2.7.1)
+      sprockets-rails
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.7)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.3)
+      loofah (~> 2.0)
+    railties (4.2.7.1)
+      actionpack (= 4.2.7.1)
+      activesupport (= 4.2.7.1)
       rake (>= 0.8.7)
-      rdoc (~> 3.4)
-      thor (>= 0.14.6, < 2.0)
-    rake (10.3.2)
-    rdoc (3.12.2)
-      json (~> 1.4)
-    sass (3.4.3)
-    sass-rails (3.2.6)
-      railties (~> 3.2.0)
-      sass (>= 3.1.10)
-      tilt (~> 1.3)
-    sinatra (1.4.5)
-      rack (~> 1.4)
+      thor (>= 0.18.1, < 2.0)
+    rake (11.3.0)
+    rubyzip (1.2.0)
+    sass (3.4.22)
+    sass-rails (5.0.6)
+      railties (>= 4.0.0, < 6)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+    sinatra (1.4.7)
+      rack (~> 1.5)
       rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
-    sportdb (1.9.5)
+      tilt (>= 1.3, < 3)
+    sportdb-models (1.16.2)
+      persondb-models (>= 0.4.2)
+      worlddb-models (>= 2.1.0)
+    sprockets (3.7.0)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-rails (3.2.0)
+      actionpack (>= 4.0)
+      activesupport (>= 4.0)
+      sprockets (>= 3.0.0)
+    sqlite3 (1.3.11-x86-mingw32)
+    tagutils (0.3.0)
       activerecord
-      activerecord-utils
-      fetcher (>= 0.3)
-      gli (>= 2.5.6)
-      logutils
-      persondb
-      props
-      tagutils
-      textutils
-      worlddb (>= 2.0.2)
-    sportdb-market (0.5.1)
-    sprockets (2.2.2)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
-      rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.9)
-    tagutils (0.2.2)
-      activerecord
-      logutils (>= 0.6)
-    textutils (0.9.4)
+      logutils (>= 0.6.1)
+      props (>= 1.1.2)
+      textutils (>= 0.10.0)
+    textutils (1.4.0)
       activesupport
-      logutils (~> 0.5)
-      props
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
+      logutils (>= 0.6.1)
+      props (>= 1.1.2)
+      rubyzip (>= 1.0.0)
+    thin (1.7.0)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
     thor (0.19.1)
-    tilt (1.4.1)
-    treetop (1.4.15)
-      polyglot
-      polyglot (>= 0.3.1)
-    tzinfo (0.3.41)
-    uglifier (2.5.3)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
-    worlddb (2.0.4)
-      activerecord
-      gli (>= 2.9)
-      logutils
-      props
-      tagutils
-      textutils (>= 0.9.4)
+    thread_safe (0.3.5)
+    tilt (2.0.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    tzinfo-data (1.2016.6)
+      tzinfo (>= 1.0.0)
+    web-console (2.3.0)
+      activemodel (>= 4.0)
+      binding_of_caller (>= 0.7.2)
+      railties (>= 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
     worlddb-flags (0.1.0)
+    worlddb-models (2.3.4)
+      activerecord
+      activerecord-utils (>= 0.2.0)
+      logutils (>= 0.6.1)
+      logutils-activerecord (>= 0.2.0)
+      props (>= 1.1.2)
+      props-activerecord (>= 0.1.0)
+      rubyzip
+      tagutils (>= 0.3.0)
+      textutils (>= 1.3.1)
 
 PLATFORMS
-  ruby
+  x86-mingw32
 
 DEPENDENCIES
   about
   annotate (~> 2.4.1.beta)
-  coffee-rails (~> 3.2.1)
+  byebug
   dbbrowser
-  footballdb-data-africa-cup (= 9.9.9)!
-  footballdb-data-at (= 9.9.9)!
-  footballdb-data-br-brazil (= 9.9.9)!
-  footballdb-data-ch (= 9.9.9)!
-  footballdb-data-clubs (= 9.9.9)!
-  footballdb-data-copa-america (= 9.9.9)!
-  footballdb-data-copa-libertadores (= 9.9.9)!
-  footballdb-data-de (= 9.9.9)!
-  footballdb-data-en (= 9.9.9)!
-  footballdb-data-es (= 9.9.9)!
-  footballdb-data-euro-cup (= 9.9.9)!
-  footballdb-data-europe-champions-league (= 9.9.9)!
-  footballdb-data-fr (= 9.9.9)!
-  footballdb-data-it (= 9.9.9)!
-  footballdb-data-mx-mexico (= 9.9.9)!
-  footballdb-data-national-teams (= 9.9.9)!
-  footballdb-data-north-america-champions-league (= 9.9.9)!
-  footballdb-data-north-america-gold-cup (= 9.9.9)!
-  footballdb-data-world-cup (= 9.9.9)!
   footballdb-logos (= 0.1.0)!
+  jbuilder (~> 2.0)
   jquery-rails
   logutils
   pg
-  rails (= 3.2.12)
-  sass-rails (~> 3.2.3)
+  rails (= 4.2.7.1)
+  sass-rails (~> 5.0)
   sinatra
-  sportdb (= 1.9.5)
   sportdb-admin (= 0.0.1)!
   sportdb-logos (= 0.1.0)!
-  sportdb-market (= 0.5.1)
+  sportdb-models (= 1.16.2)
   sqlite3
   thin
-  uglifier (>= 1.0.3)
-  worlddb (= 2.0.4)
-  worlddb-data (= 9.9.9)!
+  tzinfo-data
+  web-console (~> 2.0)
   worlddb-flags (= 0.1.0)
+  worlddb-models (= 2.3.4)
