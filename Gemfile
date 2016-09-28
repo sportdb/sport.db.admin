@@ -17,7 +17,8 @@ gem 'jbuilder', '~> 2.0'
 # lets use open sport.db schema & fixtures
 
 gem 'logutils'   ###, '0.6.0'
-
+gem 'logutils-activerecord'     # LogDb n LogDb::Models
+gem 'props-activerecord'        # ConfDb n ConfDb::Models
 
 ## gem 'worlddb-data', '9.9.9', git: 'https://github.com/openmundi/world.db.git'
 

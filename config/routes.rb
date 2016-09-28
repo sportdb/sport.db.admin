@@ -14,11 +14,11 @@ Sportdbhost::Application.routes.draw do
 
   # todo: add  JSON API link to layout
 
-  get '/api' => redirect('/api/v1')
-  mount SportDb::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
+#  get '/api' => redirect('/api/v1')
+#  mount SportDb::Service::Server, :at => '/api/v1'  # NB: make sure to require 'sportdb-service'
 
   ## mount sinatra app (bundled w/ logutils gem)
-  mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
+#  mount LogDb::Server, :at => '/logs'    # NB: make sure to require 'logutils/server'
 
 
   mount SportDbAdmin::Engine, :at => '/'  # mount a root possible?

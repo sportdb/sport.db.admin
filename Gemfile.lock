@@ -216,7 +216,9 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   logutils
+  logutils-activerecord
   pg
+  props-activerecord
   rails (= 4.2.7.1)
   sass-rails (~> 5.0)
   sinatra

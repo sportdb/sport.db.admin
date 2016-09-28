@@ -11,14 +11,17 @@ puts "[boot] environment.rb - after require 'application'"
 # todo/fix: configure logging here - find a better place??
 #  use just an initializer??
 
-require 'logutils/db'      # LogDb n LogDb::Models
-require 'logutils/server'  # LogDb::Server
-require 'props/db'  # fix: also include textutils/db (move from_fixture to textutils)
+
+require 'logutils/activerecord'   # LogDb n LogDb::Models
+require 'props/activerecord'      # ConfDb n ConfDb::Models
+
+## require 'logutils/server'  # LogDb::Server
+
 
 LogUtils::Logger.root.level = :info    # do not output debug msgs
 
 
-require 'sportdb/service'   # SportDb::Service  (lets use HTTP API service/server)
+## require 'sportdb/service'   # SportDb::Service  (lets use HTTP API service/server)
 
 
 # Initialize the rails application
