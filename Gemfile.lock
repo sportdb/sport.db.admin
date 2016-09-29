@@ -69,6 +69,10 @@ GEM
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
     daemons (1.2.4)
+    datafile (0.2.5)
+      fetcher
+      logutils
+      textutils
     dbbrowser (0.2.0)
       activerecord
       activerecord-utils (>= 0.4.0)
@@ -77,6 +81,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.2.0.1-x86-mingw32)
+    fetcher (0.4.5)
+      logutils (>= 0.6)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -185,7 +191,7 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.6)
+    tzinfo-data (1.2016.7)
       tzinfo (>= 1.0.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
@@ -211,6 +217,7 @@ DEPENDENCIES
   about
   annotate (~> 2.4.1.beta)
   byebug
+  datafile
   dbbrowser
   footballdb-logos (= 0.1.0)!
   jbuilder (~> 2.0)

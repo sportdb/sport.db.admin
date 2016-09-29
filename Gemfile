@@ -47,7 +47,7 @@ gem 'props-activerecord'        # ConfDb n ConfDb::Models
 
 gem 'worlddb-models', '2.3.4'
 gem 'sportdb-models', '1.16.2'
-
+gem 'datafile'
 
 ##################################
 # optional sportdb plugins
