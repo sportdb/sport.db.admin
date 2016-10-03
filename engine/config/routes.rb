@@ -58,8 +58,8 @@ SportDbAdmin::Engine.routes.draw do
 
   ####
   # shortcut -- 2 lower case letters - assume shortcut for country
-  ##  note: add eng, wal, sco - three letter country codes
-  get '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /([a-z]{2})|eng|wal|sco/
+  ##  note: add eng, wal, sco, nir - three letter country codes
+  get '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /([a-z]{2})|eng|wal|sco|nir/
 
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team

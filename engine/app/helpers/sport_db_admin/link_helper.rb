@@ -17,7 +17,7 @@ module LinkHelper
         opts[:fulltitle].present? )
       # show league title + season title (a.k.a full_title)
       #  e.g. Primera División 2013/14
-      link_to( event.full_title, short_event_path( event ))
+      link_to( event.title, short_event_path( event ))
     elsif opts[:league].present?
       # show only league (w/o season title)
       #  e.g. Primera División

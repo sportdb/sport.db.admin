@@ -1,5 +1,5 @@
 
-<h3><%= @event.full_title %></h3>
+<h3><%= @event.title %></h3>
 
 
 <h4><%= @event.teams.count %> Teams</h4>
@@ -47,7 +47,7 @@
 <% @event.groups.each do |group| %>
 <tr>
  <td>
-  <%= group.title %> | 
+  <%= group.title %> |
  </td>
   <% group.teams.each do |team| %>
 
@@ -62,7 +62,7 @@
 
 <% end %> <!-- if event.groups.count > 0 -->
 
-<!-- add games count -- how? --> 
+<!-- add games count -- how? -->
 <h4><%= @event.games.count %> Games</h4>
 
 <p>
@@ -78,7 +78,7 @@
 
 <!-- todo: use different css class e.g. db?? -->
 <table class='play'>
-  
+
 <% @event.rounds.each do |round| %>
 <tr class='game-round'>
   <td colspan='6' class='game-round-title'>
@@ -91,7 +91,7 @@
 
    <% round.games.each do |game| %>
     <tr>
-     
+
 <%= render_game_date( game ) %>
 <%= render_game_team1( game ) %>
 <%= render_game_score( game ) %>
@@ -109,7 +109,7 @@
     </td>
 
 <%= render_game_flags( game ) %>
-        
+
      </tr>
   <% end %> <!-- games -->
 <% end %> <!-- rounds -->
