@@ -4,7 +4,7 @@ puts '[boot] routes.rb - before SportDbAdmin::Engine.routes.draw'
 SportDbAdmin::Engine.routes.draw do
 
   puts '[boot] routes.rb - enter SportDbAdmin::Engine.routes.draw'
-  
+
   get 'about',    :to => 'pages#about'
 
 
@@ -36,14 +36,14 @@ SportDbAdmin::Engine.routes.draw do
   #  two letters (e.g. at,mx,us) assume country (fix!!  az for Alkmaar in nl)
   #    - do NOT allow two letter keys
   #
-  #   
+  #
   #  short-cut [a-z]+[0-9.\]+ for event
   #   - NOT team keys can NOT contain numbers
   #
   #  more than three letters for now assume
   #   team page
-  
-  
+
+
   ###################
   #  - nb: event key must contain dots
   #  todo/todo:
@@ -52,9 +52,14 @@ SportDbAdmin::Engine.routes.draw do
   #       euro2012 or euro12  12->2012    de12 -> bundesliga 11/12
   #
   # shortcut -- 3+ letters  (w/ digits w/ dots) - assume shortcut for event
-  #  
+  #
   # NB: for now -> must end with   .2012 or .2012_13 etc.
   get '/:key', :to => 'events#shortcut', :as => :short_event_worker, :key => /.+\.[0-9_]+/
+
+  ####
+  # shortcut -- 2 lower case letters - assume shortcut for country
+  ##  note: add eng, wal, sco - three letter country codes
+  get '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /([a-z]{2})|eng|wal|sco/
 
   ####
   # shortcut -- 3+ lower case letters (w/o digits) - assume shortcut for team
@@ -63,14 +68,11 @@ SportDbAdmin::Engine.routes.draw do
   get '/:key', :to => 'teams#shortcut', :as => :short_team_worker, :key => /[a-z]{3,}/
 
 
-  ####
-  # shortcut -- 2 lower case letters - assume shortcut for country
-  get '/:key', :to => 'countries#shortcut', :as => :short_country_worker, :key => /[a-z]{2}/
 
 
 
   root :to => 'games#index'
-  
+
   puts '[boot] routes.rb - leave SportDbAdmin::Engine.routes.draw'
 
 end

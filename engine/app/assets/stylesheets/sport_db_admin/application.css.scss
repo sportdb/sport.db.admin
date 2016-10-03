@@ -52,7 +52,7 @@ table {
   td.round-key,
   td.city-key,
   td.country-key,
-  td.region-key,
+  td.state-key,
   td.league-key,
   td.service-key {
     color: $dark-gray;
@@ -60,7 +60,7 @@ table {
     * {
       color: $dark-gray;
       font-size: 12px;  // ~80%
-    }    
+    }
   }
 }
 
@@ -68,14 +68,14 @@ table {
 table.play {
   tr.game-round,
   tr.round-week {
-     background-color:  $azure; 
-     
+     background-color:  $azure;
+
      td {
      border-top: 1px solid black;
      border-bottom: 1px solid black;
      }
   }
-  
+
  tr.game-day {
      td {
      border-top: 1px solid black;
@@ -88,17 +88,17 @@ table.play {
  tr.round-year {
      background-color:  $azure;  // todo: make it darker 20%?
      font-size: 22px;   // ~10%
-     
+
      td {
      border-top: 1px solid black;
      border-bottom: 1px solid black;
      }
   }
-  
+
   td.game-score {
      text-align: center;
   }
-  
+
   td.game-date,
   td.game-hour,
   td.game-round,
@@ -111,24 +111,24 @@ table.play {
       font-size: 12px;  // ~80%
     }
   }
-  
+
   td.game-team1,
   td.game-team2 {
       .game-knockout.game-team-loser
       {
          // color: red;    // not working - only changes line-through color
          text-decoration: line-through;
-         
+
          // -moz-text-decoration-color: grey;
          // text-decoration-color:  grey;
       }
-      
+
       .game-team-winner
       {
          font-weight: bold;
       }
   }
-  
+
   td {
     white-space: nowrap;
   }
@@ -144,7 +144,7 @@ table.play {
    text-align: center;
    margin-top: 10px;
    color: grey;
-   
+
    a, span {
      font-size: 12px;
      color: grey

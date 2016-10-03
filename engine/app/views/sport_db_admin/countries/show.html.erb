@@ -1,7 +1,7 @@
 
 <h3>
 <%= flag_for_country( @country ) %>
-<%= @country.title %> 
+<%= @country.title %>
 (<%= @country.code %>)
 </h3>
 
@@ -52,32 +52,32 @@
 </table>
 
 
-<h4><%= @country.regions.count %> Regions</h4>
+<h4><%= @country.states.count %> States</h4>
 
 <table>
-  <% @country.regions.each do |region| %>
+  <% @country.states.each do |state| %>
      <tr>
-      <td class='region-key'>
-        <%= region.key %>
+      <td class='state-key'>
+        <%= state.key %>
       </td>
       <td>
-        <%= region.title %>
+        <%= state.title %>
       </td>
       <td>
       <span class='city-count'>
-          (<%= region.cities.count %>)
+          (<%= state.cities.count %>)
       </span>
       </td>
       <td>
-         <% region.cities.each_with_index do |city,index| %>
+         <% state.cities.each_with_index do |city,index| %>
            <%= '•' if index > 0 %>
            <%= city.title %>
          <% end %><!-- each city -->
       </td>
      </tr>
-  <% end %> <!-- each region -->
+  <% end %> <!-- each state -->
 </table>
-      
+
 
 
 
