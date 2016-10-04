@@ -9,7 +9,7 @@ Hoe.spec 'sportdb-admin' do
   self.summary = 'sportdb admin addon - rails engine'
   self.description = summary
 
-  self.urls    = ['https://github.com/geraldb/sport.db.admin']
+  self.urls    = ['https://github.com/sportdb/sport.db.admin']
 
   self.author  = 'Gerald Bauer'
   self.email   = 'opensport@googlegroups.com'
@@ -24,4 +24,3 @@ Hoe.spec 'sportdb-admin' do
   }
 
 end
-

@@ -3,6 +3,7 @@ Manifest.txt
 README.md
 Rakefile
 app/assets/javascripts/sport_db_admin/application.js
+app/assets/javascripts/sport_db_admin/jquery.tabs.js
 app/assets/stylesheets/sport_db_admin/application.css.scss
 app/controllers/sport_db_admin/countries_controller.rb
 app/controllers/sport_db_admin/event_quotes_controller.rb
@@ -30,7 +31,6 @@ app/views/sport_db_admin/countries/show.html.erb
 app/views/sport_db_admin/event_quotes/index.html.erb
 app/views/sport_db_admin/events/index.html.erb
 app/views/sport_db_admin/events/show.html.erb
-app/views/sport_db_admin/games/_games.html.erb
 app/views/sport_db_admin/games/index.html.erb
 app/views/sport_db_admin/group_quotes/index.html.erb
 app/views/sport_db_admin/pages/about.html.erb
@@ -41,6 +41,7 @@ app/views/sport_db_admin/rounds/index.html.erb
 app/views/sport_db_admin/services/index.html.erb
 app/views/sport_db_admin/shared/_table_event_quotes.html.erb
 app/views/sport_db_admin/shared/_table_game_quotes.html.erb
+app/views/sport_db_admin/shared/_table_games.html.erb
 app/views/sport_db_admin/shared/_td_game_date.html.erb
 app/views/sport_db_admin/shared/_td_game_debug.html.erb
 app/views/sport_db_admin/shared/_td_game_flags.html.erb

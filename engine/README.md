@@ -2,8 +2,8 @@
 
 Open sports web admin addon / rails engine
 
-* home  :: [github.com/geraldb/sport.db.admin](https://github.com/geraldb/sport.db.admin)
-* bugs  :: [github.com/geraldb/sport.db.admin/issues](https://github.com/geraldb/sport.db.admin/issues)
+* home  :: [github.com/sportdb/sport.db.admin](https://github.com/sportdb/sport.db.admin)
+* bugs  :: [github.com/sportdb/sport.db.admin/issues](https://github.com/sportdb/sport.db.admin/issues)
 * gem   :: [rubygems.org/gems/sportdb-admin](https://rubygems.org/gems/sportdb-admin)
 * rdoc  :: [rubydoc.info/gems/sportdb-admin](http://rubydoc.info/gems/sportdb-admin)
 * forum :: [groups.google.com/group/opensport](https://groups.google.com/group/opensport)
