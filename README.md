@@ -41,6 +41,53 @@ $ rails s
 ```
 
 
+## Heroku Setup / Upgrade Notes
+
+Add a heroku remote:
+
+    $ heroku git:remote -a footballdb    ## add remote via heroku tool
+
+    $ git remote -v                      ## checkup
+
+    heroku  https://git.heroku.com/footballdb.git (fetch)
+    heroku  https://git.heroku.com/footballdb.git (push)
+
+
+Update app on heroku
+
+    $ git push heroku
+
+Reset db on heroku
+
+    $ heroku pg:reset DATABASE_URL --confirm footballdb
+
+Rebuild db on heroku
+
+    $ heroku run rake db:migrate --app footballdb   ## check --app needed for default heroku remote ???
+
+Run db seed on heroku
+
+    $ heroku run rake db:seed --app footballdb
+
+Restart. Done.
+
+
+## TODOSs
+
+check heroku error - cannot get data from rubygems via bundler 1.11.2 - why?
+
+```
+Oct/11 2016
+remote:        Fetching source index from https://rubygems.org/
+remote:        Retrying fetcher due to error (2/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
+Retrying fetcher due to error (2/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
+remote:        Retrying fetcher due to error (3/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
+remote:        Retrying fetcher due to error (4/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
+remote:        Could not fetch specs from https://rubygems.org/
+remote:  !
+remote:  !     Failed to install gems via Bundler.
+```
+
 ## License
 
 The `sport.db.admin` scripts are dedicated to the public domain.
