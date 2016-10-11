@@ -36,7 +36,12 @@ require 'fetcher'   ## move to gemfile (or environment.rb) - why? why not?
 ##  -- move to create schema - why? why not?
 SportDb.read_builtin
 
-datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/top.rb" )
+## todo/fix: allow datafile get passed in on command line!!!!
+
+
+datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/min.rb" )
+## datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/top.rb" )
+
 datafile.dump
 
 datafile.download    ## download zips from github - saved to ./tmp
