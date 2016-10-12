@@ -63,30 +63,22 @@ Reset db on heroku
 
 Rebuild db on heroku
 
-    $ heroku run rake db:migrate --app footballdb   ## check --app needed for default heroku remote ???
+    $ heroku run rake db:migrate
 
 Run db seed on heroku
 
-    $ heroku run rake db:seed --app footballdb
+    $ heroku run rake db:seed
 
-Restart. Done.
+Restart.
 
+    $ heroku restart
 
+Done.
+
+<!--
 ## TODOSs
+-->
 
-check heroku error - cannot get data from rubygems via bundler 1.11.2 - why?
-
-```
-Oct/11 2016
-remote:        Fetching source index from https://rubygems.org/
-remote:        Retrying fetcher due to error (2/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
-Retrying fetcher due to error (2/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
-remote:        Retrying fetcher due to error (3/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
-remote:        Retrying fetcher due to error (4/4): Bundler::HTTPError Could not fetch specs from https://rubygems.org/
-remote:        Could not fetch specs from https://rubygems.org/
-remote:  !
-remote:  !     Failed to install gems via Bundler.
-```
 
 ## License
 

@@ -95,6 +95,10 @@ gem 'dbbrowser'  # mountable app
 group :production do
   gem 'pg'
   gem 'thin'    # use faster multiplexed (w/ eventmachine) web server
+
+  ## required for Rails 4.x on heroku
+  ##   see https://github.com/heroku/rails_12factor
+  gem 'rails_12factor'
 end
 
 group :development do
