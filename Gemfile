@@ -1,4 +1,15 @@
 source 'https://rubygems.org'
+##   Resolving dependencies...
+##   Could not verify the SSL certificate for
+##   https://rubygems.org/quick/Marshal.4.8/thread_safe-0.3.5-java.gemspec.rz.
+##   ...
+
+## source 'http://rubygems.org'    ## trouble with SSL certificate; use/try HTTP
+##   NoMethodError: undefined method `spec' for nil:NilClass
+##   An error occurred while installing footballdb-logos (0.1.0), and Bundler cannot continue.
+
+
+ruby '2.1.5'   # note: heroku requires a ruby version (falls back to old 1.9.x)
 
 gem 'rails', '4.2.7.1'
 
