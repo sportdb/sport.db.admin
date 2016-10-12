@@ -6,7 +6,8 @@ config = ActiveRecord::Base.configurations
 pp config
 
 ## todo/check: also check if in dev mode/env - why? why not?
-if config['development']['adapter'] == 'sqlite3'
+##  note: only check in dev env!! - use pg (postgresql) for production
+if Rails.env.development? && config['development']['adapter'] == 'sqlite3'
   puts "trying to speed up sqlite; use some pragmas"
   ## try to speed up sqlite
   ## see http://www.sqlite.org/pragma.html
