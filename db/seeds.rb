@@ -39,8 +39,9 @@ SportDb.read_builtin
 
 ## todo/fix: allow datafile get passed in on command line!!!!
 
+datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/worldcup2018.rb" )
 
-datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/min.rb" )
+## datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/min.rb" )
 ## datafile = Datafile::Datafile.load_file( "#{Rails.root}/datafile/top.rb" )
 
 datafile.dump

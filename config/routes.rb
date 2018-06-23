@@ -6,8 +6,9 @@ Sportdbhost::Application.routes.draw do
 
   puts '[boot] routes.rb - enter Application.routes.draw'
 
-  mount About::Server,     :at => '/sysinfo'
-  mount DbBrowser::Server, :at => '/browse'
+  ## mount About::Server,     :at => '/sysinfo'
+  ## mount DbBrowser::Server, :at => '/browse'
+
 
   ###
   # mount sinatra app (bundled w/ sportdb-service gem) for json api service
