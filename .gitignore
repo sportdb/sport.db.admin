@@ -32,3 +32,8 @@ pickle-email-*.html
 
 /engine/pkg
 /engine/pkg/*
+
+##############################
+## ignore precompiled assets for now
+##   about ~20 megs of images (logos/flags)
+/public/assets
