@@ -1,6 +1,6 @@
 # sport.db.admin
 
-Open sports database web admin tool in Ruby on Rails 4.x.+
+Open sports database web admin tool in Ruby on Rails 5.2+
 
 
 ## Demo
