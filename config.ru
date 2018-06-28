@@ -1,6 +1,6 @@
 # This file is used by Rack-based servers to start the application.
 
-require ::File.expand_path('../config/environment',  __FILE__)
+require_relative 'config/environment'
 
 
 ####
@@ -12,13 +12,13 @@ def add_database_url_config()
     puts "no ENV['DATABASE_URL'] found; skip adding DATABASE_URL config"
     return
   end
-  
+
   ####
   # fix/todo:
   #  for config key (now db)
   #   use RACK_ENV or RAILS_ENV if present?? why? why not?
   #  only if not already in config? possible?
-  
+
   db = URI.parse( str )
 
   ### use spec instead of config ???
@@ -33,7 +33,7 @@ def add_database_url_config()
           database: db.path[1..-1],
           encoding: 'utf8'
         }
-  else 
+  else
       config = {
         adapter:  db.scheme,       # sqlite3
         database: db.path[1..-1]   # pluto.db (NB: cut off leading /, thus 1..-1)
@@ -61,3 +61,6 @@ add_database_url_config()
 
 
 run Sportdbhost::Application
+
+## use generic application - why? why not?
+## run Rails.application

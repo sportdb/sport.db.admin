@@ -1,6 +1,6 @@
 
 puts "[boot] application.rb - before require 'boot'"
-require File.expand_path('../boot', __FILE__)
+require_relative 'boot'
 puts "[boot] application.rb - after require 'boot'"
 
 
@@ -32,6 +32,8 @@ module Sportdbhost
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # fix!!! comment out was a rails 4.x hack ?
     # config.active_record.raise_in_transactional_callbacks = true
+
+    config.secret_key_base = "secret_key_base"
   end
 end
 
