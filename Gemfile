@@ -55,8 +55,8 @@ gem 'datafile'
 
 gem 'worlddb-flags', '0.1.0'  # use bundled country flags
 
-gem 'sportdb-logos',    '0.1.0',  git: 'https://github.com/sportlogos/sport.db.logos.ruby.git', branch: 'gh-pages'
-gem 'footballdb-logos', '0.1.0',  git: 'https://github.com/sportlogos/football.db.logos.ruby.git', branch: 'gh-pages'
+## gem 'sportdb-logos',    '0.1.0',  git: 'https://github.com/sportlogos/sport.db.logos.ruby.git', branch: 'gh-pages'
+## gem 'footballdb-logos', '0.1.0',  git: 'https://github.com/sportlogos/football.db.logos.ruby.git', branch: 'gh-pages'
 
 
 ########
@@ -72,28 +72,34 @@ gem 'dbbrowser'  # mountable app
 
 
 
+gem 'puma'   # use (faster) web server (rails 5 default)
+
+
 group :production do
   gem 'pg'
-  gem 'thin'    # use faster multiplexed (w/ eventmachine) web server
+
+  ## gem 'thin'    # use faster multiplexed (w/ eventmachine) web server
 
   ## required for Rails 4.x on heroku
   ##   see https://github.com/heroku/rails_12factor
-  gem 'rails_12factor'
+  ## gem 'rails_12factor'
 end
 
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'annotate', '~> 2.4.1.beta'
+  gem 'annotate'    ## , '~> 2.4.1.beta'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '>= 3.3.0'
 end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
