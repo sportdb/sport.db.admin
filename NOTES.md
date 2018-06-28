@@ -3,6 +3,25 @@
 
 ## Todos
 
+
+fix setup:
+
+```
+** Execute db:load_config
+** Execute db:migrate
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+Directly inheriting from ActiveRecord::Migration is not supported. Please specify the Rails release the migration was wr
+itten for:
+
+  class CreateDb < ActiveRecord::Migration[4.2]
+C:/ruby24/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/migration.rb:528:in `inherited'
+C:/Projects/sportdb/sport.db.admin/db/migrate/001_create_db.rb:1:in `<top (required)>'
+```
+
+
+
 fix in production:
 
 ```

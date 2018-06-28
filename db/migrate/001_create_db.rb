@@ -1,4 +1,5 @@
-class CreateDb < ActiveRecord::Migration
+
+class CreateDb < ActiveRecord::Migration[5.2]
   def up
     LogDb.create
     ConfDb.create
