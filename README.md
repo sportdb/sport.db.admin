@@ -28,7 +28,12 @@ $ rake db:migrate
 
 Step 3 - Download and read-in all the database
 
+Note: See the /datafile/world2018.rb for what datasets get included.
+
+<!-- was:
 Note: See the /datafile/top.rb for what datasets get included.
+-->
+
 
 ```
 $ rake db:seed
