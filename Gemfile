@@ -9,7 +9,8 @@ source 'https://rubygems.org'
 ##   An error occurred while installing footballdb-logos (0.1.0), and Bundler cannot continue.
 
 
-ruby '2.3.3'   # note: heroku requires a ruby version (falls back to old 1.9.x)
+## ruby '2.3.3'   # note: heroku requires a ruby version (falls back to old 1.9.x)
+ruby '2.4.4'
 
 gem 'rails', '5.2.0'
 
